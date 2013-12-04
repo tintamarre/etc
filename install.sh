@@ -5,7 +5,7 @@ DOTFILES=$HOME/etc
 
 # Where your private dotfiles are located
 # TODO: should this be optional?
-PRIVATE=$HOME/etc/private
+PRIVATE=$DOTFILES/private
 
 # The destination to symlink in the dotfiles
 DEST=$HOME
@@ -19,12 +19,20 @@ DEST=$HOME
 if ! [ -e $DOTFILES -a -d $DOTFILES ]; then
     # $DOTFILES doesn't exist, or isn't a directory...
     echo "'$DOTFILES' does not exist or is not a directory."
-    echo 'Aborting.'
+    echo "Aborting."
     exit 1
 fi
 
-# TODO: check for existance of $PRIVATE
-#     -e $PRIVATE -a -d $PRIVATE -a
+# if $PRIVATE doesn't exist, we just move on (it's optional)
+if [ -e $PRIVATE ]; then
+    # if $PRIVATE is specified and exists, it must be a directory
+    if ! [ -d $PRIVATE ]; then
+        echo "'$PRIVATE' exists but is not a directory."
+        echo "Aborting."
+	exit 1
+    fi
+fi
+
 # TODO: check for existance of $DEST
 #     -e $DEST -a -d $DEST ]; then
 
