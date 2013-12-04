@@ -1,0 +1,4 @@
+! http://wilt.isaac.su/articles/how-to-remap-your-capslock-key-to-esc-key-in-ubuntu-linux
+clear lock
+keycode 0x42 = Escape
+

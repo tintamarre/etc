@@ -1,0 +1,5 @@
+bind CM-Return xterm
+color inactiveborder '#7e705a'
+color activeborder '#beb55b'
+borderwidth 1
+

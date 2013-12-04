@@ -1,0 +1,7 @@
+[user]
+	name = Zeb DeOs
+	email = zebdeos@bayprogrammer.com
+[push]
+	default = simple
+[alias]
+	lol = log --graph --oneline --decorate --all

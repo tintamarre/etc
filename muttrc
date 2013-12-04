@@ -1,0 +1,105 @@
+set sort = threads
+
+# http://dev.mutt.org/trac/wiki/MuttFaq/Appearance
+color index blue default ~P
+
+# /usr/share/local/examples/mutt/sample.muttrc
+set folder=~/mail
+set abort_unmodified=yes
+#set alias_file=~/.mail_aliases
+set askbcc
+set askcc
+set autoedit
+#set charset="iso-8859-1"
+set noconfirmappend
+set confirmcreate
+set copy=yes
+set delete=yes
+#set edit_headers
+set editor="vim"
+#set bounce=yes
+set fast_reply
+set fcc_attach
+#set forward_decode
+#set forward_format="[%a: %s]"
+#set forward_quote
+#set index_format="%4C %Z %{%m/%d} [%2N] %-15.15F (%4c) %s"
+#set index_format="%4C %Z %{%m/%d} %-15.15F (%4c) %s" # format of the index
+#set header
+set nohelp
+#set history=20
+#set hostname="mutt.org"
+set include
+set indent_string="> "
+#set locale="C"
+set nomark_old
+set mail_check=10
+set mbox=+mbox
+set menu_scroll
+#set metoo
+set mime_forward
+set move=yes
+#set page=less
+#set pager_context=3
+#set pager_format="-%S- %-20.20f %s"
+set pager_index_lines=6
+set pager_stop
+#set pgp_strict_enc
+set postponed=+postponed
+set print=ask-yes
+set print_command=/bin/false
+set noprompt_after
+set read_inc=25
+set record=+outbox
+set reply_to
+#set resolve
+#set reverse_alias
+#set reverse_name
+#set nosave_empty
+#set save_name
+#set sendmail="/usr/lib/sendmail -oi -oem"
+set shell="/bin/ksh"
+#set signature="~/.signature"
+
+set sort_aux=reverse-date-received
+#set sort_aux=last-date
+set sort_browser=reverse-date
+
+#set spoolfile='~/mailbox'
+#set status_on_top
+#set strict_threads
+set tilde
+#set timeout=0
+#set tmpdir=~/tmp
+#set to_chars=" +TCF"
+#set use_8bitmime
+set nouse_domain
+#set use_from
+set implicit_autoview=yes
+set pgp_verify_sig=yes
+set visual=vim
+#set write_inc=25
+
+#color normal white default
+color hdrdefault red default
+color quoted brightblue default
+color signature red default
+color indicator brightyellow red
+color error brightred default
+color status yellow blue
+color tree magenta default      # the thread tree in the index menu
+color tilde magenta default
+color message brightcyan default
+color markers brightcyan default
+color attachment brightmagenta default
+color search default green      # how to hilite search patterns in the pager
+
+color header brightred default ^(From|Subject):
+color body magenta default "(ftp|http|https)://[^ ]+"   # point out URLs
+color body magenta default [-a-z_0-9.]+@[-a-z_0-9.]+    # e-mail addresses
+color underline brightgreen default
+
+# attributes when using a mono terminal
+#mono header underline ^(From|Subject):
+mono quoted bold
+
