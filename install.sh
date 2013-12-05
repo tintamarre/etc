@@ -1,14 +1,28 @@
 #!/bin/sh
 
-# Where your public dotfiles are located
+# Where your public dotfiles are located; required
 DOTFILES=$HOME/etc
 
-# Where your private dotfiles are located
-# TODO: should this be optional?
+# Where your private dotfiles are located; optional
 PRIVATE=$DOTFILES/private
 
 # The destination to symlink in the dotfiles
 DEST=$HOME
+
+# TODO: Allow specifying the three settings via commandline flags:
+# -o DOTFILES ORIGIN
+# -p PRIVATE ORIGIN
+# -d DESTINATION
+
+# TODO: Need a -h help print out
+
+echo_err() {
+    echo "$1" 1>&2
+}
+
+hostname_local() {
+    hostname | cut -f 1 -d '.'
+}
 
 # TODO: Host-specific .local conf files?
 # (e.g. ~/.profile.local -> etc/local/bree/profile on bree)
@@ -17,24 +31,25 @@ DEST=$HOME
 # them gracefully
 
 if ! [ -e $DOTFILES -a -d $DOTFILES ]; then
-    # $DOTFILES doesn't exist, or isn't a directory...
-    echo "'$DOTFILES' does not exist or is not a directory."
-    echo "Aborting."
+    echo_err "Dotfiles location, '$DOTFILES',"
+    echo_err "does not exist or is not a directory. Aborting."
     exit 1
 fi
 
 # if $PRIVATE doesn't exist, we just move on (it's optional)
 if [ -e $PRIVATE ]; then
-    # if $PRIVATE is specified and exists, it must be a directory
     if ! [ -d $PRIVATE ]; then
-        echo "'$PRIVATE' exists but is not a directory."
-        echo "Aborting."
+        echo_err "Private dotfiles location, '$PRIVATE',"
+        echo_err "exists but is not a directory. Aborting."
 	exit 1
     fi
 fi
 
-# TODO: check for existance of $DEST
-#     -e $DEST -a -d $DEST ]; then
+if ! [ -e $DEST -a -d $DEST ]; then
+    echo_err "Destination, '$DEST',"
+    echo_err "does not exist or is not a directory. Aborting."
+    exit 1
+fi
 
 # If we reach this point, all prerequisite directories exist...
 
