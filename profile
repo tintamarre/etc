@@ -17,6 +17,8 @@ export PKG_PATH=$OBSD_MIRROR/snapshots/packages/`machine -a`/
 
 export CVSROOT=anoncvs@anoncvs3.usa.openbsd.org:/cvs
 
+export PAGER=less
+
 PS1="[\u@\h \W]$ "
 alias ls="ls -F"
 alias lynx="lynx -nocolor"
