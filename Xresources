@@ -96,3 +96,9 @@ URxvt.color14:      base0F
 XTerm*color15:      base07
 URxvt.color15:      base07
 
+! Emacs Stuff
+emacs.menuBar: off
+emacs.toolBar: 0
+emacs.verticalScrollBars: off
+emacs.font: Inconsolata\ 14
+emacs.geometry: 80x24
