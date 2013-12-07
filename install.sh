@@ -48,11 +48,12 @@ if ! [ -e $DEST -a -d $DEST ]; then
     exit 1
 fi
 
-# loop through all dotfiles (exclude hidden and $PRIVATE and files
-# ending in ~)
-# TODO: Ponder where to put quotes
 for f in $DOTFILES/*; do
+
+    # Ignore files ending in '~'
     if echo "$f" | grep -qv '~$'; then
+
+        # Don't symlink the $PRIVATE directory
         if ! [ "X$f" = "X$PRIVATE" ]; then
             f_basename=$(basename "$f")
             dest="$DEST/.$f_basename"
@@ -72,10 +73,12 @@ for f in $DOTFILES/*; do
     fi
 done
 
-# loop through all private dotfiles (exclude hidden)
-#    symlink to $DEST/$dotfile prepended with '.'
-
-# TODO: What if a symlink already exists? should warn user
-# TODO: Should we offer to remove existing symlink if it exists?
-# TODO: What if a real file exists where we want to put a symlink?
-# TODO: Should we offer to back up the existing conflicting file?
+for f in $PRIVATE/*; do
+    if echo "$f" | grep -qv '~$'; then
+        f_basename=$(basename "$f")
+        dest="$DEST/.$f_basename"
+        if ! [ -e "$dest" ]; then
+            ln -s "$f" "$dest"
+        fi
+    fi
+done
