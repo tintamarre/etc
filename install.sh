@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# Where your public dotfiles are located; required
+# Where your public dotfiles are located; required; full pathname
 DOTFILES=$HOME/etc
 
-# Where your private dotfiles are located; optional
+# Where your private dotfiles are located; optional; full pathname
 PRIVATE=$DOTFILES/private
 
-# The destination to symlink in the dotfiles
+# The destination to symlink in the dotfiles; full pathname
 DEST=$HOME
 
 # TODO: Allow specifying the three settings via commandline flags:
@@ -26,9 +26,6 @@ hostname_local() {
 
 # TODO: Host-specific .local conf files?
 # (e.g. ~/.profile.local -> etc/local/bree/profile on bree)
-
-# TODO: Handle various signals the script might receive, deal with
-# them gracefully
 
 if ! [ -e $DOTFILES -a -d $DOTFILES ]; then
     echo_err "Dotfiles location, '$DOTFILES',"
@@ -51,19 +48,34 @@ if ! [ -e $DEST -a -d $DEST ]; then
     exit 1
 fi
 
-# If we reach this point, all prerequisite directories exist...
+# loop through all dotfiles (exclude hidden and $PRIVATE and files
+# ending in ~)
+# TODO: Ponder where to put quotes
+for f in $DOTFILES/*; do
+    if echo "$f" | grep -qv '~$'; then
+        if ! [ "X$f" = "X$PRIVATE" ]; then
+            f_basename=$(basename "$f")
+            dest="$DEST/.$f_basename"
 
-    # TODO: DO THIS THING!
+            # TODO: test: use 'not equal' rather than inversion?
+            if ! [ "X$f_basename" = "Xinstall.sh" ]; then
+                if ! [ -e "$dest" ]; then
+                    # TODO: Warn user if the symlink couldn't be made
+                    # TODO: If symlink couldn't be made, offer to back
+                    #       up original file (moving it out of the way)
+                    #       and try again?? (maybe overkill..)
+                    ln -s "$f" "$dest"
+                fi
+            fi
+            # TODO: Test with spaces...
+        fi
+    fi
+done
 
-    # loop through all dotfiles (exclude hidden and $PRIVATE)
-    #    symlink to $DEST/$dotfile prepended with '.'
-    # loop through all private dotfiles (exclude hidden)
-    #    symlink to $DEST/$dotfile prepended with '.'
+# loop through all private dotfiles (exclude hidden)
+#    symlink to $DEST/$dotfile prepended with '.'
 
-    # TODO: What if a symlink already exists? should warn user
-
-    # TODO: Should we offer to remove existing symlink if it exists?
-
-    # TODO: What if a real file exists where we want to put a symlink?
-
-    # TODO: Should we offer to back up the existing conflicting file?
+# TODO: What if a symlink already exists? should warn user
+# TODO: Should we offer to remove existing symlink if it exists?
+# TODO: What if a real file exists where we want to put a symlink?
+# TODO: Should we offer to back up the existing conflicting file?
