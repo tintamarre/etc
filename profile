@@ -22,8 +22,7 @@ export PAGER=less
 PS1="[\u@\h \W]$ "
 alias ls="ls -F"
 alias lynx="lynx -nocolor"
-alias enw="emacsclient -nw"
-alias e="emacsclient -nc"
+alias e="emacsclient -c"
 
 [ $TERM ] && [ $TERM = xterm ] && export TERM=xterm-256color
 
