@@ -9,15 +9,13 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-#exec --no-startup-id feh --bg-fill /home/zebdeos/arc/web/resources/nasa/jpl/marsprogram/marspathfinder/TwnPks_RkGdn_left_med.jpg
-
 set $mod Mod4
 
-focus_follows_mouse no
-# new_window 1pixel
+# focus_follows_mouse no
+new_window 1pixel
 # new_window pixel 1
-# new_float pixel 1
-# hide_edge_borders both
+new_float pixel 1
+hide_edge_borders both
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -33,8 +31,8 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+Return exec --no-startup-id urxvtc
-# bindsym $mod+Return exec --no-startup-id xterm
+# bindsym $mod+Return exec --no-startup-id urxvtc
+bindsym $mod+Return exec --no-startup-id xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
