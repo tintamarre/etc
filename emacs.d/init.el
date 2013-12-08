@@ -7,6 +7,7 @@
               inhibit-startup-screen t
               display-time-24hr-format 1)
 
+(setq custom-theme-directory "~/.emacs.d/themes")
 (load-theme 'wombat t)
 
 ;; http://stackoverflow.com/a/1867000
