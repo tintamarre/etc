@@ -15,9 +15,9 @@ URxvt*geometry:           80x24
 !XTerm*faceName:           xft:Terminus:size=10
 
 URxvt*font:           xft:Terminus:size=24
-!XTerm*faceName:           xft:Terminus:size=24
-XTerm*font: -xos4-terminus-medium-*-*-*-28-*-*-*-*-*-*-*
-XTerm*boldFont: -xos4-terminus-bold-*-*-*-28-*-*-*-*-*-*-*
+XTerm*faceName:           xft:Inconsolata:size=14
+!XTerm*font: -xos4-terminus-medium-*-*-*-28-*-*-*-*-*-*-*
+!XTerm*boldFont: -xos4-terminus-bold-*-*-*-28-*-*-*-*-*-*-*
 
 URxvt*internalBorder: 0
 XTerm*VT100.internalBorder: 0
