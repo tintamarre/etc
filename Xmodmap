@@ -21,8 +21,8 @@ keycode 66 = Escape
 ! make control_l = alt_l
 keycode 37 = Alt_L
 
-! make win_l/super_l = alt_l
-keycode 115 = Alt_L
+! make win_l/super_l = win_l/super_l/mod4 (an extra one)
+keycode 115 = Super_L
 
 ! make alt_l = control_l
 keycode 64 = Control_L
@@ -30,8 +30,8 @@ keycode 64 = Control_L
 ! make alt_r = control_r
 keycode 113 = Control_R
 
-! make menu(_r) = alt_r
-keycode 117 = Alt_R
+! make menu(_r) = win_r/super_r/mod4 (extra)
+keycode 117 = Super_R
 
 ! make control_r = alt_r
 keycode 109 = Alt_R
