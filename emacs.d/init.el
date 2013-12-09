@@ -7,8 +7,13 @@
               inhibit-startup-screen t
               display-time-24hr-format 1)
 
-(setq custom-theme-directory "~/.emacs.d/themes")
-(load-theme 'wombat t)
+(setq custom-theme-load-path '(
+    custom-theme-directory
+    t
+    "~/.emacs.d/themes/base16-emacs"
+    )
+)
+(load-theme 'base16-default-dark t)
 
 ;; http://stackoverflow.com/a/1867000
 ;(when window-system
@@ -41,3 +46,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
