@@ -7,7 +7,9 @@ DOTFILES=$HOME/etc
 PRIVATE=$DOTFILES/private
 
 # The destination to symlink in the dotfiles; full pathname
-DEST=$HOME
+DEST=$HOME/dest
+
+IGNORE_LIST="$(basename $PRIVATE) install.sh local README.md ssh"
 
 echo_err() {
     echo "$1" 1>&2
@@ -15,6 +17,20 @@ echo_err() {
 
 hostname_local() {
     hostname | cut -f 1 -d '.'
+}
+
+in_list() {
+    list_element=$1
+    list=$2
+
+    echo "$list" | grep -qF "$list_element"
+}
+
+# Return 0 if file_to_check is found in IGNORE_LIST
+ignore_file() {
+    file_to_check=$1
+
+    in_list $file_to_check "$IGNORE_LIST"
 }
 
 if ! [ -e $DOTFILES -a -d $DOTFILES ]; then
@@ -42,28 +58,34 @@ for f in $DOTFILES/*; do
 
     # Ignore files ending in '~'
     if echo "$f" | grep -qv '~$'; then
+        f_basename=$(basename "$f")
 
-        # Don't symlink the $PRIVATE directory
-        if ! [ "X$f" = "X$PRIVATE" ]; then
-            f_basename=$(basename "$f")
+        # Don't symlink any files we're supposed to ignore
+        if ! ignore_file "$f_basename"; then
             dest="$DEST/.$f_basename"
 
-            # TODO: test: use ... != ... rather than inversion?
-            if ! [ "X$f_basename" = "Xinstall.sh" ]; then
-                if ! [ -e "$dest" ]; then
-                    ln -s "$f" "$dest"
-                fi
+            # Only try to link to dest if it isn't already there
+            if ! [ -e "$dest" ]; then
+                ln -s "$f" "$dest"
             fi
         fi
     fi
 done
 
 for f in $PRIVATE/*; do
+
+    # Ignore files ending in '~'
     if echo "$f" | grep -qv '~$'; then
         f_basename=$(basename "$f")
-        dest="$DEST/.$f_basename"
-        if ! [ -e "$dest" ]; then
-            ln -s "$f" "$dest"
+
+        # Don't symlink any files we're supposed to ignore
+        if ! ignore_file "$f_basename" ; then
+            dest="$DEST/.$f_basename"
+
+            # Only try to link to dest if it isn't already there
+            if ! [ -e "$dest" ]; then
+                ln -s "$f" "$dest"
+            fi
         fi
     fi
 done
