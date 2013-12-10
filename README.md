@@ -13,7 +13,7 @@ Foundational "weapons of choice" include:
 
 - ksh
 - tmux
-- X Windows Sysytem (X11)
+- X Windows System (X11)
     - i3 & cwm window managers
 - Emacs 24 (non-gui version)
 
