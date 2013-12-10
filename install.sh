@@ -9,13 +9,6 @@ PRIVATE=$DOTFILES/private
 # The destination to symlink in the dotfiles; full pathname
 DEST=$HOME
 
-# TODO: Allow specifying the three settings via commandline flags:
-# -o DOTFILES ORIGIN
-# -p PRIVATE ORIGIN
-# -d DESTINATION
-
-# TODO: Need a -h help print out
-
 echo_err() {
     echo "$1" 1>&2
 }
@@ -23,9 +16,6 @@ echo_err() {
 hostname_local() {
     hostname | cut -f 1 -d '.'
 }
-
-# TODO: Host-specific .local conf files?
-# (e.g. ~/.profile.local -> etc/local/bree/profile on bree)
 
 if ! [ -e $DOTFILES -a -d $DOTFILES ]; then
     echo_err "Dotfiles location, '$DOTFILES',"
@@ -58,17 +48,12 @@ for f in $DOTFILES/*; do
             f_basename=$(basename "$f")
             dest="$DEST/.$f_basename"
 
-            # TODO: test: use 'not equal' rather than inversion?
+            # TODO: test: use ... != ... rather than inversion?
             if ! [ "X$f_basename" = "Xinstall.sh" ]; then
                 if ! [ -e "$dest" ]; then
-                    # TODO: Warn user if the symlink couldn't be made
-                    # TODO: If symlink couldn't be made, offer to back
-                    #       up original file (moving it out of the way)
-                    #       and try again?? (maybe overkill..)
                     ln -s "$f" "$dest"
                 fi
             fi
-            # TODO: Test with spaces...
         fi
     fi
 done
