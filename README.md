@@ -15,6 +15,7 @@ Foundational "weapons of choice" include:
 - tmux
 - X Windows System (X11)
     - i3 & cwm window managers
+    - xterm
 - Emacs 24 (non-gui version)
 
 Currently being used only on OpenBSD systems, but nothing intentionally
