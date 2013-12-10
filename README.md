@@ -11,8 +11,10 @@ those after cloning if cloning directly from repository.
 
 Foundational "weapons of choice" include:
 
-- Ksh
-- X11 (i3 window manager)
+- ksh
+- tmux
+- X Windows Sysytem (X11)
+    - i3 & cwm window managers
 - Emacs 24 (non-gui version)
 
 Currently being used only on OpenBSD systems, but nothing intentionally
@@ -26,4 +28,4 @@ used to bootstrap the dotfiles into your home directory. Tested using
 OpenBSD sh, but should work fine with other Bourne-style shells such
 as bash and dash.
 
-*TODO*: More info on install.sh forthcoming...
+**TODO**: More info on install.sh forthcoming...
