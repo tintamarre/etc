@@ -67,6 +67,12 @@ XTerm*color13:      base06
 XTerm*color14:      base0F
 XTerm*color15:      base07
 
+! Xclock
+XClock*background: base00
+XClock*foreground: base05
+XClock*hands:      base02
+XClock*highlight:  base05
+
 ! Emacs GUI Stuff
 emacs.menuBar: off
 emacs.toolBar: 0
