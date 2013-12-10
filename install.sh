@@ -7,7 +7,7 @@ DOTFILES=$HOME/etc
 PRIVATE=$DOTFILES/private
 
 # The destination to symlink in the dotfiles; full pathname
-DEST=$HOME/dest
+DEST=$HOME
 
 IGNORE_LIST="$(basename $PRIVATE) install.sh local README.md ssh"
 
@@ -54,38 +54,27 @@ if ! [ -e $DEST -a -d $DEST ]; then
     exit 1
 fi
 
-for f in $DOTFILES/*; do
+link_files() {
+    $SOURCE_LOC=$1
 
-    # Ignore files ending in '~'
-    if echo "$f" | grep -qv '~$'; then
-        f_basename=$(basename "$f")
+    for f in $SOURCE_LOC/*; do
 
-        # Don't symlink any files we're supposed to ignore
-        if ! ignore_file "$f_basename"; then
-            dest="$DEST/.$f_basename"
+        # Ignore files ending in '~'
+        if echo "$f" | grep -qv '~$'; then
+            f_basename=$(basename "$f")
 
-            # Only try to link to dest if it isn't already there
-            if ! [ -e "$dest" ]; then
-                ln -s "$f" "$dest"
+            # Don't symlink any files we're supposed to ignore
+            if ! ignore_file "$f_basename"; then
+                dest="$DEST/.$f_basename"
+
+                # Only try to link to dest if it isn't already there
+                if ! [ -e "$dest" ]; then
+                    ln -s "$f" "$dest"
+                fi
             fi
         fi
-    fi
-done
+    done
+}
 
-for f in $PRIVATE/*; do
-
-    # Ignore files ending in '~'
-    if echo "$f" | grep -qv '~$'; then
-        f_basename=$(basename "$f")
-
-        # Don't symlink any files we're supposed to ignore
-        if ! ignore_file "$f_basename" ; then
-            dest="$DEST/.$f_basename"
-
-            # Only try to link to dest if it isn't already there
-            if ! [ -e "$dest" ]; then
-                ln -s "$f" "$dest"
-            fi
-        fi
-    fi
-done
+link_files "$DOTFILES"
+link_files "$PRIVATE"
