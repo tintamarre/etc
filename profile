@@ -23,7 +23,7 @@ PS1="[\u@\h \W]$ "
 alias ls="ls -F"
 alias lynx="lynx -nocolor"
 alias e="emacsclient -c"
+alias ee="emacsclient -n"
 
 [ $TERM ] && [ $TERM = xterm ] && export TERM=xterm-256color
-
 
