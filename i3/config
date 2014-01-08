@@ -32,7 +32,7 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec --no-startup-id urxvt
 # bindsym $mod+Return exec --no-startup-id urxvtc
-bindsym $mod+Return exec --no-startup-id "xterm -e 'emacsclient -c'"
+bindsym $mod+Return exec --no-startup-id xterm
 bindsym $mod+t exec --no-startup-id xterm
 
 # kill focused window
