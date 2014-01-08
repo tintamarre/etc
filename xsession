@@ -25,6 +25,8 @@ fi
 
 feh --bg-fill /home/zebdeos/arc/wallpaper/deviantart/mycoria_speed_painting_by_karbo-d6tx2sb_cropped.jpg
 
+emacs --daemon 2>/dev/null
+
 exec i3
 
 
