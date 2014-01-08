@@ -20,7 +20,7 @@ export CVSROOT=anoncvs@anoncvs3.usa.openbsd.org:/cvs
 export PAGER=less
 
 PS1="[\u@\h \W]$ "
-alias ls="ls -F"
+alias ls="colorls -F"
 alias lynx="lynx -nocolor"
 alias e="emacsclient -c"
 alias ee="emacsclient -n"
