@@ -26,52 +26,48 @@ XTerm*metaSendsEscape:     true
 XTerm*altIsNotMeta:        true
 XTerm*altSendsEscape:      true
 
-! Base16 Default (Dark)
-! Scheme: Chris Kempson (http://chriskempson.com)
-! (See http://chriskempson.github.io/base16/#default)
 
-#define base00 #151515
-#define base01 #202020
-#define base02 #303030
-#define base03 #505050
-#define base04 #b0b0b0
-#define base05 #d0d0d0
-#define base06 #e0e0e0
-#define base07 #f5f5f5
-#define base08 #ac4142
-#define base09 #d28445
-#define base0A #f4bf75
-#define base0B #90a959
-#define base0C #75b5aa
-#define base0D #6a9fb5
-#define base0E #aa759f
-#define base0F #8f5536
+! xcolors.net/dl/derp
+! Black
+XTerm*color0:   #111111
+XTerm*background: #111111
+XTerm*color8:   #666666
 
-XTerm*foreground:   base05
-XTerm*background:   base00
-XTerm*cursorColor:  base05
-XTerm*color0:       base00
-XTerm*color1:       base08
-XTerm*color2:       base0B
-XTerm*color3:       base0A
-XTerm*color4:       base0D
-XTerm*color5:       base0E
-XTerm*color6:       base0C
-XTerm*color7:       base05
-XTerm*color8:       base03
-XTerm*color9:       base09
-XTerm*color10:      base01
-XTerm*color11:      base02
-XTerm*color12:      base04
-XTerm*color13:      base06
-XTerm*color14:      base0F
-XTerm*color15:      base07
+! Red
+XTerm*color1:   rgb:d3/62/65
+XTerm*color9:   rgb:ef/81/71
+
+! Green
+XTerm*color2:   #aece91
+XTerm*color10:  #cfefb3
+
+! Yellow
+XTerm*color3:   rgb:e7/e1/8c
+XTerm*color11:  rgb:ff/f7/96
+
+! Blue
+XTerm*color4:   #5297cf
+XTerm*color12:  #74b8ef
+
+! Magenta
+XTerm*color5:   #963c59
+XTerm*color13:  #b85e7b
+
+! Cyan
+XTerm*color6:   #5E7175
+XTerm*color14:  #A3BABF
+
+! White
+XTerm*color7:   #bebebe
+XTerm*foreground: #bebebe
+XTerm*color15:  #ffffff
+
 
 ! Xclock
-XClock*background: base00
-XClock*foreground: base05
-XClock*hands:      base02
-XClock*highlight:  base05
+!XClock*background: base00
+!XClock*foreground: base05
+!XClock*hands:      base02
+!XClock*highlight:  base05
 
 ! Emacs GUI Stuff
 emacs.menuBar: off
