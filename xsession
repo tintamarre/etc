@@ -23,10 +23,11 @@ if [ -x /usr/local/bin/dbus-launch -a -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
     eval `dbus-launch --sh-syntax --exit-with-session`
 fi
 
-feh --bg-fill /home/zebdeos/arc/wallpaper/deviantart/mycoria_speed_painting_by_karbo-d6tx2sb_cropped.jpg
+# feh --bg-fill /home/zebdeos/arc/wallpaper/deviantart/mycoria_speed_painting_by_karbo-d6tx2sb_cropped.jpg
 
-emacs --daemon 2>/dev/null
+# emacs --daemon 2>/dev/null
 
-exec i3
+exec startxfce4
+
 
 
