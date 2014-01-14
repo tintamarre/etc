@@ -7,17 +7,6 @@
               inhibit-startup-screen t
               display-time-24hr-format 1)
 
-;; http://stackoverflow.com/a/1867000
-;(when window-system
-;    (tool-bar-mode -1)
-;    ;(set-face-attribute 'default nil :font "Terminus Bold 18")
-;    (set-face-attribute 'default nil :font "Inconsolata 14")
-;
-;    ;; http://www.emacswiki.org/emacs/FrameSize#toc4
-;    (add-to-list 'default-frame-alist '(height . 25))
-;    (add-to-list 'default-frame-alist '(width . 80))
-;)
-
 ;; http://orgmode.org/manual/Activation.html#Activation
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
@@ -34,10 +23,4 @@
  '(ansi-color-names-vector ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(custom-enabled-themes (quote (wombat)))
  '(frame-background-mode (quote dark)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
