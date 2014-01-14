@@ -7,14 +7,6 @@
               inhibit-startup-screen t
               display-time-24hr-format 1)
 
-(setq custom-theme-load-path '(
-    custom-theme-directory
-    t
-    "~/.emacs.d/themes/base16-emacs"
-    )
-)
-(load-theme 'base16-default-dark t)
-
 ;; http://stackoverflow.com/a/1867000
 ;(when window-system
 ;    (tool-bar-mode -1)
@@ -39,6 +31,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
+ '(custom-enabled-themes (quote (wombat)))
  '(frame-background-mode (quote dark)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
