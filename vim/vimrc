@@ -1,0 +1,71 @@
+﻿runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+let loaded_matchparen = 1
+
+syntax on
+set background=dark
+"colorscheme default
+"colorscheme solarized
+colorscheme base16-mocha
+"colorscheme eink
+
+set t_Co=256
+set encoding=utf-8
+
+set fileformat=unix
+set history=50
+
+" map j gj
+" map k gk
+" map [Down] gj
+" map [Up] gk
+set backspace=indent,eol,start
+
+set backupdir=~/local/tmp
+set directory=~/local/tmp
+set backup
+
+" allow to switch away from unsaved buffers without saving OR
+" discarding changes
+set hidden
+
+set nowrap
+set textwidth=0
+"set colorcolumn=79
+"set cursorline
+"set cursorcolumn
+"set relativenumber
+"set number
+
+" =---=---=---=
+
+set wildmode=longest:full
+set wildmenu
+
+set nocompatible
+set hlsearch
+set incsearch
+
+set nocindent
+filetype plugin on
+"filetype plugin indent on "http://tooky.co.uk/2010/04/08/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x.html
+"filetype plugin indent off
+set noautoindent
+set nosmartindent
+
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+set vb t_vb= "no bell or visual bell
+set clipboard+=unnamed
+set ruler
+set showcmd
+set showmode
+
+set laststatus=2
+
+nmap ; :
+
