@@ -15,7 +15,8 @@ export PKG_PATH=$OBSD_MIRROR/snapshots/packages/`machine -a`/
 
 #export PKG_CACHE=$HOME/arc/openbsd/mirror/pub/OpenBSD/snapshots/packages/`machine -a`
 
-export CVSROOT=anoncvs@anoncvs3.usa.openbsd.org:/cvs
+#export CVSROOT=anoncvs@anoncvs3.usa.openbsd.org:/cvs
+export CVSROOT=/home/zebdeos/src/public/openbsd.org/cvs
 
 export PAGER=less
 
@@ -23,8 +24,9 @@ export PAGER=less
 
 alias ls="colorls -GF"
 alias lynx="lynx -nocolor"
-alias e="emacsclient -c"
-alias ee="emacsclient -n"
+alias e="emacsclient -cn"
+alias en="emacsclient -n"
+alias enw="emacsclient -c -nw"
 alias weechat='weechat-curses'
 
 [ $TERM ] && [ $TERM = xterm ] && export TERM=xterm-256color
