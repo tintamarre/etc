@@ -73,5 +73,5 @@ XTerm*color15:  #ffffff
 emacs.menuBar: off
 emacs.toolBar: 0
 emacs.verticalScrollBars: off
-emacs.font: Inconsolata\ 20
+emacs.font: Inconsolata\ Medium\ 13
 emacs.geometry: 80x24
