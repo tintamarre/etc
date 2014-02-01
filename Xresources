@@ -93,7 +93,7 @@ URxvt.color15: #EEEEEC
 emacs.menuBar: off
 emacs.toolBar: 0
 emacs.verticalScrollBars: off
-emacs.font: Terminus\ Medium\ 12
+emacs.font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 emacs.geometry: 80x24
 emacs.background: black
 emacs.foreground: white
