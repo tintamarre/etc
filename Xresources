@@ -1,15 +1,24 @@
 ! http://hintsforums.macworld.com/showthread.php?t=9282
 XTerm*.LoginShell: True
+URxvt.loginShell: True
 
 ! https://wiki.archlinux.org/index.php/X_resources#Xterm_resources
 XTerm*VT100.geometry:     80x24
+URxvt*geometry: 80x24
+
+URxvt.scrollBar: off
+URxvt.termName: xterm-256color
 
 !XTerm*faceName:           xft:Terminus:size=9
 XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 XTerm*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
+URxvt.font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt.boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 
 XTerm*VT100.internalBorder: 0
 XTerm*borderWidth: 0
+URxvt*internalBorder: 0
+URxvt*externalBorder: 0
 
 XTerm*dynamicColors:      true
 XTerm*utf8:               2
@@ -26,48 +35,59 @@ XTerm*metaSendsEscape:     true
 XTerm*altIsNotMeta:        true
 XTerm*altSendsEscape:      true
 
+XTerm*background: black
+URxvt.background: black
+XTerm*foreground: white
+URxvt.foreground: white
 
-! xcolors.net/dl/derp
-! Black
-XTerm*color0:   #111111
-XTerm*background: #111111
-XTerm*color8:   #666666
+! Tango from http://wiki.gentoo.org/wiki/Rxvt-unicode
+! black
+XTerm*color0:  #2E3436
+URxvt.color0:  #2E3436
+XTerm*color8:  #555753
+URxvt.color8:  #555753
 
-! Red
-XTerm*color1:   rgb:d3/62/65
-XTerm*color9:   rgb:ef/81/71
+! red
+XTerm*color1:  #a40000
+URxvt.color1:  #a40000
+XTerm*color9:  #EF2929
+URxvt.color9:  #EF2929
 
-! Green
-XTerm*color2:   #aece91
-XTerm*color10:  #cfefb3
+! green
+XTerm*color2:  #4E9A06
+URxvt.color2:  #4E9A06
+XTerm*color10: #8AE234
+URxvt.color10: #8AE234
 
-! Yellow
-XTerm*color3:   rgb:e7/e1/8c
-XTerm*color11:  rgb:ff/f7/96
+! yellow
+XTerm*color3:  #C4A000
+URxvt.color3:  #C4A000
+XTerm*color11: #FCE94F
+URxvt.color11: #FCE94F
 
-! Blue
-XTerm*color4:   #5297cf
-XTerm*color12:  #74b8ef
+! blue
+XTerm*color4:  #3465A4
+URxvt.color4:  #3465A4
+XTerm*color12: #729FCF
+URxvt.color12: #729FCF
 
-! Magenta
-XTerm*color5:   #963c59
-XTerm*color13:  #b85e7b
+! purple
+XTerm*color5:  #75507B
+URxvt.color5:  #75507B
+XTerm*color13: #AD7FA8
+URxvt.color13: #AD7FA8
 
-! Cyan
-XTerm*color6:   #5E7175
-XTerm*color14:  #A3BABF
+! orange (replaces cyan)
+XTerm*color6:  #ce5c00
+URxvt.color6:  #ce5c00
+XTerm*color14: #fcaf3e
+URxvt.color14: #fcaf3e
 
-! White
-XTerm*color7:   #bebebe
-XTerm*foreground: #bebebe
-XTerm*color15:  #ffffff
-
-
-! Xclock
-!XClock*background: base00
-!XClock*foreground: base05
-!XClock*hands:      base02
-!XClock*highlight:  base05
+! white
+XTerm*color7:  #babdb9
+URxvt.color7:  #babdb9
+XTerm*color15: #EEEEEC
+URxvt.color15: #EEEEEC
 
 ! Emacs GUI Stuff
 emacs.menuBar: off
