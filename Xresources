@@ -14,10 +14,12 @@ XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 XTerm*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 URxvt.font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
+XTerm*scaleHeight: 1.10
+URxvt.lineSpace: 2
 
-XTerm*VT100.internalBorder: 0
+XTerm*VT100.internalBorder: 2
 XTerm*borderWidth: 0
-URxvt*internalBorder: 0
+URxvt*internalBorder: 2
 URxvt*externalBorder: 0
 
 XTerm*dynamicColors:      true
@@ -94,7 +96,9 @@ URxvt.color15: #EEEEEC
 emacs.menuBar: off
 emacs.toolBar: 0
 emacs.verticalScrollBars: off
-emacs.font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+!emacs.font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+emacs.font: Terminus\ Medium\ 12
+!emacs.lineSpacing: 2
 emacs.geometry: 80x24
 emacs.background: black
 emacs.foreground: white
