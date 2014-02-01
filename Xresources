@@ -4,9 +4,9 @@ XTerm*.LoginShell: True
 ! https://wiki.archlinux.org/index.php/X_resources#Xterm_resources
 XTerm*VT100.geometry:     80x24
 
-XTerm*faceName:           xft:Inconsolata:size=16
-!XTerm*font: -xos4-terminus-medium-*-*-*-28-*-*-*-*-*-*-*
-!XTerm*boldFont: -xos4-terminus-bold-*-*-*-28-*-*-*-*-*-*-*
+!XTerm*faceName:           xft:Terminus:size=9
+XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+XTerm*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 
 XTerm*VT100.internalBorder: 0
 XTerm*borderWidth: 0
@@ -73,7 +73,7 @@ XTerm*color15:  #ffffff
 emacs.menuBar: off
 emacs.toolBar: 0
 emacs.verticalScrollBars: off
-emacs.font: Inconsolata\ Medium\ 13
+emacs.font: Terminus\ Medium\ 12
 emacs.geometry: 80x24
 emacs.background: black
 emacs.foreground: white
