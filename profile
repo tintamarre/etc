@@ -10,7 +10,7 @@ boise=ftp://mirrors.syringanetworks.net/pub/OpenBSD
 nyc=ftp://mirrors.nycbug.org/pub/OpenBSD
 dallas=ftp://mirror.esc7.net/pub/OpenBSD
 boulder=ftp://ftp3.usa.openbsd.org/pub/OpenBSD
-export OBSD_MIRROR=$boulder
+export OBSD_MIRROR=$redwood
 export PKG_PATH=$OBSD_MIRROR/snapshots/packages/`machine -a`/
 
 #export PKG_CACHE=$HOME/arc/openbsd/mirror/pub/OpenBSD/snapshots/packages/`machine -a`
@@ -22,12 +22,9 @@ export PAGER=less
 
 #PS1="[\u@\h \W]$ "
 
-alias ls="colorls -GF"
 alias lynx="lynx -nocolor"
-alias e="emacsclient -cn"
-alias en="emacsclient -n"
-alias enw="emacsclient -c -nw"
-alias weechat='weechat-curses'
+alias e="emacsclient -nw"
+alias eg="emacsclient -nc"
 
 [ $TERM ] && [ $TERM = xterm ] && export TERM=xterm-256color
 
