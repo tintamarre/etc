@@ -7,7 +7,7 @@ syntax on
 set background=dark
 "colorscheme default
 "colorscheme solarized
-colorscheme base16-mocha
+"colorscheme base16-mocha
 "colorscheme eink
 
 set t_Co=256
