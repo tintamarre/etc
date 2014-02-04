@@ -20,7 +20,7 @@ export CVSROOT=/home/zebdeos/src/public/openbsd.org/cvs
 
 export PAGER=less
 
-PS1="[\u@\h \W]$ "
+PS1="\W $ "
 
 alias lynx="lynx -nocolor"
 alias e="emacsclient -nw"
