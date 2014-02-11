@@ -8,6 +8,7 @@ URxvt*geometry: 80x24
 
 URxvt.scrollBar: off
 URxvt.termName: xterm-256color
+XTerm.termName: xterm-256color
 
 !XTerm*faceName:           xft:Terminus:size=9
 XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
@@ -17,9 +18,9 @@ URxvt.boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 XTerm*scaleHeight: 1.10
 URxvt.lineSpace: 2
 
-XTerm*VT100.internalBorder: 2
+XTerm*VT100.internalBorder: 0
 XTerm*borderWidth: 0
-URxvt*internalBorder: 2
+URxvt*internalBorder: 0
 URxvt*externalBorder: 0
 
 XTerm*dynamicColors:      true
