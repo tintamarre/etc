@@ -25,6 +25,7 @@ fi
 
 urxvtd &
 
-# feh --bg-fill /home/zebdeos/arc/wallpaper/deviantart/mycoria_speed_painting_by_karbo-d6tx2sb_cropped.jpg
+[ -e $HOME/.wallpaper ] && . $HOME/.wallpaper
 
-exec startxfce4
+exec i3
+
