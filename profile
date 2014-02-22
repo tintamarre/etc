@@ -9,8 +9,7 @@ export PATH HOME TERM
 
 export PAGER=less
 
-PS1="\W $ "
+PS1="\W \$ "
 
 alias lynx="lynx -nocolor"
-alias e="emacsclient -nw"
-alias eg="emacsclient -nc"
+
