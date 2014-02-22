@@ -1,3 +1,0 @@
-[submodule "emacs.d/themes/base16-emacs"]
-	path = emacs.d/themes/base16-emacs
-	url = https://github.com/milkypostman/base16-emacs.git
