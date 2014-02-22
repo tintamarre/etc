@@ -37,9 +37,11 @@ XTerm*altIsNotMeta:        true
 XTerm*altSendsEscape:      true
 
 XTerm*background: black
-!URxvt.background: black
+URxvt.background: black
 URxvt.depth: 32
-URxvt.background: [80]black
+!URxvt.background: [80]black
+URxvt.transparent: true
+URxvt.shading: 20
 XTerm*foreground: white
 URxvt.foreground: white
 
