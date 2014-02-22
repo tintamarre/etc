@@ -1,9 +1,0 @@
-set guifont=Ubuntu\ Mono\ 13
-
-set guioptions=e
-
-colorscheme desert
-
-set lines=24
-set columns=80
-
