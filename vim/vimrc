@@ -1,14 +1,8 @@
-﻿runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
-let loaded_matchparen = 1
+﻿let loaded_matchparen = 1
 
 syntax on
 set background=dark
-"colorscheme default
-"colorscheme solarized
-"colorscheme base16-mocha
-"colorscheme eink
+colorscheme default
 
 set t_Co=256
 set encoding=utf-8
@@ -32,7 +26,7 @@ set hidden
 
 set nowrap
 set textwidth=0
-"set colorcolumn=79
+set colorcolumn=72
 "set cursorline
 "set cursorcolumn
 "set relativenumber
