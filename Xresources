@@ -11,12 +11,10 @@ URxvt.termName: xterm-256color
 XTerm.termName: xterm-256color
 
 !XTerm*faceName:           xft:Terminus:size=9
-XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
-XTerm*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
-URxvt.font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
-URxvt.boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
-XTerm*scaleHeight: 1.10
-URxvt.lineSpace: 2
+XTerm*font: -gohu-gohufont-medium-*-*-*-14-*-*-*-*-*-*-*
+XTerm*boldfont: -gohu-gohufont-bold-*-*-*-14-*-*-*-*-*-*-*
+URxvt.font: -gohu-gohufont-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt.boldfont: -gohu-gohufont-bold-*-*-*-14-*-*-*-*-*-*-*
 
 XTerm*VT100.internalBorder: 0
 XTerm*borderWidth: 0
@@ -39,10 +37,14 @@ XTerm*altIsNotMeta:        true
 XTerm*altSendsEscape:      true
 
 XTerm*background: black
+!URxvt.background: black
 URxvt.depth: 32
 URxvt.background: [80]black
 XTerm*foreground: white
 URxvt.foreground: white
+
+URxvt.cursorColor: blue
+URxvt.cursorColor2: white
 
 ! Tango from http://wiki.gentoo.org/wiki/Rxvt-unicode
 ! black
@@ -92,15 +94,4 @@ XTerm*color7:  #babdb9
 URxvt.color7:  #babdb9
 XTerm*color15: #EEEEEC
 URxvt.color15: #EEEEEC
-
-! Emacs GUI Stuff
-emacs.menuBar: off
-emacs.toolBar: 0
-emacs.verticalScrollBars: off
-!emacs.font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
-emacs.font: Terminus\ Medium\ 12
-!emacs.lineSpacing: 2
-emacs.geometry: 80x24
-emacs.background: black
-emacs.foreground: white
 
