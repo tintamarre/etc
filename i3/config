@@ -30,10 +30,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+Return exec --no-startup-id urxvtc
-# bindsym $mod+Return exec --no-startup-id xterm
-# bindsym $mod+t exec --no-startup-id xterm
+bindsym $mod+Return exec --no-startup-id xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
