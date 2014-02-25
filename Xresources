@@ -6,15 +6,15 @@ XTerm*VT100.geometry:     80x24
 
 XTerm.termName: xterm-256color
 
-!XTerm*faceName:           xft:Terminus:size=9
-XTerm*font: -gohu-gohufont-medium-*-*-*-14-*-*-*-*-*-*-*
-XTerm*boldfont: -gohu-gohufont-bold-*-*-*-14-*-*-*-*-*-*-*
+XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+XTerm*Boldfont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
 
 XTerm*VT100.internalBorder: 0
 XTerm*borderWidth: 0
 
 XTerm*dynamicColors:      true
-XTerm*utf8:               2
+XTerm*utf8:               1
+XTerm*utf8Fonts:          1
 !XTerm*eightBitInput:      true
 XTerm*saveLines:          2048
 XTerm*scrollKey:          true
