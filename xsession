@@ -24,7 +24,7 @@ if [ -x /usr/local/bin/dbus-launch -a -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
 fi
 
 [ -e $HOME/.multimonitor ] && $HOME/.multimonitor
-[ -e $HOME/.wallpaper ] && $HOME/.wallpaper
+# [ -e $HOME/.wallpaper ] && $HOME/.wallpaper
 
 exec startxfce4
 
