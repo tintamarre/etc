@@ -26,7 +26,5 @@ fi
 [ -e $HOME/.multimonitor ] && $HOME/.multimonitor
 [ -e $HOME/.wallpaper ] && $HOME/.wallpaper
 
-urxvtd -q -o -f
-
 exec i3
 
