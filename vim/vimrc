@@ -1,4 +1,6 @@
-﻿let loaded_matchparen = 1
+﻿let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+let loaded_matchparen = 1
 
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
