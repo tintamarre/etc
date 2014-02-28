@@ -5,11 +5,16 @@
 PATH=$HOME/bin:$HOME/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
 export PATH HOME TERM
 
+PAGER=less
+VISUAL=vim
+EDITOR=vim
+export PAGER EDITOR
+
 . $HOME/.profile.private
 
-export PAGER=less
 
 PS1="\W \$ "
 
+set -o emacs
 alias lynx="lynx -nocolor"
 
