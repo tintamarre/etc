@@ -1,5 +1,7 @@
 ﻿let loaded_matchparen = 1
 
+execute pathogen#infect()
+
 syntax on
 set background=dark
 
