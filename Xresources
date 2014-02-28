@@ -28,7 +28,7 @@ XTerm*metaSendsEscape:     true
 XTerm*altIsNotMeta:        true
 XTerm*altSendsEscape:      true
 
-XTerm*background: black
+XTerm*background: #303030
 XTerm*foreground: white
 
 ! Tango from http://wiki.gentoo.org/wiki/Rxvt-unicode
