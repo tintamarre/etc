@@ -30,6 +30,7 @@ XTerm*altSendsEscape:      true
 
 XTerm*background: #303030
 XTerm*foreground: white
+XTerm*cursorColor: #85C7DC
 
 ! Tango from http://wiki.gentoo.org/wiki/Rxvt-unicode
 ! black
