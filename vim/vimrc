@@ -2,6 +2,7 @@
 
 execute pathogen#infect()
 
+colorscheme lucius
 syntax on
 set background=dark
 
