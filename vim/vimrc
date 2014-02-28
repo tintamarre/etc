@@ -9,6 +9,9 @@ set background=dark
 set t_Co=256
 set encoding=utf-8
 
+set mouse=a
+set ttymouse=xterm2
+
 set fileformat=unix
 set history=50
 
