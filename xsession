@@ -26,5 +26,5 @@ fi
 [ -e $HOME/.multimonitor ] && $HOME/.multimonitor
 # [ -e $HOME/.wallpaper ] && $HOME/.wallpaper
 
-exec startxfce4
+exec herbstluftwm -c $HOME/.herbstluftwm
 
