@@ -4,3 +4,6 @@
 [submodule "vim/bundle/vim-lucius"]
 	path = vim/bundle/vim-lucius
 	url = https://github.com/jonathanfilip/vim-lucius
+[submodule "emacs.d/lisp/evil"]
+	path = emacs.d/lisp/evil
+	url = git://gitorious.org/evil/evil.git
