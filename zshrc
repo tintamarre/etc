@@ -17,3 +17,4 @@ autoload -U promptinit
 promptinit
 prompt redhat
 
+alias e='emacsclient -nc --alternate-editor=""'
