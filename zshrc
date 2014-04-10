@@ -17,4 +17,7 @@ autoload -U promptinit
 promptinit
 prompt redhat
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 alias e='emacsclient -nc --alternate-editor=""'
