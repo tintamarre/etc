@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xkbcomp -I$HOME/.xkb $HOME/etc/default.xkb $DISPLAY
+
+
