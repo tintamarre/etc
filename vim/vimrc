@@ -13,7 +13,7 @@ inoremap kj <ESC>
 let mapleader = ","
 map <Leader>w :w<Enter>
 
-colorscheme lucius
+" colorscheme lucius
 syntax on
 set background=dark
 
@@ -43,7 +43,7 @@ set hidden
 set nowrap
 set textwidth=0
 set colorcolumn=72
-set cursorline
+"set cursorline
 "set cursorcolumn
 "set relativenumber
 set number

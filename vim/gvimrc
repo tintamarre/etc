@@ -1,3 +1,5 @@
 set guioptions=rLi
 set gfn=Inconsolata\ Medium\ 11
+colorscheme lucius
+set cursorline
 
