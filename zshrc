@@ -12,12 +12,13 @@ zstyle :compinstall filename '/home/zebdeos/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-#
+
 autoload -U promptinit
 promptinit
 prompt redhat
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+[ -e $HOME/.rbenv/bin ] && export PATH="$HOME/.rbenv/bin:$PATH"
+type 2>&1 1>/dev/null rbenv && eval "$(rbenv init -)"
 
 alias e='emacsclient -nc --alternate-editor=""'
+
