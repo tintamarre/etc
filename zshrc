@@ -20,5 +20,3 @@ prompt redhat
 [ -e $HOME/.rbenv/bin ] && export PATH="$HOME/.rbenv/bin:$PATH"
 type 2>&1 1>/dev/null rbenv && eval "$(rbenv init -)"
 
-alias e='emacsclient -nc --alternate-editor=""'
-
