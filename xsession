@@ -1,3 +1,4 @@
 $HOME/etc/initxkb
-startxfce4
+
+i3
 
