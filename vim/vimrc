@@ -1,6 +1,6 @@
 "let g:loaded_netrw = 1
 "let g:loaded_netrwPlugin = 1
-"let loaded_matchparen = 1
+let loaded_matchparen = 1
 
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
@@ -13,7 +13,7 @@ inoremap kj <ESC>
 let mapleader = ","
 map <Leader>w :w<Enter>
 
-" colorscheme lucius
+colorscheme lucius
 syntax off
 set background=dark
 
