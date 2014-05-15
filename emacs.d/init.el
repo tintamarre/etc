@@ -7,10 +7,10 @@
               inhibit-startup-screen t
               display-time-24hr-format 1)
 
-(add-to-list 'load-path "~/.emacs.d/lisp/evil")
-(require 'evil)
-(evil-mode 1)
-(setq evil-default-cursor t)
+; (add-to-list 'load-path "~/.emacs.d/lisp/evil")
+; (require 'evil)
+; (evil-mode 1)
+; (setq evil-default-cursor t)
 
 ;; http://orgmode.org/manual/Activation.html#Activation
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
