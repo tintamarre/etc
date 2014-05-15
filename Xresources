@@ -28,42 +28,37 @@ XTerm*metaSendsEscape:     true
 XTerm*altIsNotMeta:        true
 XTerm*altSendsEscape:      true
 
-XTerm*background: #303030
-XTerm*foreground: white
-XTerm*cursorColor: #85C7DC
+!XTerm*cursorColor: #85C7DC
+XTerm*cursorColor: #66FF66
 
-! Tango from http://wiki.gentoo.org/wiki/Rxvt-unicode
-! black
-XTerm*color0:  #2E3436
-XTerm*color8:  #555753
+! tlh theme from http://xcolors.net/dl/tlh
+XTerm*background:    #101010
+XTerm*foreground:    #66FF66
 
-! red
-XTerm*color1:  #a40000
-XTerm*color9:  #EF2929
-
-! green
-XTerm*color2:  #4E9A06
-XTerm*color10: #8AE234
-
-! yellow
-XTerm*color3:  #C4A000
-XTerm*color11: #FCE94F
-
-! blue
-XTerm*color4:  #3465A4
-XTerm*color12: #729FCF
-
-! purple
-XTerm*color5:  #75507B
-XTerm*color13: #AD7FA8
-
-! orange (replaces cyan)
-XTerm*color6:  #ce5c00
-XTerm*color14: #fcaf3e
-
-! white
-XTerm*color7:  #babdb9
-XTerm*color15: #EEEEEC
+!black
+XTerm*color0:        #1c1c1c
+XTerm*color8:        #4d4d4d
+!!red
+XTerm*color1:        #D81860
+XTerm*color9:        #F00060
+!!green
+XTerm*color2:        #60FF60
+XTerm*color10:       #70FF70
+!!yellow
+XTerm*color3:        #f9fd75
+XTerm*color11:       #f9fd80
+!!blue
+XTerm*color4:        #4695c8
+XTerm*color12:       #5a9dc8
+!!magenta
+XTerm*color5:        #a78edb
+XTerm*color13:       #b29fdb
+!!cyan
+XTerm*color6:        #43afce
+XTerm*color14:       #69b8ce
+!!white
+XTerm*color7:        #f3ebe2
+XTerm*color15:       #eeeeee
 
 ! Emacs GUI Stuff
 emacs.menuBar: off

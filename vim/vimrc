@@ -13,7 +13,7 @@ inoremap kj <ESC>
 let mapleader = ","
 map <Leader>w :w<Enter>
 
-colorscheme lucius
+"colorscheme lucius
 syntax off
 set background=dark
 
