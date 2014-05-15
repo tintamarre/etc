@@ -1,0 +1,7 @@
+[user]
+	name = Zeb DeOs
+	email = zebdeos@coquilletribe.org
+[push]
+	default = simple
+[alias]
+	lol = log --graph --oneline --decorate --all
