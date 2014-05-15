@@ -6,8 +6,8 @@ XTerm*VT100.geometry:     80x24
 
 XTerm.termName: xterm-256color
 
-XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-XTerm*Boldfont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
+XTerm*font: -xos4-terminus-medium-*-*-*-20-*-*-*-*-*-iso10646-*
+XTerm*Boldfont: -xos4-terminus-bold-*-*-*-20-*-*-*-*-*-iso10646-*
 
 XTerm*VT100.internalBorder: 0
 XTerm*borderWidth: 0
