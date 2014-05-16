@@ -176,3 +176,6 @@ bar {
 # bindsym Mod4+e exec "urxvtc -e elinks"
 # bindsym Mod4+r exec "urxvtc -e ranger"
 
+# auto-floating windows:
+for_window [class="Gitk"] floating enable
+
