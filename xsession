@@ -1,5 +1,5 @@
 $HOME/etc/initxkb
-xset r rate 150 130
+xset r rate 185 130
 
 [ -x $HOME/.wallpaper ] && $HOME/.wallpaper
 [ -x $HOME/.xsession.local ] && $HOME/.xsession.local
