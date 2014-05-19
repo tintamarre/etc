@@ -99,6 +99,18 @@ XTerm*altSendsEscape:      true
 *color14: S_base1
 *color15: S_base3
 
+XClock*background: S_base03
+! XClock*render: false
+XClock*foreground: S_base0
+XClock*hands: S_base0
+XClock*highlight: S_base0
+
+XClock*hourColor: S_cyan
+XClock*minuteColor: S_green
+XClock*secondColor: S_base0
+XClock*majorColor: S_base0
+XClock*minorColor: S_base0
+
 ! Emacs GUI Stuff
 emacs.menuBar: off
 emacs.toolBar: 0
