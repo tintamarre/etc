@@ -179,5 +179,6 @@ bar {
 # auto-floating windows:
 for_window [class="Gitk"] floating enable
 for_window [class="XClock"] floating enable
+for_window [class="XCalc"] floating enable
 for_window [class="Lxpolkit"] floating enable
 
