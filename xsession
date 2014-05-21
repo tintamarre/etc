@@ -7,7 +7,14 @@ if [ -x /usr/lib/ssh/x11-ssh-askpass ]; then
     ssh-add < /dev/null &
 fi
 
-[ -x /usr/lib/lxpolkit/lxpolkit ] && /usr/lib/lxpolkit/lxpolkit &
+if [ -x /usr/lib/lxpolkit/lxpolkit ]; then
+    # lxpolkit for Arch
+    /usr/lib/lxpolkit/lxpolkit &
+elif [ -x /usr/lib/x86_64-linux-gnu/lxpolkit ]; then
+    # lxpolkit for Debian 64 bit
+    /usr/lib/x86_64-linux-gnu/lxpolkit &
+fi
+
 [ -x $HOME/.wallpaper ] && $HOME/.wallpaper
 [ -x $HOME/.xsession.local ] && $HOME/.xsession.local
 [ -e $HOME/.Xresources ] && xrdb $HOME/.Xresources
