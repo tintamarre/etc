@@ -1,11 +1,19 @@
 $HOME/etc/initxkb
 xset r rate 185 130
 
-eval `ssh-agent -s`
+[ ! $SSH_AGENT_PID ] && eval `ssh-agent -s`
+
 if [ -x /usr/lib/ssh/x11-ssh-askpass ]; then
+    # Debian, Arch
     SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
-    ssh-add < /dev/null &
+elif [ -x /usr/libexec/openssh/x11-ssh-askpass ]; then
+    # Fedora
+    SSH_ASKPASS=/usr/libexec/openssh/x11-ssh-askpass
+else
+    unset SSH_ASKPASS
 fi
+
+[ $SSH_ASKPASS ] && ssh-add < /dev/null
 
 if [ -x /usr/lib/lxpolkit/lxpolkit ]; then
     # lxpolkit for Arch
