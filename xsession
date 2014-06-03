@@ -18,6 +18,9 @@ fi
 if [ -x /usr/lib/lxpolkit/lxpolkit ]; then
     # lxpolkit for Arch
     /usr/lib/lxpolkit/lxpolkit &
+elif [ -x /usr/libexec/lxpolkit ]; then
+    # lxpolkit for Fedora
+    /usr/libexec/lxpolkit &
 elif [ -x /usr/lib/x86_64-linux-gnu/lxpolkit ]; then
     # lxpolkit for Debian 64 bit
     /usr/lib/x86_64-linux-gnu/lxpolkit &
