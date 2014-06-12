@@ -12,8 +12,9 @@
 set $mod Mod1
 
 focus_follows_mouse no
-new_window normal 4
-new_float normal 4
+new_window pixel 2
+new_float pixel 2
+hide_edge_borders both
 
 # http://i3wm.org/docs/userguide.html#_scratchpad
 bindsym $mod+Shift+o move scratchpad
