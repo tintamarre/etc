@@ -5,6 +5,9 @@ PATH="$PATH:$HOME/bin:$HOME/local/bin"
 unalias -a
 alias e=vim
 
-VAGRANT_DEFAULT_PROVIDER=libvirt
-export VAGRANT_DEFAULT_PROVIDER
+# stuff for vagrant
+export VAGRANT_DEFAULT_PROVIDER=libvirt
+
+# stuff for python pip
+export PIP_DOWNLOAD_CACHE="$HOME/arc/pip-cache"
 
