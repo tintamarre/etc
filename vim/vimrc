@@ -75,7 +75,7 @@ set ruler
 set showcmd
 set showmode
 
-set laststatus=1
+set laststatus=2
 
 nmap ; :
 
