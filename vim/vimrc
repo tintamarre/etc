@@ -13,7 +13,7 @@ inoremap kj <ESC>
 let mapleader = ","
 map <Leader>w :w<Enter>
 
-syntax off
+syntax on
 set background=dark
 colorscheme solarized
 
