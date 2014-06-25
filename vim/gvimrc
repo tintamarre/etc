@@ -1,8 +1,4 @@
-set guioptions=rLi
-set gfn=Inconsolata\ Medium\ 11
-set colorcolumn=72
-syntax on
-colorscheme solarized
-set cursorline
-set number
+set guioptions=i
+set gfn=Inconsolata\ Medium\ 14
+set background=light
 
