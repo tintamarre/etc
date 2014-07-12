@@ -15,6 +15,8 @@ compinit
 
 # ---------------------------------------------------------------------
 
+[ "x$TERM" = "xxterm" ] && export TERM="xterm-256color"
+
 autoload -U promptinit
 promptinit
 prompt redhat
