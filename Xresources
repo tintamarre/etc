@@ -115,7 +115,7 @@ XClock*minorColor: S_base0
 emacs.menuBar: off
 emacs.toolBar: 0
 emacs.verticalScrollBars: off
-emacs.font: Inconsolata\ Medium\ 11
+emacs.font: Inconsolata\ Medium\ 14
 emacs.geometry: 80x24
 emacs.background: black
 emacs.foreground: white
