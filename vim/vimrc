@@ -15,7 +15,7 @@ map <Leader>w :w<Enter>
 
 syntax on
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 set t_Co=256
 set encoding=utf-8
@@ -43,10 +43,10 @@ set hidden
 set nowrap
 set textwidth=0
 set colorcolumn=72
-set cursorline
+"set cursorline
 "set cursorcolumn
 "set relativenumber
-set number
+"set number
 
 " =---=---=---=
 
