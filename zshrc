@@ -37,6 +37,9 @@ export PATH
 
 alias e=vim
 
+# TODO: Check for non-BSD ls and fallback to non-alias or colorls
+alias ls="ls --color -F"
+
 # stuff for vagrant
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
