@@ -1,5 +1,5 @@
 #!/bin/sh
 
-xkbcomp -I$HOME/.xkb $HOME/etc/default.xkb $DISPLAY
+xkbcomp -I$HOME/etc/keyboard/xkb $HOME/etc/keyboard/default.xkb $DISPLAY
 
 
