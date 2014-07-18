@@ -34,6 +34,15 @@ fi
 export PATH
 
 alias e=vim
+alias o=xdg-open
+alias g=git
+alias gc="git commit -m"
+alias gca="git commit -am"
+alias gs="git status"
+alias gl="git log"
+alias gp="git push"
+alias gk="gitk"
+alias gg="git gui"
 
 # TODO: Check for non-BSD ls and fallback to non-alias or colorls
 alias ls="ls --color -F"
