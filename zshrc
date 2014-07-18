@@ -17,9 +17,7 @@ compinit
 
 [ "x$TERM" = "xxterm" ] && export TERM="xterm-256color"
 
-autoload -U promptinit
-promptinit
-prompt redhat
+PS1="⛈ ⦗%n•%m %1~⦘%(#.#.⚡) "
 
 PATH="$PATH:$HOME/bin:$HOME/local/bin"
 
