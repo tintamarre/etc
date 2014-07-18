@@ -1,0 +1,23 @@
+'welcome':
+  'showOnStartup': false
+'core':
+  'disabledPackages': [
+    'metrics'
+    'feedback'
+    'exception-reporting'
+  ]
+  'useReactEditor': false
+  'audioBeep': false
+  'themes': [
+    'atom-light-ui'
+    'atom-dark-syntax'
+  ]
+'editor':
+  'showInvisibles': true
+  'preferredLineLength': 72
+  'fontFamily': 'Inconsolata'
+  'fontSize': 20
+'exception-reporting':
+  'userId': ''
+'metrics':
+  'userId': ''
