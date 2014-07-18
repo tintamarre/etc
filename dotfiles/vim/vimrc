@@ -8,6 +8,8 @@ set t_ti= t_te=
 
 execute pathogen#infect()
 
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
 " http://www.guyrutenberg.com/2013/09/23/quickly-exiting-insert-mode-in-vim/
 inoremap kj <ESC>
 let mapleader = ","
