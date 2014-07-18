@@ -16,3 +16,6 @@
 [submodule "dotfiles/vim/bundle/xoria256.vim"]
 	path = dotfiles/vim/bundle/xoria256.vim
 	url = https://github.com/vim-scripts/xoria256.vim.git
+[submodule "submodules/powerline-fonts"]
+	path = submodules/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
