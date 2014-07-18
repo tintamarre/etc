@@ -1,12 +1,12 @@
-[submodule "vim/vim-pathogen"]
-	path = vim/vim-pathogen
+[submodule "dotfiles/vim/vim-pathogen"]
+	path = dotfiles/vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "vim/bundle/vim-lucius"]
-	path = vim/bundle/vim-lucius
+[submodule "dotfiles/vim/bundle/vim-lucius"]
+	path = dotfiles/vim/bundle/vim-lucius
 	url = https://github.com/jonathanfilip/vim-lucius
-[submodule "emacs.d/lisp/evil"]
-	path = emacs.d/lisp/evil
+[submodule "dotfiles/emacs.d/lisp/evil"]
+	path = dotfiles/emacs.d/lisp/evil
 	url = git://gitorious.org/evil/evil.git
-[submodule "vim/bundle/vim-colors-solarized"]
-	path = vim/bundle/vim-colors-solarized
+[submodule "dotfiles/vim/bundle/vim-colors-solarized"]
+	path = dotfiles/vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
