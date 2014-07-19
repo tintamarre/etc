@@ -17,7 +17,7 @@ map <Leader>w :w<Enter>
 
 syntax on
 set background=dark
-colorscheme xoria256
+colorscheme lucius
 
 set t_Co=256
 set encoding=utf-8
