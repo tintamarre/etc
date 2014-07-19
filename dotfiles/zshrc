@@ -33,7 +33,8 @@ fi
 
 export PATH
 
-alias e=atom
+alias e=vim
+alias a=atom
 alias v=vim
 alias o=xdg-open
 alias g=git
