@@ -13,6 +13,10 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:notes_directories = ['~/notes']
 let g:NERDTreeMinimalUI=1
 
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
+set list
+set listchars=tab:▸\ ,eol:¬
+
 " http://www.guyrutenberg.com/2013/09/23/quickly-exiting-insert-mode-in-vim/
 inoremap kj <ESC>
 inoremap ,w <ESC>:w<Enter>
