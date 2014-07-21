@@ -10,6 +10,8 @@ execute pathogen#infect()
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
+let g:notes_directories = ['~/notes']
+
 " http://www.guyrutenberg.com/2013/09/23/quickly-exiting-insert-mode-in-vim/
 inoremap kj <ESC>
 let mapleader = ","
