@@ -37,9 +37,6 @@
 [submodule "dotfiles/vim/bundle/vim-coffee-script"]
 	path = dotfiles/vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
-[submodule "dotfiles/vim/bundle/vaxe"]
-	path = dotfiles/vim/bundle/vaxe
-	url = https://github.com/jdonaldson/vaxe
 [submodule "dotfiles/vim/bundle/vim-snippets"]
 	path = dotfiles/vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
