@@ -85,9 +85,6 @@
 [submodule "dotfiles/vim/bundle/vim-snippets"]
 	path = dotfiles/vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
-[submodule "dotfiles/vim/bundle/ultisnips"]
-	path = dotfiles/vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips
 [submodule "dotfiles/vim/bundle/ctrlp.vim"]
 	path = dotfiles/vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
