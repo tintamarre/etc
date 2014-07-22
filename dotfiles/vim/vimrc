@@ -1,99 +1,49 @@
 "let g:loaded_netrw = 1
 "let g:loaded_netrwPlugin = 1
 let g:loaded_matchparen = 1
+let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
+let g:netrw_banner=0
 
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 
 execute pathogen#infect()
-
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:notes_directories = ['~/notes/vim-notes']
+set backupdir=~/local/tmp
+set directory=~/local/tmp
+set backup
 
-let g:notes_directories = ['~/notes']
-let g:NERDTreeMinimalUI=1
+set t_Co=256
+set mouse=a
+set ttymouse=xterm2
+set background=dark
+colorscheme wombat256mod
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
 set list
 set listchars=tab:▸\ ,eol:¬
-
-" http://www.guyrutenberg.com/2013/09/23/quickly-exiting-insert-mode-in-vim/
-inoremap kj <ESC>
-inoremap ,w <ESC>:w<Enter>
-let mapleader = ","
-map <Leader>w :w<Enter>
-map <Leader>t :NERDTreeToggle<Enter>
-map <Leader>g :Tagbar<Enter>
-" http://vim.wikia.com/wiki/Display_line_numbers
-map <Leader>n :set invnumber<Enter>
-" TODO: Write function to toggle colorcolumn between 72 and 0
-
-" syntax on
-set background=dark
-colorscheme wombat256mod
-
-set t_Co=256
-" set encoding=utf-8
-
-set mouse=a
-set ttymouse=xterm2
-
-" set fileformat=unix
-" set history=50
-
-" map j gj
-" map k gk
-" map [Down] gj
-" map [Up] gk
-" set backspace=indent,eol,start
-
-set backupdir=~/local/tmp
-set directory=~/local/tmp
-set backup
+set nowrap
+set textwidth=0
+set colorcolumn=72
+set cursorline
+set nocompatible
+set hlsearch
+set vb t_vb= "no bell or visual bell
+set clipboard+=unnamed
+set noshowmode
 
 " allow to switch away from unsaved buffers without saving OR
 " discarding changes
 set hidden
 
-set nowrap
-set textwidth=0
-set colorcolumn=72
-set cursorline
-"set cursorcolumn
-"set relativenumber
-set number
-
-" =---=---=---=
-
-" set wildmode=longest:full
-" set wildmenu
-
-set nocompatible
-set hlsearch
-" set incsearch
-
-" set nocindent
-" filetype plugin on
-" filetype plugin indent on "http://tooky.co.uk/2010/04/08/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x.html
-" filetype plugin indent off
-" set noautoindent
-" set nosmartindent
-
-set softtabstop=4
-set tabstop=4
-set shiftwidth=4
-set expandtab
-" set smarttab
-set vb t_vb= "no bell or visual bell
-set clipboard+=unnamed
-" set ruler
-" set showcmd
-set showmode
-
-" set laststatus=2
-
+" http://www.guyrutenberg.com/2013/09/23/quickly-exiting-insert-mode-in-vim/
+inoremap kj <ESC>
+inoremap ,w <ESC>:w<Enter>
 nmap ; :
-
-let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
-let g:netrw_banner=0
-
+let mapleader = ","
+map <Leader>w :w<Enter>
+" http://vim.wikia.com/wiki/Display_line_numbers
+map <Leader>n :set invrelativenumber<Enter>
+" TODO: Write function to rotate amongst 72, 80, and 0
