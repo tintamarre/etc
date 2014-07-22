@@ -1,8 +1,8 @@
-"let g:loaded_netrw = 1
-"let g:loaded_netrwPlugin = 1
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
 let g:loaded_matchparen = 1
-let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
-let g:netrw_banner=0
+"let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
+"let g:netrw_banner=0
 
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
@@ -46,4 +46,5 @@ let mapleader = ","
 map <Leader>w :w<Enter>
 " http://vim.wikia.com/wiki/Display_line_numbers
 map <Leader>n :set invrelativenumber<Enter>
+map <Leader>t :NERDTreeToggle<Enter>
 " TODO: Write function to rotate amongst 72, 80, and 0
