@@ -64,3 +64,24 @@
 [submodule "dotfiles/vim/bundle/nerdtree"]
 	path = dotfiles/vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
+[submodule "dotfiles/vim/bundle/utl.vim"]
+	path = dotfiles/vim/bundle/utl.vim
+	url = https://github.com/vim-scripts/utl.vim
+[submodule "dotfiles/vim/bundle/tagbar"]
+	path = dotfiles/vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "dotfiles/vim/bundle/vim-speeddating"]
+	path = dotfiles/vim/bundle/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating
+[submodule "dotfiles/vim/bundle/NrrwRgn"]
+	path = dotfiles/vim/bundle/NrrwRgn
+	url = https://github.com/chrisbra/NrrwRgn
+[submodule "dotfiles/vim/bundle/calendar-vim"]
+	path = dotfiles/vim/bundle/calendar-vim
+	url = https://github.com/mattn/calendar-vim
+[submodule "dotfiles/vim/bundle/SyntaxRange"]
+	path = dotfiles/vim/bundle/SyntaxRange
+	url = https://github.com/vim-scripts/SyntaxRange
+[submodule "dotfiles/vim/bundle/vim-orgmode"]
+	path = dotfiles/vim/bundle/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode
