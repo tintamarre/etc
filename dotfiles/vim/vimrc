@@ -51,6 +51,15 @@ map <Leader>w :w<Enter>
 " http://vim.wikia.com/wiki/Display_line_numbers
 map <Leader>n :set invrelativenumber<Enter>
 map <Leader>m :set invcursorline invcursorcolumn<Enter>
+" TODO: Write function to rotate amongst 72, 80, and 0 colorcolumn
 map <Leader>t :NERDTreeToggle<Enter>
 map <Leader>g :Tagbar<Enter>
-" TODO: Write function to rotate amongst 72, 80, and 0
+
+" https://raw.githubusercontent.com/benmills/vimux/master/doc/vimux.txt
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
+map <Leader>vx :VimuxInterruptRunner<CR>
+map <Leader>vc :VimuxClearRunnerHistory<CR>
+map <Leader>vz :VimuxZoomRunner<CR>
