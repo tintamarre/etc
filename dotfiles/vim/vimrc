@@ -30,7 +30,8 @@ set listchars=tab:▸\ ,eol:¬
 set nowrap
 set textwidth=0
 set colorcolumn=72
-set cursorline
+set nocursorline
+set nocursorcolumn
 set nocompatible
 set hlsearch
 set vb t_vb= "no bell or visual bell
@@ -49,6 +50,7 @@ let mapleader = ","
 map <Leader>w :w<Enter>
 " http://vim.wikia.com/wiki/Display_line_numbers
 map <Leader>n :set invrelativenumber<Enter>
+map <Leader>m :set invcursorline invcursorcolumn<Enter>
 map <Leader>t :NERDTreeToggle<Enter>
 map <Leader>g :Tagbar<Enter>
 " TODO: Write function to rotate amongst 72, 80, and 0
