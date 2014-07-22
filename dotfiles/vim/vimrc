@@ -12,6 +12,8 @@ execute pathogen#infect()
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:notes_directories = ['~/notes/vim-notes']
 let g:NERDTreeMinimalUI=1
+let g:NERDTreeWinSize = 25
+let g:tagbar_width = 25
 set backupdir=~/local/tmp
 set directory=~/local/tmp
 set backup
