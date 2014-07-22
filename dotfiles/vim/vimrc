@@ -50,4 +50,5 @@ map <Leader>w :w<Enter>
 " http://vim.wikia.com/wiki/Display_line_numbers
 map <Leader>n :set invrelativenumber<Enter>
 map <Leader>t :NERDTreeToggle<Enter>
+map <Leader>g :Tagbar<Enter>
 " TODO: Write function to rotate amongst 72, 80, and 0
