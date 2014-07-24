@@ -1,13 +1,42 @@
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
+" let g:loaded_netrw = 1
+" let g:loaded_netrwPlugin = 1
 let g:loaded_matchparen = 1
-"let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
-"let g:netrw_banner=0
+let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
+let g:netrw_banner=0
 
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 
+let g:pathogen_disabled = [
+			\"calendar-vim",
+			\"nerdtree",
+			\"NrrwRgn",
+			\"sparkup",
+			\"syntastic",
+			\"SyntaxRange",
+			\"tagbar",
+			\"UltiSnips",
+			\"utl.vim",
+			\"vim-fugitive",
+			\"vim-misc",
+			\"vim-notes",
+			\"vim-orgmode",
+			\"vim-snippets",
+			\"vim-speeddating",
+			\]
+			" \"ack.vim",
+			" \"powerline",
+			" \"vim-coffee-script",
+			" \"vim-easymotion",
+			" \"vim-fugitive",
+			" \"vim-javascript-syntax",
+			" \"vim-repeat",
+			" \"vim-sensible",
+			" \"vim-sleuth",
+			" \"vimux",
+			" \"wombat256.vim",
+			" \"zombat256.vim",
 execute pathogen#infect()
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:notes_directories = ['~/notes/vim-notes']
@@ -53,8 +82,8 @@ map <Leader>w :w<Enter>
 map <Leader>n :set invrelativenumber<Enter>
 map <Leader>m :set invcursorline invcursorcolumn<Enter>
 " TODO: Write function to rotate amongst 72, 80, and 0 colorcolumn
-map <Leader>t :NERDTreeToggle<Enter>
-map <Leader>g :Tagbar<Enter>
+" map <Leader>t :NERDTreeToggle<Enter>
+" map <Leader>g :Tagbar<Enter>
 
 " https://raw.githubusercontent.com/benmills/vimux/master/doc/vimux.txt
 map <Leader>vp :VimuxPromptCommand<CR>
