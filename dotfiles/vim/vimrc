@@ -83,6 +83,7 @@ map <Leader>w :w<Enter>
 map <Leader>n :set invrelativenumber<Enter>
 map <Leader>m :set invcursorline invcursorcolumn<Enter>
 map <Leader>e :Explore<Enter>
+map <Leader>t :Texplore<Enter>
 " TODO: Write function to rotate amongst 72, 80, and 0 colorcolumn
 " map <Leader>t :NERDTreeToggle<Enter>
 " map <Leader>g :Tagbar<Enter>
