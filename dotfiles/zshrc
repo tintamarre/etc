@@ -7,7 +7,7 @@ unsetopt beep notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/zebdeos/.zshrc'
+zstyle :compinstall filename "$HOME/zebdeos/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -19,17 +19,17 @@ compinit
 
 PS1="⛈ ⦗%n•%m %1~⦘%(#.#.⚡) "
 
-PATH="$PATH:$HOME/bin:$HOME/local/bin"
+PATH="$PATH:$HOME/gandalf/bin:$HOME/finglas/bin"
 
 # per http://guides.rubygems.org/faqs/#user-install
 if which ruby 1>/dev/null 2>&1 && which gem 1>/dev/null 2>&1; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
-# if [ -d $HOME/.rbenv/bin ]; then
-#     PATH="$HOME/.rbenv/bin:$PATH"
-#     eval "$(rbenv init -)"
-# fi
+if [ -d $HOME/.rbenv/bin ]; then
+    PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
 
 export PATH
 
@@ -53,4 +53,4 @@ alias ls="ls --color -F"
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 # stuff for python pip
-export PIP_DOWNLOAD_CACHE="$HOME/arc/pip-cache"
+export PIP_DOWNLOAD_CACHE="$HOME/gandalf/pip-cache"
