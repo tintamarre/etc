@@ -1,5 +1,5 @@
 // Ctrl is mapped to the Alt keys, Alt to the Win keys, and Win to the Ctrl keys.
-// or patch this file: /usr/share/X11/symbols/altwin
+// or patch this file: /usr/share/X11/xkb/symbols/altwin
 partial modifier_keys 
 xkb_symbols "cust_ctrl_alt_win" {
     key <LALT> { [ Control_L, Control_L  ] };
