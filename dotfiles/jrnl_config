@@ -1,5 +1,5 @@
 {
-  "tagsymbols": ["@", "+"],
+  "tagsymbols": "@+!",
   "timeformat": "%Y-%m-%d %H:%M",
   "default_minute": 0,
   "encrypt": false,
