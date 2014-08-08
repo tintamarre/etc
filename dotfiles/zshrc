@@ -40,6 +40,7 @@ alias v=vim
 alias o=xdg-open
 alias g=git
 alias t=todo.sh -d ~/.todo.cfg
+alias j=jrnl
 alias gc="git commit -m"
 alias gca="git commit -am"
 alias gs="git status"
