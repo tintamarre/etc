@@ -18,7 +18,7 @@ set t_Co=256
 set mouse=a
 set ttymouse=xterm2
 set background=dark
-syntax on
+syntax off
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
 set list
@@ -38,7 +38,7 @@ set nocindent
 filetype plugin on
 filetype plugin indent on
 filetype plugin indent off
-set noautoindent
+set autoindent
 set nosmartindent
 set softtabstop=4
 set tabstop=4
