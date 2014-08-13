@@ -21,7 +21,7 @@ set background=dark
 syntax off
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
-set list
+set nolist
 set listchars=tab:▸\ ,eol:¬
 set nowrap
 set textwidth=0
