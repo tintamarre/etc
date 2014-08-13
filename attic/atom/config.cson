@@ -5,12 +5,20 @@
     'metrics'
     'feedback'
     'exception-reporting'
+    'vim-mode'
   ]
-  'useReactEditor': false
   'audioBeep': false
   'themes': [
     'atom-light-ui'
     'atom-dark-syntax'
+  ]
+  'ignoredNames': [
+    '.git'
+    '.hg'
+    '.svn'
+    '.DS_Store'
+    'Thumbs.db'
+    '*.pyc'
   ]
 'editor':
   'showInvisibles': true
