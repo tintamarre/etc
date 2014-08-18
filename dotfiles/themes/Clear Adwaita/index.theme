@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Clear Adwaita
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=Adwaita
+MetacityTheme=ClearlooksRe
+IconTheme=matefaenza
+GtkColorScheme=fg_color:#000000000000,bg_color:#ededececebeb,text_color:#1a1a1a1a1a1a,base_color:#ffffffffffff,selected_fg_color:#ffffffffffff,selected_bg_color:#8686ababd9d9,tooltip_fg_color:#000000000000,tooltip_bg_color:#f5f5f5f5b5b5
+CursorTheme=Adwaita
+CursorSize=24
+NotificationTheme=nodoka
+BackgroundImage=
