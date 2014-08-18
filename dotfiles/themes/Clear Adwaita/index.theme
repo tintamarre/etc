@@ -6,7 +6,7 @@ Comment=
 [X-GNOME-Metatheme]
 GtkTheme=Adwaita
 MetacityTheme=ClearlooksRe
-IconTheme=matefaenza
+IconTheme=menta
 GtkColorScheme=fg_color:#000000000000,bg_color:#e553ee58d940,text_color:#1a1a1a1a1a1a,base_color:#ffffffffffff,selected_fg_color:#ffffffffffff,selected_bg_color:#7df3b0a87640,tooltip_fg_color:#000000000000,tooltip_bg_color:#db8bf5f5b5b5
 CursorTheme=Adwaita
 CursorSize=24
