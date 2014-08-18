@@ -50,7 +50,7 @@ alias gk="gitk"
 alias gg="git gui"
 
 # TODO: Check for non-BSD ls and fallback to non-alias or colorls
-alias ls="ls --color -F"
+# alias ls="ls --color -F"
 
 # stuff for vagrant
 export VAGRANT_DEFAULT_PROVIDER=libvirt
