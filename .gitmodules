@@ -16,3 +16,6 @@
 [submodule "dotfiles/vim/bundle/vimux"]
 	path = dotfiles/vim/bundle/vimux
 	url = https://github.com/benmills/vimux
+[submodule "dotfiles/vim/bundle/vim-wombat256i"]
+	path = dotfiles/vim/bundle/vim-wombat256i
+	url = https://github.com/dsolstad/vim-wombat256i.git
