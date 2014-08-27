@@ -18,17 +18,18 @@ set t_Co=256
 set mouse=a
 set ttymouse=xterm2
 set background=dark
-syntax off
+colorscheme wombat256i
+syntax on
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
-set nolist
+set list
 set listchars=tab:▸\ ,eol:¬
 set nowrap
 set textwidth=0
-" set colorcolumn=72
-set nocursorline
+set colorcolumn=72
+set cursorline
 set nocursorcolumn
-set nonumber
+set number
 set nocompatible
 set hlsearch
 set vb t_vb= "no bell or visual bell
