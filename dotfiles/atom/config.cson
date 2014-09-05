@@ -1,16 +1,16 @@
 'welcome':
   'showOnStartup': false
 'core':
+  'themes': [
+    'seti-ui'
+    'seti-syntax'
+  ]
   'disabledPackages': [
+    'open-on-github'
     'metrics'
     'feedback'
+    'deprecation-cop'
     'exception-reporting'
-    'vim-mode'
-  ]
-  'audioBeep': false
-  'themes': [
-    'atom-light-ui'
-    'atom-dark-syntax'
   ]
   'ignoredNames': [
     '.git'
@@ -20,12 +20,11 @@
     'Thumbs.db'
     '*.pyc'
   ]
+  'audioBeep': false
 'editor':
+  'invisibles': {}
   'showInvisibles': true
   'preferredLineLength': 72
-  'fontFamily': 'Inconsolata'
-  'fontSize': 20
-'exception-reporting':
-  'userId': ''
-'metrics':
-  'userId': ''
+'tree-view':
+  'hideIgnoredNames': true
+  'hideVcsIgnoredFiles': true
