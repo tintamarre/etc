@@ -5,7 +5,8 @@
 (setq-default truncate-lines t
               comint-process-echoes t
               inhibit-startup-screen t
-              display-time-24hr-format 1)
+              display-time-24hr-format 1
+	      cursor-type '(bar . 2))
 
 ; (add-to-list 'load-path "~/.emacs.d/lisp/evil")
 ; (require 'evil)
