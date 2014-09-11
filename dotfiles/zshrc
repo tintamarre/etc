@@ -34,9 +34,7 @@ fi
 
 export PATH
 
-alias e=vim
-alias a=atom
-alias v=vim
+alias e="emacsclient -a '' -c -nw"
 alias o=xdg-open
 alias g=git
 alias t="todo.sh -d ~/.todo.cfg"

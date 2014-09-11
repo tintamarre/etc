@@ -2,11 +2,12 @@
 (column-number-mode t)
 (ido-mode t)
 ; (display-time-mode 1)
-(setq-default truncate-lines t
-              comint-process-echoes t
-              inhibit-startup-screen t
-              display-time-24hr-format 1
-	      cursor-type '(bar . 2))
+(setq-default
+ truncate-lines t
+ comint-process-echoes t
+ inhibit-startup-screen t
+ display-time-24hr-format 1
+ )
 
 ; (add-to-list 'load-path "~/.emacs.d/lisp/evil")
 ; (require 'evil)
@@ -26,7 +27,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (wombat)))
+ ;; '(custom-enabled-themes (quote (misterioso)))
  '(frame-background-mode (quote dark))
  '(indicate-empty-lines t)
  '(scroll-bar-mode nil)
