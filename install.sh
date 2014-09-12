@@ -4,21 +4,14 @@
 [ -e $HOME/.gitconfig -o -L $HOME/.gitconfig ] && rm $HOME/.gitconfig
 [ -e $HOME/.hgrc -o -L $HOME/.hgrc ] && rm $HOME/.hgrc
 [ -e $HOME/.tmux.conf -o -L $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
-[ -e $HOME/.vim -o -L $HOME/.vim ] && rm -r $HOME/.vim
-[ -e $HOME/.todo.cfg -o -L $HOME/.todo.cfg ] && rm $HOME/.todo.cfg
 [ -e $HOME/.jrnl_config -o -L $HOME/.jrnl_config ] && rm $HOME/.jrnl_config
 [ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
-[ -e $HOME/.themes -o -L $HOME/.themes ] && rm $HOME/.themes
 
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/emacs.d $HOME/.emacs.d
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/gitconfig $HOME/.gitconfig
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/hgrc $HOME/.hgrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/tmux.conf $HOME/.tmux.conf
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vim $HOME/.vim
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/todo.cfg $HOME/.todo.cfg
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/jrnl_config $HOME/.jrnl_config
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/zshrc $HOME/.zshrc
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/themes $HOME/.themes
 
 [ -d $HOME/.ssh ] || mkdir $HOME/.ssh
 [ -e $HOME/.ssh/authorized_keys -o -L $HOME/.ssh/authorized_keys ] && rm $HOME/.ssh/authorized_keys
