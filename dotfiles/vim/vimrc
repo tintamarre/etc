@@ -14,7 +14,7 @@ set backupdir=~/finglas/tmp
 set directory=~/finglas/tmp
 set backup
 
-set t_Co=256
+set t_Co=8
 set mouse=a
 set ttymouse=xterm2
 set background=dark
@@ -22,8 +22,8 @@ set background=dark
 " syntax on
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
-set list
-set listchars=tab:▸\ ,eol:¬
+" set list
+" set listchars=tab:▸\ ,eol:¬
 set nowrap
 set textwidth=0
 " set colorcolumn=72
