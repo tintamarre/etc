@@ -1,4 +1,4 @@
-$HOME/etc/initxkb
+$HOME/gandalf/src/github/bayprogrammer/dotfiles/scripts/initxkb
 xset r rate 185 130
 
 [ ! $SSH_AGENT_PID ] && eval `ssh-agent -s`

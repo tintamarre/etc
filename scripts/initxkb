@@ -1,5 +1,5 @@
 #!/bin/sh
 
-xkbcomp -I$HOME/etc/keyboard/xkb $HOME/etc/keyboard/default.xkb $DISPLAY
+xkbcomp -I$HOME/gandalf/src/github/bayprogrammer/dotfiles/keyboard/xkb $HOME/gandalf/src/github/bayprogrammer/dotfiles/keyboard/default.xkb $DISPLAY
 
 
