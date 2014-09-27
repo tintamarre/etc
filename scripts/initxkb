@@ -1,5 +1,6 @@
 #!/bin/sh
 
-xkbcomp -I$HOME/gandalf/src/github/bayprogrammer/dotfiles/keyboard/xkb $HOME/gandalf/src/github/bayprogrammer/dotfiles/keyboard/default.xkb $DISPLAY
-
-
+# http://www.tldp.org/HOWTO/Intkeyb/x1696.html
+xmodmap -e "pointer = 3 2 1"
+xkbcomp -I$HOME/gandalf/src/github/bayprogrammer/dotfiles/keyboard/xkb \
+          $HOME/gandalf/src/github/bayprogrammer/dotfiles/keyboard/default.xkb $DISPLAY

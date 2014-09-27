@@ -8,6 +8,8 @@
 [ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
 [ -e $HOME/.i3status.conf -o -L $HOME/.i3status.conf ] && rm $HOME/.i3status.conf
 [ -e $HOME/.i3 -o -L $HOME/.i3 ] && rm -r $HOME/.i3
+[ -e $HOME/.Xresources -o -L $HOME/.Xresources ] && rm $HOME/.Xresources
+[ -e $HOME/.xsession -o -L $HOME/.xsession ] && rm $HOME/.xsession
 
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/emacs.d $HOME/.emacs.d
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/gitconfig $HOME/.gitconfig
@@ -16,6 +18,8 @@ ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/tmux.conf $HOME/.
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/zshrc $HOME/.zshrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/i3status.conf $HOME/.i3status.conf
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/i3 $HOME/.i3
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/Xresources $HOME/.Xresources
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/xsession $HOME/.xsession
 
 [ -d $HOME/.ssh ] || mkdir $HOME/.ssh
 [ -e $HOME/.ssh/authorized_keys -o -L $HOME/.ssh/authorized_keys ] && rm $HOME/.ssh/authorized_keys

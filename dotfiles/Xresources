@@ -1,3 +1,34 @@
+! http://xcolors.net/dl/rasi
+
+*background : #1c1c1c
+*foreground : #dcdcdc
+
+!black
+*color0:                  #1B1D1E
+*color8:                  #505354
+!red
+*color1:                  #F92672
+*color9:                  #FF5995
+!green
+*color2:                  #82B414
+*color10:                 #B6E354
+!yellow
+*color3:                  #FD971F
+*color11:                 #FEED6C
+!blue
+*color4:                  #4E82AA
+*color12:                 #0C73C2
+!magenta
+*color5:                  #8C54FE
+*color13:                 #9E6FFE
+!cyan
+*color6:                  #465457
+*color14:                 #899CA1
+!white
+*color7:                  #CCCCC6
+*color15:                 #F8F8F2
+
+
 ! http://hintsforums.macworld.com/showthread.php?t=9282
 XTerm*.LoginShell: True
 
@@ -6,9 +37,9 @@ XTerm*VT100.geometry:     80x24
 
 XTerm.termName: xterm-256color
 
-!XTerm*font: -xos4-terminus-medium-*-*-*-20-*-*-*-*-*-iso10646-*
-!XTerm*Boldfont: -xos4-terminus-bold-*-*-*-20-*-*-*-*-*-iso10646-*
-XTerm*faceName: Inconsolata:size=14
+XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+XTerm*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
+!XTerm*faceName: Inconsolata:size=14
 
 XTerm*VT100.internalBorder: 0
 XTerm*borderWidth: 0
@@ -32,92 +63,22 @@ XTerm*altSendsEscape:      true
 !XTerm*cursorColor: #85C7DC
 !XTerm*cursorColor: #66FF66
 
-! Solarized From https://github.com/altercation/solarized/blob/master/xresources/solarized
+URxvt.scrollBar: off
+URxvt*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+URxvt*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
+URxvt*geometry: 80x24
+!URxvt*font: xft:Inconsolata:size=14
+URxvt*internalBorder: 0
 
-! Solarized color scheme for the X Window System
-!
-! http://ethanschoonover.com/solarized
-
-
-! Common
-
-#define S_yellow #b58900
-#define S_orange #cb4b16
-#define S_red #dc322f
-#define S_magenta #d33682
-#define S_violet #6c71c4
-#define S_blue #268bd2
-#define S_cyan #2aa198
-#define S_green #859900
-
-
-! Dark
-
-#define S_base03 #002b36
-#define S_base02 #073642
-#define S_base01 #586e75
-#define S_base00 #657b83
-#define S_base0 #839496
-#define S_base1 #93a1a1
-#define S_base2 #eee8d5
-#define S_base3 #fdf6e3
-
-
-! Light
-
-! #define S_base03 #fdf6e3
-! #define S_base02 #eee8d5
-! #define S_base01 #93a1a1
-! #define S_base00 #839496
-! #define S_base0 #657b83
-! #define S_base1 #586e75
-! #define S_base2 #073642
-! #define S_base3 #002b36
-
-*background: S_base03
-*foreground: S_base0
-*fading: 40
-*fadeColor: S_base03
-*cursorColor: S_base1
-*pointerColorBackground: S_base01
-*pointerColorForeground: S_base1
-
-*color0: S_base02
-*color1: S_red
-*color2: S_green
-*color3: S_yellow
-*color4: S_blue
-*color5: S_magenta
-*color6: S_cyan
-*color7: S_base2
-*color9: S_orange
-*color8: S_base03
-*color10: S_base01
-*color11: S_base00
-*color12: S_base0
-*color13: S_violet
-*color14: S_base1
-*color15: S_base3
-
-XClock*background: S_base03
+! XClock*background: S_base03
 ! XClock*render: false
-XClock*foreground: S_base0
-XClock*hands: S_base0
-XClock*highlight: S_base0
+! XClock*foreground: S_base0
+! XClock*hands: S_base0
+! XClock*highlight: S_base0
 
-XClock*hourColor: S_cyan
-XClock*minuteColor: S_green
-XClock*secondColor: S_base0
-XClock*majorColor: S_base0
-XClock*minorColor: S_base0
-
-! Emacs GUI Stuff
-emacs.menuBar: off
-emacs.toolBar: 0
-emacs.verticalScrollBars: off
-emacs.font: Inconsolata\ Medium\ 14
-emacs.geometry: 80x24
-emacs.background: black
-emacs.foreground: white
-emacs.cursorColor: steel\ blue
+! XClock*hourColor: S_cyan
+! XClock*minuteColor: S_green
+! XClock*secondColor: S_base0
+! XClock*majorColor: S_base0
+! XClock*minorColor: S_base0
 

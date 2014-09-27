@@ -26,10 +26,14 @@ elif [ -x /usr/lib/x86_64-linux-gnu/lxpolkit ]; then
     /usr/lib/x86_64-linux-gnu/lxpolkit &
 fi
 
+urxvtd &
+emacs --daemon
+
+xsetroot -solid "#2e3a47"
+
 [ -x $HOME/.wallpaper ] && $HOME/.wallpaper
 [ -x $HOME/.xsession.local ] && $HOME/.xsession.local
 [ -e $HOME/.Xresources ] && xrdb $HOME/.Xresources
 [ -e $HOME/.Xresources.local ] && xrdb -override $HOME/.Xresources.local
 
 i3
-
