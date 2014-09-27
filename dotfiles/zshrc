@@ -17,38 +17,24 @@ compinit
 
 [ "x$TERM" = "xxterm" ] && export TERM="xterm-256color"
 
-#PS1="⛈ ⦗%n•%m %1~⦘%(#.#.⚡) "
-PS1="[%n@%m %1~]%(#.#.$) "
+PS1="$ "
 
 PATH="$PATH:$HOME/gandalf/bin:$HOME/finglas/bin"
 
 # per http://guides.rubygems.org/faqs/#user-install
-if which ruby 1>/dev/null 2>&1 && which gem 1>/dev/null 2>&1; then
-    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-fi
-
-if [ -d $HOME/.rbenv/bin ]; then
-    PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
-fi
+# if which ruby 1>/dev/null 2>&1 && which gem 1>/dev/null 2>&1; then
+#     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+# fi
+# 
+# if [ -d $HOME/.rbenv/bin ]; then
+#     PATH="$HOME/.rbenv/bin:$PATH"
+#     eval "$(rbenv init -)"
+# fi
 
 export PATH
 
-alias e="emacsclient -a '' -c -nw"
-alias o=xdg-open
-alias g=git
-alias t="todo.sh -d ~/.todo.cfg"
-alias j=jrnl
-alias gc="git commit -m"
-alias gca="git commit -am"
-alias gs="git status"
-alias gl="git log"
-alias gp="git push"
-alias gk="gitk"
-alias gg="git gui"
-
-# TODO: Check for non-BSD ls and fallback to non-alias or colorls
-# alias ls="ls --color -F"
+alias e="vim"
+alias j="jrnl"
 
 # stuff for vagrant
 export VAGRANT_DEFAULT_PROVIDER=libvirt

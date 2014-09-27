@@ -5,3 +5,5 @@
 	default = simple
 [alias]
 	lol = log --graph --oneline --decorate --all
+[color]
+	ui = false
