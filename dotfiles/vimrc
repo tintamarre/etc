@@ -9,7 +9,6 @@ let g:netrw_cursor=0
 " http://shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 
-execute pathogen#infect()
 set backupdir=~/finglas/tmp
 set directory=~/finglas/tmp
 set backup
