@@ -1,3 +1,0 @@
-[submodule "dotfiles/emacs.d/lisp/evil"]
-	path = dotfiles/emacs.d/lisp/evil
-	url = git://gitorious.org/evil/evil.git
