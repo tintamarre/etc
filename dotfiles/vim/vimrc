@@ -1,0 +1,76 @@
+" let g:loaded_netrw = 1
+" let g:loaded_netrwPlugin = 1
+let g:loaded_matchparen = 1
+let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
+let g:netrw_banner=0
+let g:netrw_cursor=0
+
+" disable alternate screen for vim
+" http://shallowsky.com/linux/noaltscreen.html
+set t_ti= t_te=
+
+execute pathogen#infect()
+set backupdir=~/finglas/tmp
+set directory=~/finglas/tmp
+set backup
+
+set t_Co=256
+set mouse=a
+set ttymouse=xterm2
+set background=dark
+colorscheme wombat256i
+syntax on
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
+set list
+set listchars=tab:▸\ ,eol:¬
+set nowrap
+set textwidth=0
+set colorcolumn=72
+set cursorline
+set nocursorcolumn
+set number
+set nocompatible
+set hlsearch
+set vb t_vb= "no bell or visual bell
+set clipboard+=unnamed
+
+set nocindent
+filetype plugin on
+filetype plugin indent on
+filetype plugin indent off
+set autoindent
+set nosmartindent
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set ruler
+set showcmd
+set showmode
+set laststatus=2
+
+" allow to switch away from unsaved buffers without saving OR
+" discarding changes
+set hidden
+
+" http://www.guyrutenberg.com/2013/09/23/quickly-exiting-insert-mode-in-vim/
+inoremap kj <ESC>
+inoremap ,w <ESC>:w<Enter>
+" nmap ; :
+let mapleader = ","
+map <Leader>w :w<Enter>
+" http://vim.wikia.com/wiki/Display_line_numbers
+" map <Leader>n :set invrelativenumber<Enter>
+" map <Leader>m :set invcursorline invcursorcolumn<Enter>
+map <Leader>e :Explore<Enter>
+map <Leader>t :Texplore<Enter>
+
+" https://raw.githubusercontent.com/benmills/vimux/master/doc/vimux.txt
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
+map <Leader>vx :VimuxInterruptRunner<CR>
+map <Leader>vc :VimuxClearRunnerHistory<CR>
+map <Leader>vz :VimuxZoomRunner<CR>
