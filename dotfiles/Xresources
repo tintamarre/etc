@@ -1,32 +1,33 @@
-! http://xcolors.net/dl/rasi
+! http://www.xcolors.net/dl/swayr
+! swayr color scheme
 
-*background : #1c1c1c
-*foreground : #dcdcdc
+*background: #1c1709
+! *foreground: #c2b9a1
+*foreground: #ffac44
 
-!black
-*color0:                  #1B1D1E
-*color8:                  #505354
-!red
-*color1:                  #F92672
-*color9:                  #FF5995
-!green
-*color2:                  #82B414
-*color10:                 #B6E354
-!yellow
-*color3:                  #FD971F
-*color11:                 #FEED6C
-!blue
-*color4:                  #4E82AA
-*color12:                 #0C73C2
-!magenta
-*color5:                  #8C54FE
-*color13:                 #9E6FFE
-!cyan
-*color6:                  #465457
-*color14:                 #899CA1
-!white
-*color7:                  #CCCCC6
-*color15:                 #F8F8F2
+*color0:     #1c1709
+*color8:     #4f4939
+
+*color1:     #8e4317
+*color9:     #f07935
+
+*color2:     #787200
+*color10:    #d9d138
+
+*color3:     #945c00
+*color11:    #ffab26
+
+*color4:     #315094
+*color12:    #8aa9ed
+
+*color5:     #5c2e40
+*color13:    #ff8cb8
+
+*color6:     #00617d
+*color14:    #43bfe0
+
+*color7:     #c2b9a1
+*color15:    #f2e8c9
 
 
 ! http://hintsforums.macworld.com/showthread.php?t=9282
@@ -71,10 +72,10 @@ URxvt*geometry: 80x24
 URxvt*internalBorder: 0
 
 ! XClock*background: S_base03
-! XClock*render: false
-! XClock*foreground: S_base0
-! XClock*hands: S_base0
-! XClock*highlight: S_base0
+XClock*render: false
+XClock*foreground: #ffac44
+XClock*hands: #ffac44
+XClock*highlight: #ffac44
 
 ! XClock*hourColor: S_cyan
 ! XClock*minuteColor: S_green
@@ -82,3 +83,5 @@ URxvt*internalBorder: 0
 ! XClock*majorColor: S_base0
 ! XClock*minorColor: S_base0
 
+XCalc.*.Command.foreground: #ffac44
+XCalc.*.Form.bevel.background: #8e4317
