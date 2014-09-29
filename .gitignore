@@ -2,6 +2,7 @@
 private
 emacs.d/auto-save-list
 emacs.d/session*
+fbrun_history
 *~
 \#*\#
 .\#*
