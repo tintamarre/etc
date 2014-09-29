@@ -52,6 +52,18 @@ Mod4 l :FocusRight
 Mod4 j :FocusDown
 Mod4 k :FocusUp
 
+Mod4 Left :MoveLeft 1
+Mod4 Control Left :MoveLeft 5
+Mod4 Right :MoveRight 1
+Mod4 Control Right :MoveRight 5
+Mod4 Down :MoveDown 1
+Mod4 Control Down :MoveDown 5
+Mod4 Up :MoveUp 1
+Mod4 Control Up :MoveUp 5
+
+Mod4 Mod1 Left :MoveTabLeft
+Mod4 Mod1 Right :MoveTabRight
+
 Mod4 slash :SetTitleDialog
 
 # go to a specific tab in the current window
