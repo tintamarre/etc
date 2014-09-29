@@ -5,9 +5,8 @@
 [ -e $HOME/.hgrc -o -L $HOME/.hgrc ] && rm $HOME/.hgrc
 [ -e $HOME/.tmux.conf -o -L $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
 [ -e $HOME/.jrnl_config -o -L $HOME/.jrnl_config ] && rm $HOME/.jrnl_config
-[ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
-[ -e $HOME/.i3status.conf -o -L $HOME/.i3status.conf ] && rm $HOME/.i3status.conf
-[ -e $HOME/.i3 -o -L $HOME/.i3 ] && rm -r $HOME/.i3
+[ -e $HOME/.profile -o -L $HOME/.profile ] && rm $HOME/.profile
+[ -e $HOME/.fluxbox -o -L $HOME/.fluxbox ] && rm -r $HOME/.fluxbox
 [ -e $HOME/.Xresources -o -L $HOME/.Xresources ] && rm $HOME/.Xresources
 [ -e $HOME/.xsession -o -L $HOME/.xsession ] && rm $HOME/.xsession
 
@@ -15,9 +14,9 @@ ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vimrc $HOME/.vimr
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/gitconfig $HOME/.gitconfig
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/hgrc $HOME/.hgrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/tmux.conf $HOME/.tmux.conf
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/zshrc $HOME/.zshrc
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/i3status.conf $HOME/.i3status.conf
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/i3 $HOME/.i3
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/jrnl_config $HOME/.jrnl_config
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/profile $HOME/.profile
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/fluxbox $HOME/.fluxbox
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/Xresources $HOME/.Xresources
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/xsession $HOME/.xsession
 
