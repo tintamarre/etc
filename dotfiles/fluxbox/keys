@@ -54,12 +54,16 @@ Mod4 k :FocusUp
 
 Mod4 Left :MoveLeft 1
 Mod4 Control Left :MoveLeft 5
+Mod4 Shift Control Left :MoveLeft 25
 Mod4 Right :MoveRight 1
 Mod4 Control Right :MoveRight 5
+Mod4 Shift Control Right :MoveRight 25
 Mod4 Down :MoveDown 1
 Mod4 Control Down :MoveDown 5
+Mod4 Shift Control Down :MoveDown 25
 Mod4 Up :MoveUp 1
 Mod4 Control Up :MoveUp 5
+Mod4 Shift Control Up :MoveUp 25
 
 Mod4 Mod1 Left :MoveTabLeft
 Mod4 Mod1 Right :MoveTabRight
