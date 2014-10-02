@@ -38,13 +38,14 @@ XTerm*VT100.geometry:     80x24
 
 XTerm.termName: xterm-256color
 
-XTerm*font1: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-XTerm*font2: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-XTerm*font: -xos4-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
-XTerm*boldFont: -xos4-terminus-bold-*-*-*-18-*-*-*-*-*-iso10646-*
-XTerm*font4: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
-XTerm*font5: -xos4-terminus-medium-*-*-*-28-*-*-*-*-*-iso10646-*
-XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
+XTerm*font1: -*-fixed-*-*-*-*-6-*-*-*-*-*-*-*
+XTerm*font2: -*-fixed-*-*-*-*-8-*-*-*-*-*-*-*
+XTerm*font3: -*-fixed-*-*-*-*-10-*-*-*-*-*-*-*
+XTerm*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+XTerm*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
+XTerm*font4: -xos4-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
+XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
+XTerm*font6: -xos4-terminus-medium-*-*-*-28-*-*-*-*-*-iso10646-*
 
 !XTerm*faceName: Inconsolata:size=14
 
@@ -77,13 +78,13 @@ URxvt*geometry: 80x24
 !URxvt*font: xft:Inconsolata:size=14
 URxvt*internalBorder: 0
 
-! XClock*background: S_base03
+XClock*background: #1C1709
 XClock*render: false
-XClock*foreground: #ffac44
-XClock*hands: #ffac44
-XClock*highlight: #ffac44
+XClock*foreground: #FF7300
+XClock*hands: #6D3805
+XClock*highlight: #ff7300
 
-! XClock*hourColor: S_cyan
+! XClock*hourColor: #FFAC44
 ! XClock*minuteColor: S_green
 ! XClock*secondColor: S_base0
 ! XClock*majorColor: S_base0
@@ -91,3 +92,10 @@ XClock*highlight: #ffac44
 
 XCalc.*.Command.foreground: #ffac44
 XCalc.*.Form.bevel.background: #8e4317
+XCalc.*.foreground: #ff7300
+*.internalBorderColor: #ff7300
+*.Paned*borderColor: #ff7300
+*cursorColor: #6D3805
+Xedit*loadTags: False
+Xedit*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+Xedit*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
