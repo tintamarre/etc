@@ -92,7 +92,7 @@ XClock*highlight: #ff7300
 
 XCalc.*.Command.foreground: #ffac44
 XCalc.*.Form.bevel.background: #8e4317
-XCalc.*.foreground: #ff7300
+XCalc.*.borderColor: #ff7300
 *.internalBorderColor: #ff7300
 *.Paned*borderColor: #ff7300
 *cursorColor: #6D3805
