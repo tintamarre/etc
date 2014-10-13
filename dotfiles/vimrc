@@ -64,12 +64,4 @@ map <Leader>w :w<Enter>
 " map <Leader>m :set invcursorline invcursorcolumn<Enter>
 map <Leader>e :Explore<Enter>
 map <Leader>t :Texplore<Enter>
-
-" https://raw.githubusercontent.com/benmills/vimux/master/doc/vimux.txt
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vi :VimuxInspectRunner<CR>
-map <Leader>vq :VimuxCloseRunner<CR>
-map <Leader>vx :VimuxInterruptRunner<CR>
-map <Leader>vc :VimuxClearRunnerHistory<CR>
-map <Leader>vz :VimuxZoomRunner<CR>
+map <Leader>s :silent ! tmux send -t 'hack1:0' up enter<Enter>
