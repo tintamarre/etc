@@ -29,30 +29,19 @@ dnsutils
 # -----------------
 
 xorg
-xorg-xclock
-xorg-xcalc
-xorg-xlogo
-xorg-xedit
-# xorg-editres (from aur)
-xorg-xfontsel
-xorg-xman
 mesa
 mesa-libgl
 glu
 mesa-demos
-fluxbox
-slock
-dmenu
-pcmanfm
+kde-meta
+kde-gtk-config
+rekonq
 gnome-icon-theme
 gnome-themes-standard
-xterm
-x11-ssh-askpass
-lxpolkit
-xorg-xdm
+oxygen-gtk2
+oxygen-gtk3
 feh
 scrot
-# xorg-xmessage
 
 # printing
 # --------
