@@ -1,0 +1,341 @@
+# packages to install during install
+# ----------------------------------
+
+grub
+sudo
+openssh
+
+# main packages
+# -------------
+
+mksh
+tmux
+rsync
+mosh
+espeak
+vim
+ed
+pwgen
+tree
+bc
+zip
+unzip
+aspell
+aspell-en
+hunspell-en
+dnsutils
+
+# graphical desktop
+# -----------------
+
+xorg
+xorg-xclock
+xorg-xcalc
+xorg-xlogo
+xorg-xedit
+# xorg-editres (from aur)
+xorg-xfontsel
+xorg-xman
+mesa
+mesa-libgl
+glu
+mesa-demos
+fluxbox
+slock
+dmenu
+pcmanfm
+gnome-icon-theme
+gnome-themes-standard
+xterm
+x11-ssh-askpass
+lxpolkit
+xorg-xdm
+feh
+scrot
+# xorg-xmessage
+
+# printing
+# --------
+
+system-config-printer
+foomatic-db
+foomatic-db-engine
+cups
+cups-pdf
+cups-pk-helper
+
+# fonts
+# -----
+
+terminus-font
+ttf-dejavu
+ttf-ubuntu-font-family
+ttf-inconsolata
+ttf-droid
+ttf-freefont
+ttf-bitstream-vera
+ttf-liberation
+ttf-linux-libertine
+ttf-symbola
+
+# graphics apps
+# -------------
+
+imagemagick
+graphicsmagick
+ghostscript
+gv
+gcolor2
+gimp
+blender
+povray
+sane
+xsane
+xsane-gimp
+gphoto2
+
+# productivity apps
+# -----------------
+
+libreoffice
+mupdf
+gv
+zathura
+zathura-ps
+zathura-pdf-mupdf
+
+# codecs
+# ------
+
+gstreamer0.10-plugins
+gst-libav
+gst-plugins-bad
+gst-plugins-good
+gst-plugins-ugly
+
+# mulimedia apps (recording, playing, and converting)
+# ---------------------------------------------------
+
+ffmpeg
+ffmpegthumbnailer
+mplayer
+vlc
+audacity
+asunder
+xine-ui
+minitube
+youtube-dl
+recordmydesktop
+gtk-recordmydesktop
+simplescreenrecorder
+kdenlive
+openshot
+frei0r-plugins
+
+# network & communications applications
+# ------------------------------------
+
+links
+lynx
+wget
+weechat
+firefox
+filezilla
+chromium
+gvfs
+gvfs-gphoto2
+gvfs-mtp
+ca-certificates
+pidgin
+pidgin-otr
+thunderbird
+libcanberra
+hexchat
+
+# programming languages & libraries
+# ---------------------------------
+
+## c
+## -
+
+base-devel
+clang
+llvm
+
+gtkmm3
+gtkmm3-docs
+
+## go
+## --
+
+go
+gcc-go
+
+## rust
+## ----
+
+rust
+
+## python
+## ------
+
+python
+python2
+ipython
+ipython2
+python-ipdb
+python2-ipdb
+
+## perl
+## ----
+
+perlbrew
+cpanminus
+
+## database / sql
+## --------------
+
+sqlite
+mariadb
+postgresql
+
+## javascript (v8 provides d8 on cli, js is spidermonkey)
+## ------------------------------------------------------
+
+v8
+js
+gjs
+nodejs
+rhino
+
+## tcl / tk (mostly to provide tk to other langs)
+tcl
+tk
+
+## java
+## ----
+
+jdk8-openjdk
+
+## ruby
+## ----
+
+ruby
+jruby
+
+## asm
+## ---
+
+nasm
+yasm
+
+## clojure
+## -------
+
+clojure
+
+## common lisp
+## -----------
+
+sbcl
+clisp
+
+## scheme
+## ------
+
+guile
+chicken
+# racket
+# bigloo
+
+## ocaml
+## -----
+
+# ocaml
+# ocaml-findlib
+# llvm-ocaml
+
+# other programming-related utilities
+# -----------------------------------
+
+git
+python-virtualenv
+python2-virtualenv
+python-sphinx
+python2-sphinx
+python-pip
+python2-pip
+ack
+ncurses
+python-psutil
+python2-psutil
+python-pygit2
+python2-pygit2
+cmake
+ctags
+cscope
+mercurial
+
+# emulators
+# ---------
+
+qemu
+bochs
+simh
+vice
+# hatari
+# stella
+
+# gaming
+# ------
+
+bsd-games
+rogue
+nethack
+freeciv
+
+# virtualization
+# --------------
+
+libvirt
+virt-manager
+bridge-utils
+ebtables
+dnsmasq
+dmidecode
+iptables
+
+# extra documentation
+# -------------------
+
+opengl-man-pages
+imagemagick-doc
+gimp-help-en
+sqlite-doc
+imagemagick-doc
+openjdk7-doc
+ruby-docs
+linux-docs
+linux-manpages
+python-docs
+python2-docs
+
+# RADAR
+# -----
+
+# texlive-core
+# python2-numpy
+# python2-lxml
+# uniconverter
+# cuda
+# gvfs-smb
+# gvfs-afc
+# mailx
+# mutt
+
+### RESEARCH ###
+
+# randr utilities, like arandr or lrandr
+# something to rip CDs to ogg-vorbis, and convert MP3s to ogg-vorbis
+# better mua, gpg integration, and filtering/filing of mails
+# git-annex and git-annex assistant?
