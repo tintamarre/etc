@@ -1,5 +1,7 @@
 # mksh
 
+[ ! $SSH_AGENT_PID ] && eval `ssh-agent -s`
+
 [ "x$TERM" = "xxterm" ] && export TERM="xterm-256color"
 
 PS1="# " ; (( USER_ID )) && PS1="$ "
