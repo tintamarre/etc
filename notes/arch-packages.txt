@@ -264,6 +264,8 @@ cmake
 ctags
 cscope
 mercurial
+qt
+qtcreator
 
 # emulators
 # ---------
