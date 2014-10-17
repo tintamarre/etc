@@ -5,6 +5,8 @@ let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
 let g:netrw_banner=0
 let g:netrw_cursor=0
 
+execute pathogen#infect()
+
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
