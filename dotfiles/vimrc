@@ -15,7 +15,7 @@ set backupdir=~/finglas/tmp
 set directory=~/finglas/tmp
 set backup
 
-set t_Co=8
+set t_Co=256
 set mouse=a
 set ttymouse=xterm2
 set background=dark
