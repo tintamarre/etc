@@ -36,6 +36,7 @@ mesa-demos
 kde-meta
 kde-gtk-config
 rekonq
+ksshaskpass
 gnome-icon-theme
 gnome-themes-standard
 oxygen-gtk2
