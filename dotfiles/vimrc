@@ -17,8 +17,8 @@ set t_Co=8
 set mouse=a
 set ttymouse=xterm2
 set background=dark
-" colorscheme wombat256i
-" syntax on
+colorscheme wombat256i
+syntax on
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
 " set list
