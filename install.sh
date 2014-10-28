@@ -6,6 +6,7 @@
 [ -e $HOME/.tmux.conf -o -L $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
 [ -e $HOME/.jrnl_config -o -L $HOME/.jrnl_config ] && rm $HOME/.jrnl_config
 [ -e $HOME/.profile -o -L $HOME/.profile ] && rm $HOME/.profile
+[ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
 [ -e $HOME/.fluxbox -o -L $HOME/.fluxbox ] && rm -r $HOME/.fluxbox
 [ -e $HOME/.Xresources -o -L $HOME/.Xresources ] && rm $HOME/.Xresources
 [ -e $HOME/.xsession -o -L $HOME/.xsession ] && rm $HOME/.xsession
@@ -16,6 +17,7 @@ ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/hgrc $HOME/.hgrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/jrnl_config $HOME/.jrnl_config
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/profile $HOME/.profile
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/zshrc $HOME/.zshrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/fluxbox $HOME/.fluxbox
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/Xresources $HOME/.Xresources
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/xsession $HOME/.xsession
