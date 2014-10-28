@@ -1,6 +1,7 @@
 #!/bin/sh
 
 [ -e $HOME/.vimrc -o -L $HOME/.vimrc ] && rm $HOME/.vimrc
+[ -e $HOME/.vim -o -L $HOME/.vim ] && rm -rf $HOME/.vim
 [ -e $HOME/.gitconfig -o -L $HOME/.gitconfig ] && rm $HOME/.gitconfig
 [ -e $HOME/.hgrc -o -L $HOME/.hgrc ] && rm $HOME/.hgrc
 [ -e $HOME/.tmux.conf -o -L $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
@@ -12,6 +13,7 @@
 [ -e $HOME/.xsession -o -L $HOME/.xsession ] && rm $HOME/.xsession
 
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vimrc $HOME/.vimrc
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vim $HOME/.vim
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/gitconfig $HOME/.gitconfig
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/hgrc $HOME/.hgrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/tmux.conf $HOME/.tmux.conf
