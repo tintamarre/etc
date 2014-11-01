@@ -9,6 +9,7 @@ openssh
 # -------------
 
 mksh
+zsh
 tmux
 rsync
 mosh
@@ -35,6 +36,10 @@ glu
 mesa-demos
 kde-meta
 kde-gtk-config
+k3b
+dvd+rw-tools
+cdrdao
+amarok
 rekonq
 ksshaskpass
 gnome-icon-theme
