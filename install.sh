@@ -9,7 +9,6 @@
 [ -e $HOME/.profile -o -L $HOME/.profile ] && rm $HOME/.profile
 [ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
 [ -e $HOME/.fluxbox -o -L $HOME/.fluxbox ] && rm -r $HOME/.fluxbox
-[ -e $HOME/.Xresources -o -L $HOME/.Xresources ] && rm $HOME/.Xresources
 [ -e $HOME/.xsession -o -L $HOME/.xsession ] && rm $HOME/.xsession
 
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vimrc $HOME/.vimrc
@@ -21,7 +20,6 @@ ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/jrnl_config $HOME
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/profile $HOME/.profile
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/zshrc $HOME/.zshrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/fluxbox $HOME/.fluxbox
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/Xresources $HOME/.Xresources
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/xsession $HOME/.xsession
 
 [ -d $HOME/.ssh ] || mkdir $HOME/.ssh
