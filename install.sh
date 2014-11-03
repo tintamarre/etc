@@ -9,8 +9,6 @@
 [ -e $HOME/.jrnl_config -o -L $HOME/.jrnl_config ] && rm $HOME/.jrnl_config
 [ -e $HOME/.profile -o -L $HOME/.profile ] && rm $HOME/.profile
 [ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
-[ -e $HOME/.fluxbox -o -L $HOME/.fluxbox ] && rm -r $HOME/.fluxbox
-[ -e $HOME/.xsession -o -L $HOME/.xsession ] && rm $HOME/.xsession
 
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vim $HOME/.vim
@@ -21,8 +19,6 @@ ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/tmux.conf $HOME/.
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/jrnl_config $HOME/.jrnl_config
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/profile $HOME/.profile
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/zshrc $HOME/.zshrc
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/fluxbox $HOME/.fluxbox
-ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/xsession $HOME/.xsession
 
 [ -d $HOME/.ssh ] || mkdir $HOME/.ssh
 [ -e $HOME/.ssh/authorized_keys -o -L $HOME/.ssh/authorized_keys ] && rm $HOME/.ssh/authorized_keys
