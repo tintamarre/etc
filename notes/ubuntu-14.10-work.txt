@@ -1,0 +1,313 @@
+# ubuntu 14.10 (unity) desktop
+# ============================
+
+# core cli stuff
+# --------------
+
+openssh-server
+tmux
+zsh
+zsh-doc
+mksh
+pwgen
+espeak
+beep
+curl
+ack-grep
+tree
+ansible
+vagrant
+cpio
+juju
+
+# utilities
+# ---------
+unity-tweak-tool
+compizconfig-settings-manager
+xfce4-terminal
+dconf-editor
+cryptsetup-bin
+
+# net, web & comm
+# ---------------
+
+gopher
+links
+lynx
+chromium-browser
+traceroute
+tcptraceroute
+whois
+nmap
+hexchat
+pidgin
+pidgin-otr
+
+# extra docs
+# ----------
+
+opengl-4-html-doc
+# posix manpages restricted and only available in multiverse?
+# manpages-posix
+# manpages-posix-dev
+
+# graphics
+# --------
+
+blender
+inkscape
+gimp
+gimp-help-en
+pencil
+mypaint
+k3d
+xpaint
+
+# gis, cartography, & visualization
+# ---------------------------------
+
+grass
+qgis
+gmt
+gmt-tutorial-pdf
+gmt-doc-pdf
+
+# video recording and editing
+# ---------------------------
+
+openshot
+pitivi
+recordmydesktop
+gtk-recordmydesktop
+# look into: http://www.maartenbaert.be/simplescreenrecorder/
+
+# development stuff
+# -----------------
+
+# editors & ides
+# ``````````````
+
+vim-gnome
+emacs24
+anjuta
+geany
+leafpad
+# install atom.io editor from deb
+
+# programming-related utilities
+# `````````````````````````````
+
+git
+gitk
+git-gui
+bzr
+mercurial
+fossil
+cvs
+subversion
+bmake
+cmake
+
+# gui & mobile toolkits / sdks
+# ````````````````````````````
+
+# qt
+# ..
+
+qtcreator
+libxcb-doc
+libsqlite3-dev
+qt4-dev-tools
+qt4-doc
+python-pyside
+python3-pyside
+pyside-tools
+
+# gtk+
+# ....
+
+gnome-devel
+
+# ubuntu platform sdk
+# ...................
+
+# per: http://developer.ubuntu.com/start/ubuntu-sdk/installing-the-sdk/
+# $ sudo add-apt-repository ppa:ubuntu-sdk-team/ppa
+# $ sudo apt-get update && sudo apt-get install ubuntu-sdk
+
+# databases / nosql
+# `````````````````
+
+sqlite3
+sqlite3-doc
+
+# asm
+# ```
+
+# nasm
+
+# c/c++
+# `````
+
+build-essential
+llvm
+clang
+libxml2-dev
+libxslt1-dev
+ncurses-doc
+
+# python
+# ``````
+
+python-dev
+python3-dev
+python-doc
+python3-doc
+virtualenv
+python3-virtualenv
+python-pip
+python3-pip
+
+# javascript / etc.
+# `````````````````
+
+#libmozjs-24-bin provides js24
+libmozjs-24-bin
+nodejs
+gjs
+
+# perl
+# ````
+
+perlbrew
+cpanminus
+rakudo
+
+# clojure
+# ```````
+
+# openjdk-8-jdk
+# openjdk-8-jre
+# openjdk-8-jre-headless
+# openjdk-8-dbg
+# openjdk-8-doc
+# openjdk-8-demo
+# openjdk-8-source
+# clojure1.4
+
+# ocaml
+# `````
+
+# ocaml-batteries-included
+# omake
+# omake-doc
+# opam
+# opam-docs
+
+# scheme / lisp
+# `````````````
+
+# sbcl
+# sbcl-doc
+# clisp
+# clisp-doc
+# chicken-bin
+# mit-scheme
+# mit-scheme-doc
+# guile-2.0
+# guile-2.0-doc
+# racket
+# racket-doc
+
+# lua
+# ```
+
+lua5.2
+lua5.2-doc
+
+# basic
+# `````
+
+# gambas3
+
+# cobol
+# `````
+
+# open-cobol
+
+# php
+# ```
+
+php5-cli
+php5-sqlite
+php-pear
+
+# go
+# ``
+
+# TODO: install go and gcc-go
+
+# virtualization & containerisation
+# ---------------------------------
+
+qemu
+qemu-kvm
+libvirt-bin
+libvirt-doc
+virtinst
+virt-manager
+lxc
+lxctl
+lxc-templates
+python-lxc
+python3-lxc
+python-libvirt
+docker.io
+python-docker
+python3-docker
+bridge-utils
+
+# emulators
+# ---------
+
+# bochs
+# bochs-doc
+# simh
+
+# games
+# -----
+
+# micropolis
+# opencity
+# freeciv-server
+# freeciv-sound
+# freeciv-client-gtk
+# freeciv-client-extras
+# freecol
+# nethack-console
+# slashem
+# games-rogue
+# bsdgames
+# bsdgames-nonfree
+# crawl
+# oolite
+# minetest
+# minetest-mod-moreblocks
+# minetest-mod-moreores
+# minetest-mod-pipeworks
+# gnome-games
+# warzone2100
+
+# wallpaper
+# ---------
+ubuntu-wallpapers-karmic
+ubuntu-wallpapers-lucid
+ubuntu-wallpapers-maverick
+ubuntu-wallpapers-natty
+ubuntu-wallpapers-oneiric
+ubuntu-wallpapers-precise
+ubuntu-wallpapers-quantal
+ubuntu-wallpapers-raring
+ubuntu-wallpapers-saucy
+ubuntu-wallpapers-trusty
+ubuntu-wallpapers-utopic
