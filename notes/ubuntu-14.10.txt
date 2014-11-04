@@ -149,7 +149,10 @@ nasm
 
 build-essential
 llvm
+llvm-3.5-doc
 clang
+clang-3.5-doc
+clang-3.5-examples
 libxml2-dev
 libxslt1-dev
 ncurses-doc
@@ -241,6 +244,12 @@ php-pear
 
 # go
 # ``
+
+golang
+golang-doc
+golang-go.tools
+gccgo
+gccgo-4.9-doc
 
 # TODO: install go and gcc-go
 
