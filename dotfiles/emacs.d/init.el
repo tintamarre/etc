@@ -22,12 +22,18 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+;; http://stackoverflow.com/questions/19054228/emacs-disable-theme-background-color-in-terminal
+;; http://ergoemacs.org/emacs/emacs_playing_with_color_theme.html
+(defun on-after-init ()
+  (if (display-graphic-p (selected-frame))
+    (load-theme 'wombat)))
+(add-hook 'window-setup-hook 'on-after-init)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (wombat)))
  '(frame-background-mode (quote dark))
  '(indicate-empty-lines t)
  '(scroll-bar-mode nil)
