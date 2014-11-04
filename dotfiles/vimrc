@@ -49,7 +49,7 @@ set expandtab
 set ruler
 set showcmd
 set showmode
-set laststatus=2
+set laststatus=1
 
 " allow to switch away from unsaved buffers without saving OR
 " discarding changes
