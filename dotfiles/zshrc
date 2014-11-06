@@ -35,6 +35,7 @@ PATH="$PATH:$HOME/gandalf/bin:$HOME/finglas/bin"
 export PATH
 
 alias e="vim"
+alias em="emacsclient -nw -ca ''"
 alias j="jrnl"
 alias ls="ls --color=auto"
 
