@@ -1,0 +1,197 @@
+Do full system update:
+
+$ sudo yum update
+
+Enable sshd:
+
+$ sudo systemctl enable sshd
+$ sudo systemctl start sshd
+
+Install zsh, git, gvim, emacs:
+
+$ sudo yum install zsh git gvim emacs
+
+Reboot.
+
+---
+
+Copy data via rsync/ssh.
+
+Install dotfiles.
+
+$ cd ~/gandalf/src/github/bayprogrammer/dotfiles
+$ sh install.sh
+
+Activate zsh as shell:
+
+$ chsh -s /usr/bin/zsh
+
+Reboot or relog.
+
+---
+
+Install packages:
+
+$ sudo yum install ack ansible audacity blender bochs bsd-games bzr \
+@c-development clang cvs @development-libs @development-tools \
+docker-io elinks emacs epiphany fedora-dockerfiles fig fossil \
+freeciv gcolor2 gimp git gitg git-gui gitk gjs glade gl-manpages \
+GMT @gnome-games gnome-shell-extension-pomodoro \
+@gnome-software-development gnome-tweak-tool gpick grass \
+gtk-recordmydesktop gvim ImageMagick inkscape js k3d l3afpad \
+libvirt-daemon-lxc links llvm llvm-devel llvm-doc llvm-libs lxc \
+lynx mercurial minetest minetest-server mosh mypaint nasm nethack \
+nmap nodejs npm @ocaml ocaml-docs pencil perlbrew pitivi povray \
+pwgen python3-gstreamer1 python3-numpy python3-setuptools \
+python3-sphinx python-docker-py python-setuptools python-sphinx \
+python-virtualenv qemu qgis qgis-grass rakudo-star recordmydesktop \
+rogue sfxr shutter simh sjasm slashem subversion tmux tree v8 \
+vim-enhanced @virtualization xiphos xpaint @x-software-development \
+yasm z80asm z80dasm zsh
+
+---
+
+Finish installing pomodoro extension:
+
+$ gnome-pomodoro &
+
+---
+
+Gnome Terminal Settings:
+
+Edit > Preferences > General:
+
+Uncheck Show menubar by default in new terminals
+
+Edit > Profile Preferences > Scrolling:
+
+Uncheck Show scrollbar
+
+---
+
+Gnome Settings:
+
+Gnome Settings > Privacy:
+
+- Screen Lock -> Automatic Screen Lock On, after 30 minutes
+
+Gnome Settings > Power:
+
+- Blank screen after 15 minutes.
+
+Gnome Settings > Keyboard > Typing:
+
+- Lower delay
+- Maximize speed
+
+Gnome Settings > Keyboard > Shortcuts:
+
+- > Launchers > Home folder: Super + i
+
+- > System > Show the run command prompt: Super + ;
+
+- > Custom Shortcuts > Add:
+   - Name: Gnome Terminal
+   - Command: gnome-terminal
+      - Super + Return to activate.
+
+---
+
+Ubuntu Tweak Tool Tweaks:
+
+Ubuntu Tweak Tool > Extensions:
+
+- Enable Applications menu
+
+Ubuntu Tweak Tool > Tob Bar:
+
+- Show date
+
+Ubuntu Tweak Tool > Typing:
+
+- Caps Lock key behavior: Make Caps Lock an additional ESC
+
+Ubuntu Tweak Tool > Windows:
+
+- Enable Resize with Secondary-click
+- Set Window Action Key to Alt
+
+Ubuntu Tweak Tool > Workspaces
+
+- Disable Workspaces only on primary display
+
+---
+
+Favorites:
+
+- Gnome Terminal
+- Files
+- gVim
+- Emacs
+- Gedit
+- L3afpad
+- Virtual Machine Manager
+- Firefox
+- Epiphany
+- Rhythmbox
+- Gimp
+- Blender
+- Inkscape
+- Shutter
+
+---
+
+Virtualization & Containerization:
+
+libvirtd should be automatically enabled and started; but if necessary:
+
+$ sudo systemctl enable libvirtd
+$ sudo systemctl start libvirtd
+
+We need to create a policy to allow members of wheel access to administer / control libvirt:
+
+$ sudo vim /etc/polkit-1/rules.d/51-libvirtwheel.rules
+
+<code>
+polkit.addRule(function(action, subject){
+    if (action.id == "org.libvirt.unix.manage" &&
+        subject.isInGroup("wheel")) {
+            return polkit.Result.YES;
+    }
+});
+</code>
+
+From Virtual Machine Manager, ensure you can connect to localhost (QEMU) and localhost (LXC) without having to enter you password. Add those connections if necessary. You should also be able to access libvirt from the virtual machine manager for other systems with your user in wheel over ssh if you've created the needed polkit rule to allow access to wheel users. May need to reboot after installing the virtualization packages for the local libvirt access to be fully functional.
+
+Enable nested virtualization for KVM:
+
+See http://my-techno-arena.blogspot.com/2014/08/installing-kvm-in-lubuntu1404-with.html
+
+$ sudo cat /sys/module/kvm_intel/parameters/nested
+N
+$ sudo -s
+# echo 'options kvm_intel nested=1' >> /etc/modprobe.d/qemu-system-x86.conf
+<reboot>
+$ sudo cat /sys/module/kvm_intel/parameters/nested
+Y
+
+TODO: Optional: Configure bridged networking
+
+TODO: Docker & LXC
+
+---
+
+Install and setup communications apps (as applicable):
+
+- Hexchat
+- Pidgin & OTR
+- Thunderbird & Enigmail
+
+---
+
+TODO: Firewall configuration (via UFW?)
+
+TODO: Manually install Vagrant
+
+TODO: Manually install keybase client
+
