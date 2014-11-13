@@ -1,0 +1,141 @@
+# main
+# ====
+
+zsh
+gvim
+vim-enhanced
+emacs
+l3afpad
+tmux
+pwgen
+mosh
+xiphos
+ack
+tree
+ansible
+gnome-tweak-tool
+gnome-shell-extension-pomodoro
+
+# internet
+# ========
+
+epiphany
+lynx
+elinks
+links
+nmap
+pidgin-otr
+
+# graphics
+# ========
+
+gimp
+inkscape
+mypaint
+ImageMagick
+pencil
+gcolor2
+gpick
+shutter
+
+# video & screen recording
+# ========================
+
+pitivi
+# BUG: pitivi didn't automatically pull in
+# required dependency!! Needs more hard
+# dependencies! (python3-numpy and python3-gstreamer1)
+python3-numpy
+python3-gstreamer1
+recordmydesktop
+gtk-recordmydesktop
+
+# audio processing
+# ----------------
+
+audacity
+
+# developement
+# ============
+
+# version control
+# ---------------
+
+git
+git-gui
+gitk
+gitg
+fossil
+mercurial
+bzr
+cvs
+subversion
+
+# c
+# -
+
+@c-development
+@development-libs
+@development-tools
+@x-software-development
+@gnome-software-development
+llvm
+llvm-devel
+llvm-doc
+llvm-libs
+clang
+glade
+
+# javascript
+# ----------
+
+js
+v8
+gjs
+nodejs
+npm
+
+# perl
+# ----
+
+rakudo-star
+perlbrew
+
+# python
+# ------
+
+python-setuptools
+python3-setuptools
+python-virtualenv
+python-sphinx
+python3-sphinx
+python-docker-py
+
+# virtualization, containerization, emulation
+# ===========================================
+
+qemu
+bochs
+simh
+lxc
+libvirt-daemon-lxc
+lxc-templates
+@virtualization
+docker-io
+fedora-dockerfiles
+fig
+
+# gis & cartography
+# =================
+
+grass
+qgis
+qgis-grass
+GMT
+
+# INSTALL MANUALLY
+# ================
+
+# vagrant
+# jrnl
+
