@@ -25,15 +25,15 @@ ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/terminfo $HOME/.t
 [ -d $HOME/.ssh ] || mkdir $HOME/.ssh
 [ -e $HOME/.ssh/authorized_keys -o -L $HOME/.ssh/authorized_keys ] && rm $HOME/.ssh/authorized_keys
 [ -e $HOME/gandalf/src/private/dotfiles-private/ssh/authorized_keys ] && \
-    ln -s $HOME/gandalf/src/private/dotfiles-private/ssh/authorized_keys \
+    cp -p $HOME/gandalf/src/private/dotfiles-private/ssh/authorized_keys \
         $HOME/.ssh/authorized_keys
 [ -e $HOME/.ssh/id_rsa -o -L $HOME/.ssh/id_rsa ] && rm $HOME/.ssh/id_rsa
 [ -e $HOME/gandalf/src/private/dotfiles-private/ssh/id_rsa  ] && \
-    ln -s $HOME/gandalf/src/private/dotfiles-private/ssh/id_rsa \
+    cp -p $HOME/gandalf/src/private/dotfiles-private/ssh/id_rsa \
         $HOME/.ssh/id_rsa
 [ -e $HOME/.ssh/id_rsa.pub -o -L $HOME/.ssh/id_rsa.pub ] && rm $HOME/.ssh/id_rsa.pub
 [ -e $HOME/gandalf/src/private/dotfiles-private/ssh/id_rsa.pub ] && \
-    ln -s $HOME/gandalf/src/private/dotfiles-private/ssh/id_rsa.pub \
+    cp -p $HOME/gandalf/src/private/dotfiles-private/ssh/id_rsa.pub \
         $HOME/.ssh/id_rsa.pub
 
 [ -d $HOME/finglas ] || mkdir $HOME/finglas
