@@ -42,11 +42,6 @@ shutter
 # ========================
 
 pitivi
-# BUG: pitivi didn't automatically pull in
-# required dependency!! Needs more hard
-# dependencies! (python3-numpy and python3-gstreamer1)
-python3-numpy
-python3-gstreamer1
 recordmydesktop
 gtk-recordmydesktop
 
@@ -123,7 +118,6 @@ lxc-templates
 @virtualization
 docker-io
 fedora-dockerfiles
-fig
 
 # gis & cartography
 # =================
