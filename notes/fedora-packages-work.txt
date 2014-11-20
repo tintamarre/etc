@@ -9,7 +9,6 @@ l3afpad
 tmux
 pwgen
 mosh
-xiphos
 ack
 tree
 ansible
