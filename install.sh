@@ -1,6 +1,7 @@
 #!/bin/sh
 
 [ -e $HOME/.vimrc -o -L $HOME/.vimrc ] && rm $HOME/.vimrc
+[ -e $HOME/.gvimrc -o -L $HOME/.gvimrc ] && rm $HOME/.gvimrc
 [ -e $HOME/.vim -o -L $HOME/.vim ] && rm -rf $HOME/.vim
 [ -e $HOME/.emacs.d -o -L $HOME/.emacs.d ] && rm -rf $HOME/.emacs.d
 [ -e $HOME/.gitconfig -o -L $HOME/.gitconfig ] && rm $HOME/.gitconfig
@@ -12,6 +13,7 @@
 [ -e $HOME/.vim -o -L $HOME/.terminfo ] && rm -rf $HOME/.terminfo
 
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vimrc $HOME/.vimrc
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/gvimrc $HOME/.gvimrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vim $HOME/.vim
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/emacs.d $HOME/.emacs.d
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/gitconfig $HOME/.gitconfig
