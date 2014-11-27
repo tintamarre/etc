@@ -7,3 +7,7 @@ fbrun_history
 \#*\#
 .\#*
 tags*
+dotfiles/emacs.d/elpa
+dotfiles/emacs.d/eshell
+dotfiles/emacs.d/ido.last
+dotfiles/emacs.d/url
