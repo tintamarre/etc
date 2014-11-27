@@ -154,8 +154,6 @@ ruby
 ruby-devel
 ruby-doc
 rubygem
-rubygem-bundler
-rubygem-bundler-doc
 
 # rust
 # ----
