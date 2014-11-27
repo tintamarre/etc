@@ -148,6 +148,14 @@ python-docker-py
 @ocaml
 ocaml-docs
 
+# ruby
+# ----
+ruby
+ruby-doc
+rubygem
+rubygem-bundler
+rubygem-bundler-doc
+
 # rust
 # ----
 
