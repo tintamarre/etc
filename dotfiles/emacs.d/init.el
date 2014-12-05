@@ -7,7 +7,7 @@
  comint-process-echoes t
  inhibit-startup-screen t
  display-time-24hr-format 1
- org-log-done 'note
+ org-log-done 'time
  )
 
 ; (add-to-list 'load-path "~/.emacs.d/lisp/evil")
