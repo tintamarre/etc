@@ -79,6 +79,7 @@ mercurial
 bzr
 cvs
 subversion
+darcs
 
 # c
 # -
@@ -94,6 +95,10 @@ llvm-doc
 llvm-libs
 clang
 glade
+bmake
+mk-files
+cmake
+scons
 
 # asm
 # ---
@@ -132,15 +137,22 @@ python-docker-py
 # clojure
 # -------
 
-# clojure
-# clojure-contrib
-# leiningen not working yet for f21 - beta
-# leiningen
-# java-1.8.0-openjdk
-# java-1.8.0-openjdk-devel
-# java-1.8.0-openjdk-demo
-# java-1.8.0-openjdk-javadoc
-# java-1.8.0-openjdk-src
+clojure
+clojure-contrib
+java-1.8.0-openjdk
+java-1.8.0-openjdk-devel
+java-1.8.0-openjdk-demo
+java-1.8.0-openjdk-javadoc
+java-1.8.0-openjdk-src
+# gradle :(
+ant
+
+# groovy
+# ------
+
+groovy
+groovy-javadoc
+# gant :(
 
 # ocaml
 # -----
@@ -148,17 +160,64 @@ python-docker-py
 @ocaml
 ocaml-docs
 
+# scheme
+# ------
+
+guile
+guile-lib
+chicken
+chicken-libs
+slib
+
+# common-lisp
+# -----------
+
+sbcl
+clisp
+# quicklisp :(
+
+# erlang
+# ------
+
+erlang
+
+# haskell
+# -------
+
+@haskell
+
 # ruby
 # ----
 ruby
 ruby-devel
 ruby-doc
 rubygem
+rubygem-rake
+
+# lua
+# ---
+
+lua
+luadoc
+luarocks
 
 # rust
 # ----
 
-# not available in official repos yet
+# not available in official repos yet :(
+
+# go
+# --
+
+golang
+golang-godoc
+gcc-go
+
+# LEGOS!!
+# -------
+
+nbc
+nxt_python
 
 # virtualization, containerization, emulation
 # ===========================================
