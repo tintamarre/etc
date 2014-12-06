@@ -10,7 +10,8 @@
 [ -e $HOME/.jrnl_config -o -L $HOME/.jrnl_config ] && rm $HOME/.jrnl_config
 [ -e $HOME/.profile -o -L $HOME/.profile ] && rm $HOME/.profile
 [ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
-[ -e $HOME/.vim -o -L $HOME/.terminfo ] && rm -rf $HOME/.terminfo
+[ -e $HOME/.terminfo -o -L $HOME/.terminfo ] && rm -rf $HOME/.terminfo
+[ -e $HOME/.sbclrc -o -L $HOME/.sbclrc ] && rm $HOME/.sbclrc
 
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/gvimrc $HOME/.gvimrc
@@ -23,6 +24,7 @@ ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/jrnl_config $HOME
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/profile $HOME/.profile
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/zshrc $HOME/.zshrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/terminfo $HOME/.terminfo
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/sbclrc $HOME/.sbclrc
 
 [ -d $HOME/.ssh ] || mkdir $HOME/.ssh
 [ -e $HOME/.ssh/authorized_keys -o -L $HOME/.ssh/authorized_keys ] && rm $HOME/.ssh/authorized_keys
