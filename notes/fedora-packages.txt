@@ -16,7 +16,6 @@ ansible
 gnome-tweak-tool
 gnome-shell-extension-pomodoro
 @mate-desktop
-i3
 
 # internet
 # ========
