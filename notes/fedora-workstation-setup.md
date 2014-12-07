@@ -41,7 +41,7 @@ Log out, log back in to MATE Desktop.
 
 ## Configure MATE Desktop
 
-Compile and install stumpwm (see stumpwm-fedora.txt).
+Compile and install stumpwm (see stumpwm-fedora.md).
 
 Once installed, open dconf-editor, navigate to:
 
@@ -53,7 +53,7 @@ Configure just one top MATE panel. Default menu, shortcuts, taskbar, workspace
 switcher, tray, clock.
 
 Relog for stumpwm to be active with MATE. It should replace its modeline with
-the solitary MATE panel we've configured above before relogging.
+the solitary MATE panel we've configured.
 
 ## Mate Terminal Settings
 
@@ -75,22 +75,21 @@ Set scrollbar is Disabled.
 
 System > Preferences > Hardware > Keyboard:
 
-> General:
+Under General tab:
 
 Delay: quite short
+
 Speed: quite fast
 
-> Layouts:
+Under Layouts tab:
 
 Click Options...
 
 Under Caps Lock key behavior, select "Make Caps Lock an additional ESC"
 
-> Layouts:
+Confirm, then, from the dialog click Add...
 
-Click Add...
-
-> By language
+Under By language tab:
 
 Language: English
 

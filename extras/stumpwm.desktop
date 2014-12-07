@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=stumpwm
+NoDisplay=true
+Comment=flexible window manager written in common lisp
+Exec=stumpwm
+X-GNOME-WMName=stumpwm
+X-GNOME-Autostart-Phase=WindowManager
+X-GNOME-Provides=windowmanager
+X-GNOME-Autostart-Notify=false

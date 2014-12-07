@@ -14,8 +14,8 @@ ack
 tree
 ansible
 gnome-tweak-tool
-gnome-shell-extension-pomodoro
 @mate-desktop
+dmenu
 
 # internet
 # ========
@@ -176,6 +176,7 @@ slib
 sbcl
 clisp
 # quicklisp :(
+texinfo
 
 # erlang
 # ------
@@ -279,7 +280,6 @@ gl-manpages
 # rust language
 # vagrant
 # keybase
-# jrnl
 # simplescreenrecorder?
 # http://www.maartenbaert.besimplescreenrecorder/
 
