@@ -45,9 +45,13 @@ Compile and install stumpwm (see stumpwm-fedora.md).
 
 Once installed, open dconf-editor, navigate to:
 
-org.mate.session.required-components
+org.mate.desktop.session.required-components
 
 Then set windowmanager to stumpwm.
+
+navigate to org.mate.desktop.background
+
+Then uncheck show-desktop-icons
 
 Configure just one top MATE panel. Default menu, shortcuts, taskbar, workspace
 switcher, tray, clock.
