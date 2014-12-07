@@ -16,6 +16,7 @@ ansible
 gnome-tweak-tool
 @mate-desktop
 dmenu
+scrot
 
 # internet
 # ========
