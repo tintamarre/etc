@@ -40,8 +40,8 @@ OnTitlebar Mouse2 :Lower
 OnTitlebar Mouse3 :WindowMenu
 
 # alt-tab
-Mod1 Tab :NextWindow {static groups} (workspace=[current]) (minimized=no)
-Mod1 Shift Tab :PrevWindow {static groups} (workspace=[current]) (minimized=no)
+Mod1 Tab :NextWindow {static groups} (workspace=[current])
+Mod1 Shift Tab :PrevWindow {static groups} (workspace=[current])
 
 # cycle through tabs in the current window
 Mod4 bracketright :NextTab
