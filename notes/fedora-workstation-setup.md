@@ -1,6 +1,6 @@
 # Fedora Setup Notes
 
-Starting with Fedora 21 Workstation Beta 4.
+Starting with Fedora 21.
 
 ## Update and initial setup:
 
@@ -61,39 +61,6 @@ Set Built-in schemas to Tango.
 Edit > Profile Preferences > Scrolling:
 
 Set scrollbar is Disabled.
-
-## Keyboard Settings
-
-System > Preferences > Hardware > Keyboard:
-
-Under General tab:
-
-Delay: quite short
-
-Speed: quite fast
-
-Under Layouts tab:
-
-Click Options...
-
-Under Caps Lock key behavior, select "Make Caps Lock an additional ESC"
-
-Confirm, then, from the dialog click Add...
-
-Under By language tab:
-
-Language: English
-
-Variants: English (US) English (Colemak)
-
-Once added, you can switch between US English Querty and Colemak layouts easily
-from the language tray applet.
-
-## Screen Lock Timeout Settings
-
-System > Preferences > Look and Feel > Screensaver
-
-Change "Regard the computer as idle after" to 30 minutes.
 
 ## Virtualization & Containerization
 
