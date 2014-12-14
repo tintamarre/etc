@@ -5,6 +5,7 @@ zsh
 gvim
 vim-enhanced
 emacs
+mg
 l3afpad
 tmux
 pwgen
@@ -15,6 +16,7 @@ tree
 ansible
 gnome-tweak-tool
 @mate-desktop
+fluxbox
 dmenu
 scrot
 
