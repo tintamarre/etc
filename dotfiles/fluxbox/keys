@@ -135,7 +135,7 @@ Mod1 space :WindowMenu
 Mod4 l :Exec mate-screensaver-command -l
 
 # open file manager
-Mod4 i :Exec caja --browser
+Mod4 i :Exec caja --no-desktop --browser ~
 
 # change to a specific workspace
 Mod4 1 :Workspace 1
