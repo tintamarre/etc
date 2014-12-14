@@ -132,10 +132,10 @@ Mod4 u :Fullscreen
 Mod1 space :WindowMenu
 
 # lock the screen
-Mod4 l :Exec 'mate-screensaver-command -l'
+Mod4 l :Exec mate-screensaver-command -l
 
 # open file manager
-Mod4 i :Exec caja
+Mod4 i :Exec caja --browser
 
 # change to a specific workspace
 Mod4 1 :Workspace 1
@@ -159,7 +159,7 @@ Mod4 Control 6 :SendToWorkspace 6
 Mod4 Control 7 :SendToWorkspace 7
 Mod4 Control 8 :SendToWorkspace 8
 Mod4 Control 9 :SendToWorkspace 9
-Mod4 Control 10 :SendToWorkspace 10
+Mod4 Control 0 :SendToWorkspace 10
 
 # send the current window and change to a specific workspace
 Mod4 Shift 1 :TakeToWorkspace 1
@@ -171,4 +171,4 @@ Mod4 Shift 6 :TakeToWorkspace 6
 Mod4 Shift 7 :TakeToWorkspace 7
 Mod4 Shift 8 :TakeToWorkspace 8
 Mod4 Shift 9 :TakeToWorkspace 9
-Mod4 Shift 10 :TakeToWorkspace 10
+Mod4 Shift 0 :TakeToWorkspace 10
