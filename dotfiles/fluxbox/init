@@ -20,7 +20,8 @@ session.screen0.toolbar.visible:	false
 session.screen0.toolbar.layer:	Dock
 session.screen0.toolbar.autoHide:	false
 session.screen0.toolbar.alpha:	255
-session.screen0.toolbar.tools:	prevworkspace, workspacename, nextworkspace, iconbar, systemtray, clock
+#session.screen0.toolbar.tools:	prevworkspace, workspacename, nextworkspace, iconbar, systemtray, clock
+session.screen0.toolbar.tools:	
 session.screen0.toolbar.maxOver:	false
 session.screen0.toolbar.widthPercent:	63
 session.screen0.window.focus.alpha:	255
