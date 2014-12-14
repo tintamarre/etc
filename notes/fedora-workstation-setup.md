@@ -34,30 +34,17 @@ Reboot or relog.
 
 ## Install packages:
 
-$ cd ~/gandalf/src/github/bayprogrammer/dotfiles/scripts
-$ sudo yum install `sh flatten_pkg_list.sh ../notes/fedora-packages.txt`
+    $ cd ~/gandalf/src/github/bayprogrammer/dotfiles/scripts
+    $ sudo yum install `sh flatten_pkg_list.sh ../notes/fedora-packages.txt`
 
 Log out, log back in to MATE Desktop.
 
 ## Configure MATE Desktop
 
-Compile and install stumpwm (see stumpwm-fedora.md).
+    $ cd ~/gandalf/src/github/bayprogrammer/dotfiles
+    $ ./configure-mate.sh
 
-Once installed, open dconf-editor, navigate to:
-
-org.mate.desktop.session.required-components
-
-Then set windowmanager to stumpwm.
-
-navigate to org.mate.desktop.background
-
-Then uncheck show-desktop-icons
-
-Configure just one top MATE panel. Default menu, shortcuts, taskbar, workspace
-switcher, tray, clock.
-
-Relog for stumpwm to be active with MATE. It should replace its modeline with
-the solitary MATE panel we've configured.
+Relog.
 
 ## Mate Terminal Settings
 
