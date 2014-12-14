@@ -11,16 +11,16 @@ OnDesktop Mouse3 :RootMenu
 # OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
 # OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
 
-# alt + left/right click to move/resize a window
-OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+# super + left/right click to move/resize a window
+OnWindow Mod4 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
 OnWindowBorder Move1 :StartMoving
 
-OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+OnWindow Mod4 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
 OnLeftGrip Move1 :StartResizing bottomleft
 OnRightGrip Move1 :StartResizing bottomright
 
 # alt + middle click to lower the window
-OnWindow Mod1 Mouse2 :Lower
+OnWindow Mod4 Mouse2 :Lower
 
 # control-click a window's titlebar and drag to attach windows
 OnTitlebar Control Mouse1 :StartTabbing
@@ -44,121 +44,131 @@ Mod1 Tab :NextWindow {static groups} (workspace=[current]) (minimized=no)
 Mod1 Shift Tab :PrevWindow {static groups} (workspace=[current]) (minimized=no)
 
 # cycle through tabs in the current window
-Mod4 Control l :NextTab
-Mod4 Control h :PrevTab
+Mod4 bracketright :NextTab
+Mod4 bracketleft :PrevTab
 
-Mod4 h :FocusLeft
-Mod4 l :FocusRight
-Mod4 j :FocusDown
-Mod4 k :FocusUp
+# move tabs within current window
+Mod4 Shift bracketright :MoveTabRight
+Mod4 Shift bracketleft :MoveTabLeft
 
-Mod4 Left :MoveLeft 1
-Mod4 Control Left :MoveLeft 5
-Mod4 Shift Control Left :MoveLeft 25
-Mod4 Right :MoveRight 1
-Mod4 Control Right :MoveRight 5
-Mod4 Shift Control Right :MoveRight 25
-Mod4 Down :MoveDown 1
-Mod4 Control Down :MoveDown 5
-Mod4 Shift Control Down :MoveDown 25
-Mod4 Up :MoveUp 1
-Mod4 Control Up :MoveUp 5
-Mod4 Shift Control Up :MoveUp 25
+# change to previous/next workspace
+Mod4 comma :PrevWorkspace
+Mod4 period :NextWorkspace
 
-Mod4 Mod1 Left :MoveTabLeft
-Mod4 Mod1 Right :MoveTabRight
+# send the current window and follow it to previous/next workspace
+Mod4 Shift comma :TakeToPrevWorkspace
+Mod4 Shift period :TakeToNextWorkspace
 
+# focus windows with keyboard directionally
+Mod4 Left :FocusLeft
+Mod4 Right :FocusRight
+Mod4 Down :FocusDown
+Mod4 Up :FocusUp
+
+# move windows with keyboard
+Mod4 Shift Left :MoveLeft 10
+Mod4 Shift Control Left :MoveLeft 1
+
+Mod4 Shift Right :MoveRight 10
+Mod4 Shift Control Right :MoveRight 1
+
+Mod4 Shift Down :MoveDown 10
+Mod4 Shift Control Down :MoveDown 1
+
+Mod4 Shift Up :MoveUp 10
+Mod4 Shift Control Up :MoveUp 1
+
+# resize windows with keyboard
+Mod4 Mod1 Left :Resize -10 0
+Mod4 Mod1 Control Left :Resize -1 0
+
+Mod4 Mod1 Right :Resize 10 0
+Mod4 Mod1 Control Right :Resize 1 0
+
+Mod4 Mod1 Up :Resize 0 -10
+Mod4 Mod1 Control Up :Resize 0 -1
+
+Mod4 Mod1 Down :Resize 0 10
+Mod4 Mod1 Control Down :Resize 0 1
+
+# easily rename windows
 Mod4 slash :SetTitleDialog
 
 # go to a specific tab in the current window
-Mod4 1 :Tab 1
-Mod4 2 :Tab 2
-Mod4 3 :Tab 3
-Mod4 4 :Tab 4
-Mod4 5 :Tab 5
-Mod4 6 :Tab 6
-Mod4 7 :Tab 7
-Mod4 8 :Tab 8
-Mod4 9 :Tab 9
+#Mod4 1 :Tab 1
+#Mod4 2 :Tab 2
+#Mod4 3 :Tab 3
+#Mod4 4 :Tab 4
+#Mod4 5 :Tab 5
+#Mod4 6 :Tab 6
+#Mod4 7 :Tab 7
+#Mod4 8 :Tab 8
+#Mod4 9 :Tab 9
 
 # open a terminal
-Mod4 Return :Exec xterm
+Mod4 Return :Exec mate-terminal
 
 # open a dialog to run programs
-Mod4 semicolon :Exec dmenu_run -nb '#1C1709' -nf '#FF7330' -sb '#FF7330' -sf '#1C1709'
+Mod4 semicolon :Exec dmenu_run
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
-176 :Exec amixer sset Master,0 1+
-174 :Exec amixer sset Master,0 1-
-160 :Exec amixer sset Master,0 toggle
+#176 :Exec amixer sset Master,0 1+
+#174 :Exec amixer sset Master,0 1-
+#160 :Exec amixer sset Master,0 toggle
 
+# take a screenshot
+# TODO: replace with wrapper script to properly
+#       file new screenshots
 Print :Exec scrot
 
 # current window commands
-Mod4 Control p :Close
-# Mod1 F5 :Kill
-# Mod4 n :Minimize
+Mod4 k :Close
+Mod4 n :Minimize
 Mod4 m :Maximize
 Mod4 u :Fullscreen
 
 # open the window menu
 Mod1 space :WindowMenu
 
-# exit fluxbox
-Control Mod1 Delete :Exec slock
-Mod4 i :Exec pcmanfm
+# lock the screen
+Mod4 l :Exec 'mate-screensaver-command -l'
 
-# change to previous/next workspace
-Mod4 comma :PrevWorkspace
-Mod4 period :NextWorkspace
-
-# send the current window to previous/next workspace
-# Mod4 Left :SendToPrevWorkspace
-# Mod4 Right :SendToNextWorkspace
-
-# send the current window and follow it to previous/next workspace
-Control Mod4 comma :TakeToPrevWorkspace
-Control Mod4 period :TakeToNextWorkspace
+# open file manager
+Mod4 i :Exec caja
 
 # change to a specific workspace
-# Control F1 :Workspace 1
-# Control F2 :Workspace 2
-# Control F3 :Workspace 3
-# Control F4 :Workspace 4
-# Control F5 :Workspace 5
-# Control F6 :Workspace 6
-# Control F7 :Workspace 7
-# Control F8 :Workspace 8
-# Control F9 :Workspace 9
-# Control F10 :Workspace 10
-# Control F11 :Workspace 11
-# Control F12 :Workspace 12
+Mod4 1 :Workspace 1
+Mod4 2 :Workspace 2
+Mod4 3 :Workspace 3
+Mod4 4 :Workspace 4
+Mod4 5 :Workspace 5
+Mod4 6 :Workspace 6
+Mod4 7 :Workspace 7
+Mod4 8 :Workspace 8
+Mod4 9 :Workspace 9
+Mod4 0 :Workspace 10
 
 # send the current window to a specific workspace
-# Mod4 F1 :SendToWorkspace 1
-# Mod4 F2 :SendToWorkspace 2
-# Mod4 F3 :SendToWorkspace 3
-# Mod4 F4 :SendToWorkspace 4
-# Mod4 F5 :SendToWorkspace 5
-# Mod4 F6 :SendToWorkspace 6
-# Mod4 F7 :SendToWorkspace 7
-# Mod4 F8 :SendToWorkspace 8
-# Mod4 F9 :SendToWorkspace 9
-# Mod4 F10 :SendToWorkspace 10
-# Mod4 F11 :SendToWorkspace 11
-# Mod4 F12 :SendToWorkspace 12
+Mod4 Control 1 :SendToWorkspace 1
+Mod4 Control 2 :SendToWorkspace 2
+Mod4 Control 3 :SendToWorkspace 3
+Mod4 Control 4 :SendToWorkspace 4
+Mod4 Control 5 :SendToWorkspace 5
+Mod4 Control 6 :SendToWorkspace 6
+Mod4 Control 7 :SendToWorkspace 7
+Mod4 Control 8 :SendToWorkspace 8
+Mod4 Control 9 :SendToWorkspace 9
+Mod4 Control 10 :SendToWorkspace 10
 
 # send the current window and change to a specific workspace
-# Control Mod4 F1 :TakeToWorkspace 1
-# Control Mod4 F2 :TakeToWorkspace 2
-# Control Mod4 F3 :TakeToWorkspace 3
-# Control Mod4 F4 :TakeToWorkspace 4
-# Control Mod4 F5 :TakeToWorkspace 5
-# Control Mod4 F6 :TakeToWorkspace 6
-# Control Mod4 F7 :TakeToWorkspace 7
-# Control Mod4 F8 :TakeToWorkspace 8
-# Control Mod4 F9 :TakeToWorkspace 9
-# Control Mod4 F10 :TakeToWorkspace 10
-# Control Mod4 F11 :TakeToWorkspace 11
-# Control Mod4 F12 :TakeToWorkspace 12
+Mod4 Shift 1 :TakeToWorkspace 1
+Mod4 Shift 2 :TakeToWorkspace 2
+Mod4 Shift 3 :TakeToWorkspace 3
+Mod4 Shift 4 :TakeToWorkspace 4
+Mod4 Shift 5 :TakeToWorkspace 5
+Mod4 Shift 6 :TakeToWorkspace 6
+Mod4 Shift 7 :TakeToWorkspace 7
+Mod4 Shift 8 :TakeToWorkspace 8
+Mod4 Shift 9 :TakeToWorkspace 9
+Mod4 Shift 10 :TakeToWorkspace 10
