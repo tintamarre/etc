@@ -12,6 +12,7 @@
 [ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
 [ -e $HOME/.terminfo -o -L $HOME/.terminfo ] && rm -rf $HOME/.terminfo
 [ -e $HOME/.sbclrc -o -L $HOME/.sbclrc ] && rm $HOME/.sbclrc
+[ -e $HOME/.fluxbox -o -L $HOME/.fluxbox ] && rm -rf $HOME/.fluxbox
 
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/gvimrc $HOME/.gvimrc
@@ -25,6 +26,7 @@ ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/profile $HOME/.pr
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/zshrc $HOME/.zshrc
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/terminfo $HOME/.terminfo
 ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/sbclrc $HOME/.sbclrc
+ln -s $HOME/gandalf/src/github/bayprogrammer/dotfiles/dotfiles/fluxbox $HOME/.fluxbox
 
 [ -d $HOME/.ssh ] || mkdir $HOME/.ssh
 [ -e $HOME/.ssh/authorized_keys -o -L $HOME/.ssh/authorized_keys ] && rm $HOME/.ssh/authorized_keys
