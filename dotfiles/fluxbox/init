@@ -70,6 +70,6 @@ session.styleOverlay:	/home/zebdeos/.fluxbox/overlay
 session.slitlistFile:	/home/zebdeos/.fluxbox/slitlist
 session.ignoreBorder:	false
 session.tabPadding:	0
-session.styleFile:	/home/zebdeos/.fluxbox/styles/MurrinaBW
+session.styleFile:	/usr/share/fluxbox/styles/bloe
 session.appsFile:	/home/zebdeos/.fluxbox/apps
 session.configVersion:	13
