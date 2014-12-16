@@ -13,7 +13,9 @@ ack
 tree
 ansible
 gnome-tweak-tool
-gnome-shell-extension-pomodoro
+@mate-desktop
+dmenu
+scrot
 
 # internet
 # ========
@@ -64,6 +66,7 @@ mercurial
 bzr
 cvs
 subversion
+darcs
 
 # c
 # -
@@ -79,6 +82,19 @@ llvm-doc
 llvm-libs
 clang
 glade
+bmake
+mk-files
+cmake
+scons
+
+# asm
+# ---
+
+nasm
+yasm
+sjasm
+z80asm
+z80dasm
 
 # javascript
 # ----------
@@ -105,6 +121,81 @@ python-sphinx
 python3-sphinx
 python-docker-py
 
+# clojure
+# -------
+
+clojure
+clojure-contrib
+java-1.8.0-openjdk
+java-1.8.0-openjdk-devel
+java-1.8.0-openjdk-demo
+java-1.8.0-openjdk-javadoc
+java-1.8.0-openjdk-src
+# gradle :(
+ant
+
+# groovy
+# ------
+
+groovy
+groovy-javadoc
+# gant :(
+
+# ocaml
+# -----
+
+@ocaml
+ocaml-docs
+
+# scheme
+# ------
+
+guile
+guile-lib
+chicken
+chicken-libs
+slib
+
+# common-lisp
+# -----------
+
+sbcl
+clisp
+# quicklisp :(
+texinfo
+
+# erlang
+# ------
+
+erlang
+
+# haskell
+# -------
+
+@haskell
+
+# ruby
+# ----
+ruby
+ruby-devel
+ruby-doc
+rubygem
+rubygem-rake
+
+# lua
+# ---
+
+lua
+luadoc
+luarocks
+
+# go
+# --
+
+golang
+golang-godoc
+gcc-go
+
 # virtualization, containerization, emulation
 # ===========================================
 
@@ -117,6 +208,7 @@ lxc-templates
 @virtualization
 docker-io
 fedora-dockerfiles
+fig
 
 # gis & cartography
 # =================
@@ -130,5 +222,3 @@ GMT
 # ================
 
 # vagrant
-# jrnl
-
