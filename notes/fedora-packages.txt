@@ -103,6 +103,10 @@ bmake
 mk-files
 cmake
 scons
+libxml2-devel
+gnutls-devel
+libgsasl-devel
+libidn-devel
 
 # asm
 # ---
