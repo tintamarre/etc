@@ -7,10 +7,10 @@ fbrun_history
 \#*\#
 .\#*
 tags*
-dotfiles/emacs.d/elpa
-dotfiles/emacs.d/eshell
-dotfiles/emacs.d/ido.last
-dotfiles/emacs.d/url
-dotfiles/fluxbox/styles
-dotfiles/emacs.d/bookmarks
-dotfiles/emacs.d/tramp
+public/emacs.d/elpa
+public/emacs.d/eshell
+public/emacs.d/ido.last
+public/emacs.d/url
+public/fluxbox/styles
+public/emacs.d/bookmarks
+public/emacs.d/tramp

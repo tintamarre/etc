@@ -1,6 +1,0 @@
-[submodule "dotfiles/vim/vim-pathogen"]
-	path = dotfiles/vim/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-[submodule "dotfiles/vim/bundle/vim-wombat256i"]
-	path = dotfiles/vim/bundle/vim-wombat256i
-	url = https://github.com/dsolstad/vim-wombat256i
