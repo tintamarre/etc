@@ -5,21 +5,18 @@ let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
 let g:netrw_banner=0
 let g:netrw_cursor=0
 
-execute pathogen#infect()
-
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 
-set backupdir=~/finglas/tmp
-set directory=~/finglas/tmp
+set backupdir=~/local/tmp
+set directory=~/local/tmp
 set backup
 
 set t_Co=256
 set mouse=a
 set ttymouse=xterm2
 set background=dark
-" colorscheme wombat256i
 syntax on
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
