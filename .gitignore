@@ -1,12 +1,12 @@
 .netrwhist
 private
-emacs.d/auto-save-list
-emacs.d/session*
 fbrun_history
 *~
 \#*\#
 .\#*
 tags*
+public/emacs.d/auto-save-list
+public/emacs.d/session*
 public/emacs.d/elpa
 public/emacs.d/eshell
 public/emacs.d/ido.last
