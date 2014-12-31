@@ -1,62 +1,100 @@
 #!/bin/sh
 
-[ -e $HOME/.vimrc -o -L $HOME/.vimrc ] && rm $HOME/.vimrc
-[ -e $HOME/.gvimrc -o -L $HOME/.gvimrc ] && rm $HOME/.gvimrc
-[ -e $HOME/.vim -o -L $HOME/.vim ] && rm -rf $HOME/.vim
-[ -e $HOME/.emacs.d -o -L $HOME/.emacs.d ] && rm -rf $HOME/.emacs.d
-[ -e $HOME/.gitconfig -o -L $HOME/.gitconfig ] && rm $HOME/.gitconfig
-[ -e $HOME/.hgrc -o -L $HOME/.hgrc ] && rm $HOME/.hgrc
-[ -e $HOME/.tmux.conf -o -L $HOME/.tmux.conf ] && rm $HOME/.tmux.conf
-[ -e $HOME/.jrnl_config -o -L $HOME/.jrnl_config ] && rm $HOME/.jrnl_config
-[ -e $HOME/.profile -o -L $HOME/.profile ] && rm $HOME/.profile
-[ -e $HOME/.zshrc -o -L $HOME/.zshrc ] && rm $HOME/.zshrc
-[ -e $HOME/.terminfo -o -L $HOME/.terminfo ] && rm -rf $HOME/.terminfo
-[ -e $HOME/.sbclrc -o -L $HOME/.sbclrc ] && rm $HOME/.sbclrc
-[ -e $HOME/.fluxbox -o -L $HOME/.fluxbox ] && rm -rf $HOME/.fluxbox
+DOTFILES="$(pwd)"
+DEST="$HOME"
+source_dirs="public private"
+special_cases="config ssh"
+ignore="attic gitconfig_cit hgrc_cit"
 
-ln -s $HOME/etc/public/vimrc $HOME/.vimrc
-ln -s $HOME/etc/public/gvimrc $HOME/.gvimrc
-ln -s $HOME/etc/public/vim $HOME/.vim
-ln -s $HOME/etc/public/emacs.d $HOME/.emacs.d
-ln -s $HOME/etc/public/gitconfig $HOME/.gitconfig
-ln -s $HOME/etc/public/hgrc $HOME/.hgrc
-ln -s $HOME/etc/public/tmux.conf $HOME/.tmux.conf
-ln -s $HOME/etc/public/jrnl_config $HOME/.jrnl_config
-ln -s $HOME/etc/public/profile $HOME/.profile
-ln -s $HOME/etc/public/zshrc $HOME/.zshrc
-ln -s $HOME/etc/public/terminfo $HOME/.terminfo
-ln -s $HOME/etc/public/sbclrc $HOME/.sbclrc
-ln -s $HOME/etc/public/fluxbox $HOME/.fluxbox
+list_files() {
+    pathname=$1
+    exclude_regex='~$\|#'
+    for i in $ignore; do
+        exclude_regex="$exclude_regex\|$i"
+    done
+    for lf in $(ls -1 $pathname | grep -v "$exclude_regex"); do
+        echo $pathname/$lf
+    done
+}
 
-[ -d $HOME/.ssh ] || mkdir $HOME/.ssh
-[ -e $HOME/.ssh/authorized_keys -o -L $HOME/.ssh/authorized_keys ] && rm $HOME/.ssh/authorized_keys
-[ -e $HOME/etc/private/ssh/authorized_keys ] && \
-    cp -p $HOME/etc/private/ssh/authorized_keys \
-        $HOME/.ssh/authorized_keys
-[ -e $HOME/.ssh/id_rsa -o -L $HOME/.ssh/id_rsa ] && rm $HOME/.ssh/id_rsa
-[ -e $HOME/etc/private/ssh/id_rsa  ] && \
-    cp -p $HOME/etc/private/ssh/id_rsa \
-        $HOME/.ssh/id_rsa
-[ -e $HOME/.ssh/id_rsa.pub -o -L $HOME/.ssh/id_rsa.pub ] && rm $HOME/.ssh/id_rsa.pub
-[ -e $HOME/etc/private/ssh/id_rsa.pub ] && \
-    cp -p $HOME/etc/private/ssh/id_rsa.pub \
-        $HOME/.ssh/id_rsa.pub
+mkdir_if_absent() {
+    [ -d $1 ] || mkdir $1
+}
 
-[ -d $HOME/local ] || mkdir $HOME/local
-[ -d $HOME/local/tmp ] || mkdir $HOME/local/tmp
-[ -d $HOME/local/bin ] || mkdir $HOME/local/bin
-[ -d $HOME/local/xdg-dirs ] || mkdir $HOME/local/xdg-dirs
-[ -d $HOME/local/xdg-dirs/Desktop ] || mkdir $HOME/local/xdg-dirs/Desktop
-[ -d $HOME/local/xdg-dirs/Documents ] || mkdir $HOME/local/xdg-dirs/Documents
-[ -d $HOME/local/xdg-dirs/Downloads ] || mkdir $HOME/local/xdg-dirs/Downloads
-[ -d $HOME/local/xdg-dirs/Music ] || mkdir $HOME/local/xdg-dirs/Music
-[ -d $HOME/local/xdg-dirs/Pictures ] || mkdir $HOME/local/xdg-dirs/Pictures
-[ -d $HOME/local/xdg-dirs/Public ] || mkdir $HOME/local/xdg-dirs/Public
-[ -d $HOME/local/xdg-dirs/Templates ] || mkdir $HOME/local/xdg-dirs/Templates
-[ -d $HOME/local/xdg-dirs/Videos ] || mkdir $HOME/local/xdg-dirs/Videos
+rm_if_present() {
+    [ -e $1 -o -L $1 ] && rm -rf $1
+}
 
-[ -d $HOME/.config ] || mkdir $HOME/.config
-[ -e $HOME/.config/user-dirs.dirs -o -L $HOME/.config/user-dirs.dirs ] && \
-    rm $HOME/.config/user-dirs.dirs
-ln -s $HOME/etc/public/config/user-dirs.dirs \
-    $HOME/.config/user-dirs.dirs
+config() {
+    config_source=$1
+    config_dest=$DEST/.config
+
+    mkdir_if_absent $config_dest
+    for config_f in $(list_files $config_source); do
+        config_f_dst=$config_dest/$(basename $config_f)
+        rm_if_present $config_f_dst
+        ln -s $config_f $config_f_dst
+    done
+}
+
+ssh() {
+    ssh_source=$1
+    ssh_dest=$DEST/.ssh
+
+    mkdir_if_absent $ssh_dest
+    chmod 750 $ssh_dest
+    for ssh_f in $(list_files $ssh_source); do
+        ssh_f_dst=$ssh_dest/$(basename $ssh_f)
+        rm_if_present $ssh_f_dst
+        cp -p $ssh_f $ssh_f_dst
+    done
+}
+
+standard_handler() {
+    file_source=$1
+    file_dest=$DEST/.$(basename $1)
+    rm_if_present $file_dest
+    ln -s $file_source $file_dest
+}
+
+bootstrap_home() {
+    local="$DEST/local"
+    local_dirs="tmp bin xdg-dirs"
+    xdg="$local/xdg-dirs"
+    xdg_dirs="Desktop Documents Downloads Music Pictures Public Templates Videos"
+
+    mkdir_if_absent $local
+    mkdir_if_absent $xdg
+
+    for d in $local_dirs; do
+        mkdir_if_absent $local/$d
+    done
+
+    for d in $xdg_dirs; do
+        mkdir_if_absent $xdg/$d
+    done
+}
+
+file_special_case() {
+    filename=$(basename $1)
+    for sc in $special_cases; do
+        if [ $sc = $filename ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+main() {
+    bootstrap_home
+    for sd in $source_dirs; do
+        for f in $(list_files $DOTFILES/$sd); do
+            if file_special_case $f; then
+                $(basename $f) $f
+            else
+                standard_handler $f
+            fi
+        done
+    done
+}
+main "@"
