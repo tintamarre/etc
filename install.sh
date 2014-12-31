@@ -97,4 +97,4 @@ main() {
         done
     done
 }
-main "@"
+main "$@"
