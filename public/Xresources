@@ -78,11 +78,11 @@ URxvt*geometry: 80x24
 !URxvt*font: xft:Inconsolata:size=14
 URxvt*internalBorder: 0
 
-XClock*background: #1C1709
-XClock*render: false
-XClock*foreground: #FF7300
-XClock*hands: #6D3805
-XClock*highlight: #ff7300
+!XClock*background: #1C1709
+!XClock*render: false
+!XClock*foreground: #FF7300
+!XClock*hands: #6D3805
+!XClock*highlight: #ff7300
 
 ! XClock*hourColor: #FFAC44
 ! XClock*minuteColor: S_green
@@ -90,12 +90,12 @@ XClock*highlight: #ff7300
 ! XClock*majorColor: S_base0
 ! XClock*minorColor: S_base0
 
-XCalc.*.Command.foreground: #ffac44
-XCalc.*.Form.bevel.background: #8e4317
-XCalc.*.borderColor: #ff7300
-*.internalBorderColor: #ff7300
-*.Paned*borderColor: #ff7300
-*cursorColor: #6D3805
-Xedit*loadTags: False
-Xedit*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-Xedit*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
+!XCalc.*.Command.foreground: #ffac44
+!XCalc.*.Form.bevel.background: #8e4317
+!XCalc.*.borderColor: #ff7300
+!*.internalBorderColor: #ff7300
+!*.Paned*borderColor: #ff7300
+!*cursorColor: #6D3805
+!Xedit*loadTags: False
+!Xedit*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+!Xedit*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*

@@ -1,4 +1,4 @@
-$HOME/gandalf/src/github/bayprogrammer/dotfiles/scripts/initxkb
+$HOME/etc/scripts/initxkb
 xset r rate 185 130
 
 [ ! $SSH_AGENT_PID ] && eval `ssh-agent -s`
@@ -33,4 +33,4 @@ xsetroot -solid "#0a0903"
 [ -e $HOME/.Xresources ] && xrdb $HOME/.Xresources
 [ -e $HOME/.Xresources.local ] && xrdb -override $HOME/.Xresources.local
 
-exec fluxbox
+exec $HOME/local/bin/stumpwm
