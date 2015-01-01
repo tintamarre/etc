@@ -11,8 +11,8 @@ https://github.com/stumpwm/stumpwm
 
 ## Install quicklisp
 
-    $ mkdir ~/finglas/src-cl
-    $ cd ~/finglas/src-cl
+    $ mkdir ~/local/build
+    $ cd ~/local/tmp
     $ curl -O http://beta.quicklisp.org/quicklisp.lisp
     $ sbcl --load quicklisp.lisp
     * (quicklisp-quickstart:help)
@@ -50,22 +50,10 @@ avaialable directly from the Fedora repos:
 
 ## Configure, compile, and install stumpwm
 
-    $ cd ~/gandalf/src/github/stumpwm  # create if necessary
+    $ cd ~/local/build
     $ git clone https://github.com/stumpwm/stumpwm.git
     $ cd stumpwm
     $ autoconf
-    $ ./configure --prefix=/usr/local
+    $ ./configure --prefix=$HOME/local
     $ make
-    $ sudo make install
-
-## Copy stumpwm.desktop into position
-
-In order for MATE to properly recognize stumpwm as an available window manager
-(when so configured via dconf), stumpwm needs it's own desktop entry, which we
-can place inside the /usr/local hierarchy. I have adapted such a file from
-i3.desktop from the Fedora i3 package, included in this dotfiles repo.
-
-    $ sudo cp /home/zebdeos/gandalf/src/github/bayprogrammer/dotfiles/extras/stumpwm.desktop \
-              /usr/local/share/applications
-
-Now MATE can be instructed to use stumpwm instead of its default of marco.
+    $ make install
