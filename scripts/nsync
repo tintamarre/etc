@@ -26,7 +26,7 @@ set=
 desthost=
 
 usage() {
-    echo "USAGE: nsync [-f] <set> <hostname>"
+    echo "USAGE: nsync [-f] [-c] <set> <hostname>"
     echo " SETS: vps main all"
 }
 
@@ -40,12 +40,15 @@ while [ $# -gt 0 ]; do
         '-f')
             forreal=''
             ;;
+	'-c')
+	    extraargs="$extraargs -c"
+	    ;;
         'main')
             set=$main
             ;;
         'vps')
             set=$vps
-            extraargs="--exclude=etc/private"
+            extraargs="$extraargs --exclude=etc/private"
             ;;
         'all')
             set=$all
