@@ -13,14 +13,14 @@ set backupdir=~/local/tmp
 set directory=~/local/tmp
 set backup
 
-set t_Co=256
-set mouse=a
-set ttymouse=xterm2
+" set t_Co=256
+" set mouse=a
+" set ttymouse=xterm2
 set background=dark
-syntax on
+syntax off
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
-set list
+" set list
 set listchars=tab:▸\ ,eol:¬
 set nowrap
 set textwidth=0
@@ -31,7 +31,7 @@ set textwidth=0
 set nocompatible
 set hlsearch
 set vb t_vb= "no bell or visual bell
-set clipboard+=unnamed
+" set clipboard+=unnamed
 
 set nocindent
 filetype plugin on
