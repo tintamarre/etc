@@ -26,11 +26,11 @@ elif [ -x /usr/lib/x86_64-linux-gnu/lxpolkit ]; then
     /usr/lib/x86_64-linux-gnu/lxpolkit &
 fi
 
-xsetroot -solid "#0a0903"
+xsetroot -solid "#000000"
 
 [ -x $HOME/.wallpaper ] && $HOME/.wallpaper
 [ -x $HOME/.xsession.local ] && $HOME/.xsession.local
 [ -e $HOME/.Xresources ] && xrdb $HOME/.Xresources
 [ -e $HOME/.Xresources.local ] && xrdb -override $HOME/.Xresources.local
 
-exec $HOME/local/bin/stumpwm
+exec i3
