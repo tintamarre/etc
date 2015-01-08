@@ -1,33 +1,32 @@
-! http://www.xcolors.net/dl/swayr
-! swayr color scheme
+! colorscheme: http://www.xcolors.net/dl/tangoesque
+*background:  #000000
+*foreground:  #aaaaaa
+! Black
+*color0:      #202020
+*color8:      #606060
+! Red
+*color1:      #ff6565
+*color9:      #ff8d8d
+! Green
+*color2:      #93d44f
+*color10:     #c8e7a8
+! Yellow
+*color3:      #eab93d
+*color11:     #ffc123
+! Blue
+*color4:      #204a87
+*color12:     #3465a4
+! Mangenta
+*color5:      #ce5c00
+*color13:     #f57900
+! Cyan 
+*color6:      #89b6e2
+*color14:     #46a4ff
+! White
+*color7:      #cccccc
+*color15:     #ffffff
 
-*background: #1c1709
-! *foreground: #c2b9a1
-*foreground: #ffac44
-
-*color0:     #1c1709
-*color8:     #4f4939
-
-*color1:     #8e4317
-*color9:     #f07935
-
-*color2:     #787200
-*color10:    #d9d138
-
-*color3:     #945c00
-*color11:    #ffab26
-
-*color4:     #315094
-*color12:    #8aa9ed
-
-*color5:     #5c2e40
-*color13:    #ff8cb8
-
-*color6:     #00617d
-*color14:    #43bfe0
-
-*color7:     #c2b9a1
-*color15:    #f2e8c9
+Xft.dpi: 96
 
 
 ! http://hintsforums.macworld.com/showthread.php?t=9282
