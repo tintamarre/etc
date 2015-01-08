@@ -1,0 +1,41 @@
+gen_prompt() {
+    cwd=$(pwd)
+    [ $cwd = $HOME ] && cwd="~"
+    cwd=$(basename $cwd)
+    prompt="#"
+    (( USER_ID )) && prompt="$"
+    user=$(whoami)
+    [ $user = "zebdeos" ] && user=z
+    host=$(hostname -s)
+    echo "$user@$host $cwd $prompt "
+}
+PS1='$(gen_prompt)'
+
+# for the likes of gnome-terminal and mate-terminal
+[ "x$TERM" = "xxterm" ] && export TERM="xterm-256color"
+
+PATH="$PATH:$HOME/bin:$HOME/local/bin"
+
+# per http://guides.rubygems.org/faqs/#user-install
+if which ruby 1>/dev/null 2>&1 && which gem 1>/dev/null 2>&1; then
+    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
+
+if [ -d $HOME/.rbenv/bin ]; then
+    PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
+export PATH
+
+alias em="emacs -nw"
+alias e="emacsclient -nw -ca ''"
+alias v="vim"
+
+# stuff for vagrant
+export VAGRANT_DEFAULT_PROVIDER=libvirt
+
+# stuff for python pip
+export PIP_DOWNLOAD_CACHE="$HOME/ext/package/pip-cache"
+
+export VISUAL=vim
