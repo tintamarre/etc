@@ -39,3 +39,4 @@ export VAGRANT_DEFAULT_PROVIDER=libvirt
 export PIP_DOWNLOAD_CACHE="$HOME/ext/package/pip-cache"
 
 export VISUAL=vim
+
