@@ -1,0 +1,268 @@
+# ===== non-gui system =====
+
+# ----- basic apps -----
+
+base
+#iw
+#wpa_supplicant
+grub
+rsync
+mksh
+dash
+openssh
+sudo
+openssl
+git
+cvs
+svn
+fossil
+mercurial
+tmux
+sqlite
+ack
+pwgen
+ed
+vim-minimal
+emacs-nox
+
+# ----- multimedia -----
+
+alsa-lib
+alsa-firmware
+alsa-utils
+alsa-plugins
+
+# ----- basic network apps -----
+
+curl
+wget
+tnftp
+openbsd-netcat
+netstat-nat
+bridge-utils
+ebtables
+
+# ----- text-only web and gopher browsing -----
+
+lynx
+links
+surfraw
+w3m
+elinks
+
+# ----- development languages & tools -----
+
+base-devel
+ncurses
+bmake
+llvm
+clang
+nasm
+yasm
+tcc
+perl
+perlbrew
+#TODO: aur/rakudo-star (&c.)
+cpanminus
+v8
+js
+nodejs
+lua
+luarocks
+chicken
+guile
+ocaml
+rust
+python3
+python-pip
+python-virtualenv
+cython
+pypy
+python2
+python2-pip
+python2-virtualenv
+supercollider
+ruby
+
+# ----- extra documentation -----
+
+linux-manpages
+linux-docs
+sqlite-doc
+ruby-docs
+arch-wiki-docs
+bash-docs
+gcc-docs
+python-docs
+python2-docs
+
+# ----- games (not requiring X11) -----
+
+nethack
+rogue
+bsd-games
+fortune-mod
+curseofwar
+
+# ===== non-x11 graphical workstation =====
+
+# improved fbdev console? kmscon? yaft?
+# text processing (latex, markdown)
+# sixel support on console
+# libraries for x11-independent graphics? sixel, direct fb ogl?
+# fbv ?
+
+# ===== x11 graphical desktop =====
+
+xorg
+xorg-xinit
+xorg-xdm
+x11-ssh-askpass
+xterm
+#TODO aur/mlterm
+xdg-utils
+#polkit
+#lxpolkit
+gnome-themes-standard
+i3
+dmenu
+
+# ----- fonts -----
+
+ttf-bitstream-vera
+ttf-dejavu
+ttf-freefont
+ttf-linux-libertine
+ttf-oxygen
+ttf-droid
+ttf-fira-mono
+ttf-fira-sans
+ttf-gentium
+ttf-inconsolata
+ttf-liberation
+ttf-symbola
+ttf-ubuntu-font-family
+adobe-source-code-pro-fonts
+adobe-source-sans-pro-fonts
+adobe-source-serif-pro-fonts
+cantarell-fonts
+gnu-free-fonts
+terminus-font
+
+# ----- graphics -----
+
+scrot
+feh
+gimp
+inkscape
+blender
+povray
+imagemagick
+graphicsmagick
+tumbler
+mirage
+
+# ----- productivity -----
+
+mupdf
+gv
+thunar
+fuse
+gource
+
+# ----- multimedia  -----
+
+ffmpeg
+ffmpegthumbnailer
+youtube-dl
+youtube-viewer
+minitube
+mplayer
+vlc
+gst-libav
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-base-libs
+gst-plugins-good
+gst-plugins-ugly
+espeak
+audacity
+
+# ----- graphical browsers -----
+
+surf
+firefox
+chromium
+dillo
+netsurf
+xulrunner
+
+# ----- screencasting -----
+
+recordmydesktop
+gtk-recordmydesktop
+simplescreenrecorder
+
+# ----- simulators / emulators / basic virt -----
+
+simh
+qemu
+# qemu-kvm
+bochs
+
+# ----- graphical games -----
+
+# freeciv
+# freecol
+# minetest
+# #minetest-server
+# gnugo
+# ccgo
+# simutrans
+# stone-soup
+# angband
+# wesnoth
+# widelands
+# hex-a-hop
+# gnuchess
+# xboard
+# speed-dreams
+# torcs
+# vdrift
+# flightgear
+# oolite
+# freedroidrpg
+# naev
+# warzone2100
+# 0ad
+#TODO: aur/brogue
+
+# ----- graphical / game dev libs -----
+
+allegro
+sdl
+mesa
+mesa-libgl
+libxcb
+xcb-util
+xcb-util-image
+xcb-util-renderutil
+xcb-util-wm
+xcb-util-cursor
+libxt
+libxaw
+xaw3d
+libxft
+fontconfig
+pango
+cairo
+
+# ----- graphical app extra documentation -----
+
+imagemagick-doc
+freedesktop-docs
+xorg-docs
+x-docs-pdf
+
+# ===== libvirt, containerization, etc. =====
+# LATER
