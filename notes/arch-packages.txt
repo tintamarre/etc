@@ -24,6 +24,8 @@ pwgen
 ed
 vim-minimal
 emacs-nox
+aspell
+aspell-en
 
 # ----- multimedia -----
 
@@ -83,6 +85,8 @@ python2-pip
 python2-virtualenv
 supercollider
 ruby
+android-tools
+android-udev
 
 # ----- extra documentation -----
 
@@ -126,6 +130,13 @@ xdg-utils
 gnome-themes-standard
 i3
 dmenu
+#cups  # org.cups.cupsd.service
+#cups-filters
+#cups-pdf
+#foomatic-db
+#foomatic-db-engine
+#system-config-printer
+#gutenprint
 
 # ----- fonts -----
 
@@ -169,6 +180,7 @@ gv
 thunar
 fuse
 gource
+#libreoffice-fresh
 
 # ----- multimedia  -----
 
@@ -209,6 +221,12 @@ simh
 qemu
 # qemu-kvm
 bochs
+vice
+hatari
+stella
+qtspim
+dosbox
+dosemu
 
 # ----- graphical games -----
 
