@@ -17,7 +17,7 @@ set backup
 " set mouse=a
 " set ttymouse=xterm2
 set background=dark
-syntax off
+syntax on
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
 " set list
