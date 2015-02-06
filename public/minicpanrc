@@ -1,0 +1,2 @@
+local: ~/ext/package/cpan/minicpan/
+remote: http://ftp.osuosl.org/pub/CPAN/
