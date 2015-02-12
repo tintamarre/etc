@@ -8,7 +8,12 @@
  inhibit-startup-screen t
  display-time-24hr-format 1
  org-log-done 'time
+ indent-tabs-mode nil
  )
+
+; from http://stackoverflow.com/a/10439239
+(setq tab-stop-list (number-sequence 4 200 4))
+
 
 ; (add-to-list 'load-path "~/.emacs.d/lisp/evil")
 ; (require 'evil)
