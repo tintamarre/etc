@@ -1,0 +1,9 @@
+$_REPL->load_plugin('FancyPrompt');
+$_REPL->fancy_prompt(sub {
+    my $self = shift;
+    sprintf "\n>>> ";
+});
+$_REPL->fancy_continuation_prompt(sub {
+    my $self = shift;
+    sprintf "... ";
+});
