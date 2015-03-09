@@ -136,7 +136,8 @@ Install some additional essential packages:
 
 # pacman -S --asexplicit openssh tmux rsync sudo ed zsh curl wget \
                          nethack rogue bsd-games fortune-mod pwgen \
-                         mc ranger vifm zsh-syntax-highlighting tree
+                         mc ranger vifm zsh-syntax-highlighting tree \
+                         sl
 
 Configure sudo to allow users in the wheel group to issue commands
 with super user privileges
@@ -166,7 +167,9 @@ Here's the packages I like for a GUI desktop:
                          lynx links surfraw pidgin-otr hexchat emacs \
                          gvim libreoffice-fresh cups cups-filters \
                          cups-pdf foomatic-db foomatic-db-engine \
-                         system-config-printer gnome-tweak-tool
+                         system-config-printer gnome-tweak-tool \
+                         gconf-editor xfce4-terminal mate-terminal \
+                         docky caja
 
 You will need to enable some services at this point for things to boot
 into the graphical environment upon restart:
