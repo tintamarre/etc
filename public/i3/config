@@ -6,8 +6,8 @@ set $super Mod4
 focus_follows_mouse no
 
 # How should windows be formatted? 1 pixel only please
-new_window pixel 2px
-new_float normal
+new_window normal 2px
+new_float normal 2px
 #hide_edge_borders both
 
 # Scratchpad like a BOSS!
