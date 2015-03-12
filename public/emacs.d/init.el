@@ -14,12 +14,6 @@
 ; from http://stackoverflow.com/a/10439239
 (setq tab-stop-list (number-sequence 4 200 4))
 
-
-; (add-to-list 'load-path "~/.emacs.d/lisp/evil")
-; (require 'evil)
-; (evil-mode 1)
-; (setq evil-default-cursor t)
-
 ;; http://orgmode.org/manual/Activation.html#Activation
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
@@ -48,7 +42,7 @@
 
 (put 'narrow-to-region 'disabled nil)
 
-(set-face-attribute 'default nil :font "Source Code Pro Extralight" )
+(set-face-attribute 'default nil :font "Source Code Pro Light 12" )
 
 ;; ELPA Configuration (http://www.emacswiki.org/emacs/ELPA)
 
