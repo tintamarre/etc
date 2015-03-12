@@ -99,7 +99,7 @@ Now chroot into the new installation and finalize the basic installation:
 
 <file>
 ...
-   en_US.UTF-8 UTF-8  
+   en_US.UTF-8 UTF-8
    en_US ISO-8859-1
 ...
 </file>
@@ -137,7 +137,7 @@ Install some additional essential packages:
 # pacman -S --asexplicit openssh tmux rsync sudo ed zsh curl wget \
                          nethack rogue bsd-games fortune-mod pwgen \
                          mc ranger vifm zsh-syntax-highlighting tree \
-                         sl
+                         sl dosfstools ntfsprogs
 
 Configure sudo to allow users in the wheel group to issue commands
 with super user privileges
@@ -169,7 +169,7 @@ Here's the packages I like for a GUI desktop:
                          cups-pdf foomatic-db foomatic-db-engine \
                          system-config-printer gnome-tweak-tool \
                          gconf-editor xfce4-terminal mate-terminal \
-                         docky caja
+                         docky caja fuse mtpfs gvfs-mtp
 
 You will need to enable some services at this point for things to boot
 into the graphical environment upon restart:
@@ -178,6 +178,17 @@ into the graphical environment upon restart:
 # systemctl enable sshd
 # systemctl enable gdm
 # systemctl enable org.cups.cupsd
+
+As an alternative to enabling NetworkManager we can rely on dhcpcd to
+bring up the interface (this would be useful in a server environment
+or where we don't need NetworkManager's services):
+
+# ip link  # determine what the interface is
+# systemctl enable dhcpcd@ens5
+
+And we could bring up the interface manually like this:
+
+# dhcpcd ens5
 
 You're also going to want spell checking and good fonts right out of
 the box:
@@ -208,7 +219,7 @@ recording, and video processing
                          mplayer rhythmbox gnome-sound-recorder pitivi \
                          recordmydesktop gtk-recordmydesktop \
                          simplescreenrecorder frei0r-plugins gource \
-                         libdvdread libdvdcss libdvdnav
+                         libdvdread libdvdcss libdvdnav openshot
 
 Here's applications I like to keep on hand for doing graphics and 3d
 modelling:
