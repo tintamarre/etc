@@ -3,7 +3,7 @@
 DOTFILES="$(pwd)"
 DEST="$HOME"
 source_dirs="public private"
-special_cases="config ssh"
+special_cases="config ssh local"
 ignore="attic gitconfig_cit hgrc_cit"
 
 list_files() {
@@ -34,6 +34,23 @@ config() {
         config_f_dst=$config_dest/$(basename $config_f)
         rm_if_present $config_f_dst
         ln -s $config_f $config_f_dst
+    done
+}
+
+# For Evolution (PIM)
+local() {
+    local_source=$1
+    local_dest=$DEST/.local
+    local_share_source=$local_source/share
+    local_share_dest=$local_dest/share
+
+    mkdir_if_absent $local_dest
+    mkdir_if_absent $local_share_dest
+
+    for local_share_f in $(list_files $local_share_source); do
+        local_share_f_dest=$local_share_dest/$(basename $local_share_f)
+        rm_if_present $local_share_f_dest
+        ln -s $local_share_f $local_share_f_dest
     done
 }
 
