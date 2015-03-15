@@ -156,27 +156,28 @@ can change its shell now:
 
 # chsh -s /bin/zsh zebdeos
 
-I'm currently using a full GNOME 3 GUI environment, and this can all
-be installed and ready to go for first boot (along with any other
+I'm currently using a full MATE Desktop GUI environment, and this can
+all be installed and ready to go for first boot (along with any other
 packages you care to install).
 
 Here's the packages I like for a GUI desktop:
 
-# pacman -S --asexplicit dhclient networkmanager xorg gnome \
-                         gnome-extra firefox chromium netsurf dillo \
-                         lynx links surfraw pidgin-otr hexchat emacs \
-                         gvim libreoffice-fresh cups cups-filters \
-                         cups-pdf foomatic-db foomatic-db-engine \
-                         system-config-printer gnome-tweak-tool \
-                         gconf-editor xfce4-terminal mate-terminal \
-                         docky caja fuse mtpfs gvfs-mtp
+# pacman -S --asexplicit dhclient networkmanager xorg mate mate-extra \
+                         mate-themes-extras gnome-keyring \
+                         network-manager-applet lightdm-gtk-greeter \
+                         firefox chromium netsurf dillo lynx links \
+                         surfraw pidgin-otr hexchat emacs gvim \
+                         libreoffice-fresh cups cups-filters cups-pdf \
+                         foomatic-db foomatic-db-engine \
+                         system-config-printer caja fuse mtpfs \
+                         gvfs-mtp synergy
 
 You will need to enable some services at this point for things to boot
 into the graphical environment upon restart:
 
 # systemctl enable NetworkManager
 # systemctl enable sshd
-# systemctl enable gdm
+# systemctl enable lightdm
 # systemctl enable org.cups.cupsd
 
 As an alternative to enabling NetworkManager we can rely on dhcpcd to
@@ -216,10 +217,10 @@ recording, and video processing
 # pacman -S --asexplicit gst-libav gst-plugins-bad gst-plugins-base \
                          gst-plugins-base-libs gst-plugins-good \
                          gst-plugins-ugly ffmpeg espeak audacity vlc \
-                         mplayer rhythmbox gnome-sound-recorder pitivi \
-                         recordmydesktop gtk-recordmydesktop \
+                         mplayer recordmydesktop gtk-recordmydesktop \
                          simplescreenrecorder frei0r-plugins gource \
-                         libdvdread libdvdcss libdvdnav openshot
+                         libdvdread libdvdcss libdvdnav openshot \
+                         cheese guvcview xawtv
 
 Here's applications I like to keep on hand for doing graphics and 3d
 modelling:
@@ -231,12 +232,14 @@ Here's the packages I like related to development:
 
 # pacman -S --asexplicit git cvs svn fossil mercurial bzr base-devel \
                          ncurses llvm clang nasm yasm perl perlbrew \
-                         cpanminus v8 js nodejs lua luarocks chicken \
+                         cpanminus v8 js lua luarocks chicken \
                          guile ocaml rust python3 python-pip \
                          python-virtualenv cython pypy python2 \
                          python2-pip python2-virtualenv sbcl \
                          jdk8-openjdk clojure rlwrap supercollider \
                          ruby go android-tools android-udev sqlite
+
+# NOTE: replaced nodejs with iojs from AUR for now
 
 Kitchen sink of libraries (most is already installed; also all the
 gnome libs seem to be installed as part of gnome-extra):
