@@ -226,7 +226,7 @@ Here's applications I like to keep on hand for doing graphics and 3d
 modelling:
 
 # pacman -S --asexplicit gimp inkscape povray blender graphicsmagick \
-                         simple-scan
+                         simple-scan pinta
 
 Here's the packages I like related to development:
 
