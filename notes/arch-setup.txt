@@ -170,7 +170,7 @@ Here's the packages I like for a GUI desktop:
                          libreoffice-fresh cups cups-filters cups-pdf \
                          foomatic-db foomatic-db-engine \
                          system-config-printer caja fuse mtpfs \
-                         gvfs-mtp synergy
+                         gvfs-mtp synergy gnome-commander leafpad
 
 You will need to enable some services at this point for things to boot
 into the graphical environment upon restart:
