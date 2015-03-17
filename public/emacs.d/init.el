@@ -1,7 +1,6 @@
-(menu-bar-mode -1)
 (column-number-mode t)
 (ido-mode t)
-; (display-time-mode 1)
+
 (setq-default
  truncate-lines t
  comint-process-echoes t
@@ -9,7 +8,18 @@
  display-time-24hr-format 1
  org-log-done 'time
  indent-tabs-mode nil
+ indicate-empty-lines t
+ frame-background-mode 'dark
  )
+
+(setq default-frame-alist
+      '((font . "Source Code Pro Light 12")
+        (tool-bar-lines . 0)
+        (menu-bar-lines . 0)
+        (vertical-scroll-bars . nil)
+        (width . 80)
+        (height . 24)
+        ))
 
 ; from http://stackoverflow.com/a/10439239
 (setq tab-stop-list (number-sequence 4 200 4))
@@ -29,20 +39,7 @@
     (load-theme 'wombat)))
 (add-hook 'window-setup-hook 'on-after-init)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(frame-background-mode (quote dark))
- '(indicate-empty-lines t)
- '(scroll-bar-mode nil)
- '(tool-bar-mode nil)
- '(truncate-lines t))
-
 (put 'narrow-to-region 'disabled nil)
-
-(set-face-attribute 'default nil :font "Source Code Pro Light 12" )
 
 ;; ELPA Configuration (http://www.emacswiki.org/emacs/ELPA)
 

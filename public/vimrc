@@ -13,18 +13,19 @@ set backupdir=~/local/tmp
 set directory=~/local/tmp
 set backup
 
-" set t_Co=256
+set t_Co=256
 " set mouse=a
 " set ttymouse=xterm2
 set background=dark
 syntax on
+colorscheme jellybeans
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
-" set list
+set list
 set listchars=tab:▸\ ,eol:¬
 set nowrap
 set textwidth=0
-" set colorcolumn=72
+" set colorcolumn=80
 " set cursorline
 " set cursorcolumn
 " set number
@@ -39,9 +40,9 @@ filetype plugin indent on
 filetype plugin indent off
 set autoindent
 set nosmartindent
-set softtabstop=4
-set tabstop=4
-set shiftwidth=4
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set ruler
 set showcmd
