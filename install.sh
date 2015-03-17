@@ -3,7 +3,7 @@
 DOTFILES="$(pwd)"
 DEST="$HOME"
 source_dirs="public private"
-special_cases="config ssh"
+special_cases="config ssh atom"
 ignore="attic gitconfig_cit hgrc_cit"
 
 list_files() {
@@ -47,6 +47,18 @@ ssh() {
         ssh_f_dst=$ssh_dest/$(basename $ssh_f)
         rm_if_present $ssh_f_dst
         cp -p $ssh_f $ssh_f_dst
+    done
+}
+
+atom() {
+    atom_source=$1
+    atom_dest=$DEST/.atom
+
+    mkdir_if_absent $atom_dest
+    for atom_f in $(list_files $atom_source); do
+        atom_f_dst=$atom_dest/$(basename $atom_f)
+        rm_if_present $atom_f_dst
+        ln -s $atom_f $atom_f_dst
     done
 }
 
