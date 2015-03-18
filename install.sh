@@ -3,7 +3,7 @@
 DOTFILES="$(pwd)"
 DEST="$HOME"
 source_dirs="public private"
-special_cases="config ssh atom"
+special_cases="config ssh atom fonts"
 ignore="attic gitconfig_cit hgrc_cit"
 
 list_files() {
@@ -25,18 +25,6 @@ rm_if_present() {
     [ -e $1 -o -L $1 ] && rm -rf $1
 }
 
-config() {
-    config_source=$1
-    config_dest=$DEST/.config
-
-    mkdir_if_absent $config_dest
-    for config_f in $(list_files $config_source); do
-        config_f_dst=$config_dest/$(basename $config_f)
-        rm_if_present $config_f_dst
-        ln -s $config_f $config_f_dst
-    done
-}
-
 ssh() {
     ssh_source=$1
     ssh_dest=$DEST/.ssh
@@ -50,15 +38,33 @@ ssh() {
     done
 }
 
+config() {
+    config_source=$1
+    config_dest=$DEST/.config
+    merge_handler "$config_source" "$config_dest"
+}
+
 atom() {
     atom_source=$1
     atom_dest=$DEST/.atom
+    merge_handler "$atom_source" "$atom_dest"
+}
 
-    mkdir_if_absent $atom_dest
-    for atom_f in $(list_files $atom_source); do
-        atom_f_dst=$atom_dest/$(basename $atom_f)
-        rm_if_present $atom_f_dst
-        ln -s $atom_f $atom_f_dst
+fonts() {
+    fonts_source=$1
+    fonts_dest=$DEST/.fonts
+    merge_handler "$fonts_source" "$fonts_dest"
+}
+
+merge_handler() {
+    merge_source=$1
+    merge_dest=$2
+
+    mkdir_if_absent $merge_dest
+    for merge_f in $(list_files $merge_source); do
+        merge_f_dst=$merge_dest/$(basename $merge_f)
+        rm_if_present $merge_f_dst
+        ln -s $merge_f $merge_f_dst
     done
 }
 
