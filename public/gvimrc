@@ -9,5 +9,16 @@ set columns=100
 set gfn=Source\ Code\ Pro\ Extralight\ 12
 set vb t_vb= "no bell or visual bell
 
-colorscheme freya
-highlight ColorColumn guibg=#313131
+set fillchars+=vert:\ 
+
+colorscheme darkburn
+highlight ColorColumn guibg=#262626
+
+"colorscheme Mustang
+"highlight ColorColumn guibg=#292929
+"highlight NonText guibg=#202020
+
+" colorscheme softblue
+" highlight ColorColumn guibg=#0D2349
+" highlight NonText guibg=#183058
+" highlight CursorLine guibg=#0D2349
