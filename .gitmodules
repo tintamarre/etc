@@ -1,0 +1,9 @@
+[submodule "public/vim/vim-pathogen"]
+	path = public/vim/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "public/vim/bundle/nerdtree"]
+	path = public/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "public/vim/bundle/vim-colorsamplerpack"]
+	path = public/vim/bundle/vim-colorsamplerpack
+	url = https://github.com/Slashbunny/vim-colorsamplerpack
