@@ -1,9 +1,12 @@
-$_REPL->load_plugin('FancyPrompt');
+$_REPL->load_plugin(qw(
+  FancyPrompt
+  Colors
+));
 $_REPL->fancy_prompt(sub {
     my $self = shift;
-    sprintf "\n>>> ";
+    sprintf "> ";
 });
 $_REPL->fancy_continuation_prompt(sub {
     my $self = shift;
-    sprintf "... ";
+    sprintf ": ";
 });
