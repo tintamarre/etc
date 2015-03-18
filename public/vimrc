@@ -1,5 +1,5 @@
-" let g:loaded_netrw = 1
-" let g:loaded_netrwPlugin = 1
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
 let g:loaded_matchparen = 1
 let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
 let g:netrw_banner=0
@@ -8,6 +8,11 @@ let g:netrw_cursor=0
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
+
+execute pathogen#infect()
+
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeWinSize = 25
 
 set backupdir=~/local/tmp
 set directory=~/local/tmp
@@ -27,16 +32,17 @@ set textwidth=0
 " set colorcolumn=80
 " set cursorline
 " set cursorcolumn
-" set number
+set number
 set nocompatible
 set hlsearch
 set vb t_vb= "no bell or visual bell
 " set clipboard+=unnamed
 
 set nocindent
-filetype plugin on
+
 filetype plugin indent on
 filetype plugin indent off
+filetype plugin on
 set autoindent
 set nosmartindent
 set softtabstop=2
@@ -55,12 +61,15 @@ set hidden
 " http://www.guyrutenberg.com/2013/09/23/quickly-exiting-insert-mode-in-vim/
 inoremap kj <ESC>
 inoremap ,w <ESC>:w<Enter>
-" nmap ; :
+nmap ; :
 let mapleader = ","
 map <Leader>w :w<Enter>
 " http://vim.wikia.com/wiki/Display_line_numbers
+map <Leader>n :set invnumber<Enter>
 " map <Leader>n :set invrelativenumber<Enter>
 " map <Leader>m :set invcursorline invcursorcolumn<Enter>
-map <Leader>e :Explore<Enter>
-map <Leader>t :Texplore<Enter>
+
+map <Leader>e :e .<Enter>
+map <Leader>E :tabe .<Enter>
+map <Leader>t :NERDTreeToggle .<Enter>
 map <Leader>s :silent ! tmux send -t 'hack1:test.0' up enter<Enter>
