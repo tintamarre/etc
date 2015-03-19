@@ -13,3 +13,6 @@
 [submodule "extras/submodules/powerline"]
 	path = extras/submodules/powerline
 	url = https://github.com/powerline/powerline
+[submodule "public/vim/bundle/Command-T"]
+	path = public/vim/bundle/Command-T
+	url = https://github.com/wincent/Command-T

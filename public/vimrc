@@ -78,3 +78,5 @@ map <Leader>e :e .<Enter>
 map <Leader>E :tabe .<Enter>
 map <Leader>t :NERDTreeToggle .<Enter>
 map <Leader>s :silent ! tmux send -t 'hack1:test.0' up enter<Enter>
+
+nnoremap <C-p> :CommandT <Enter>
