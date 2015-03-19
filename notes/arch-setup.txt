@@ -137,7 +137,7 @@ Install some additional essential packages:
 # pacman -S --asexplicit openssh tmux rsync sudo ed zsh curl wget \
                          nethack rogue bsd-games fortune-mod pwgen \
                          mc ranger vifm zsh-syntax-highlighting tree \
-                         sl dosfstools ntfsprogs
+                         dosfstools ntfsprogs ack
 
 Configure sudo to allow users in the wheel group to issue commands
 with super user privileges
