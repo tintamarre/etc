@@ -8,5 +8,6 @@ dconf write /org/mate/desktop/session/idle-delay 30
 dconf write /org/mate/marco/general/num-workspaces 8
 dconf write /org/mate/marco/general/side-by-side-tiling true
 dconf write /org/mate/marco/general/action-double-click-titlebar "'toggle_shade'"
+dconf write /org/mate/marco/window-keybindings/toggle-fullscreen "'F11'"
 dconf write /org/mate/panel/objects/workspace-switcher/prefs/num-rows 2
 dconf write /org/mate/desktop/background/show-desktop-icons true
