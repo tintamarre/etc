@@ -25,8 +25,8 @@ set directory=~/local/tmp
 set backup
 
 set t_Co=256
-" set mouse=a
-" set ttymouse=xterm2
+set mouse=a
+set ttymouse=xterm2
 set background=dark
 syntax on
 
