@@ -1,30 +1,12 @@
 [submodule "public/vim/vim-pathogen"]
 	path = public/vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
-[submodule "public/vim/bundle/nerdtree"]
-	path = public/vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "public/vim/bundle/vim-colorsamplerpack"]
 	path = public/vim/bundle/vim-colorsamplerpack
 	url = https://github.com/Slashbunny/vim-colorsamplerpack
-[submodule "public/vim/bundle/vim-airline"]
-	path = public/vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
 [submodule "extras/submodules/powerline"]
 	path = extras/submodules/powerline
 	url = https://github.com/powerline/powerline
-[submodule "public/vim/bundle/Command-T"]
-	path = public/vim/bundle/Command-T
-	url = https://github.com/wincent/Command-T
-[submodule "public/vim/bundle/vim-fugitive"]
-	path = public/vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
 [submodule "public/vim/bundle/ack.vim"]
 	path = public/vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
-[submodule "public/vim/bundle/vim-slime"]
-	path = public/vim/bundle/vim-slime
-	url = https://github.com/jpalardy/vim-slime
-[submodule "public/vim/bundle/slimv"]
-	path = public/vim/bundle/slimv
-	url = https://github.com/kovisoft/slimv

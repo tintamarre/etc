@@ -1,5 +1,5 @@
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
+" let g:loaded_netrw = 1
+" let g:loaded_netrwPlugin = 1
 let g:loaded_matchparen = 1
 let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
 let g:netrw_banner=0
@@ -11,14 +11,8 @@ set t_ti= t_te=
 
 execute pathogen#infect()
 
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeWinSize = 25
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 0
-let g:airline_left_sep = ' '
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep = ' '
-let g:airline_right_alt_sep = ''
+" let g:NERDTreeMinimalUI=1
+" let g:NERDTreeWinSize = 25
 
 set backupdir=~/local/tmp
 set directory=~/local/tmp
@@ -35,9 +29,8 @@ set list
 set listchars=tab:▸\ ,eol:¬
 set nowrap
 set textwidth=0
-" set colorcolumn=80
-" set cursorline
-" set cursorcolumn
+set colorcolumn=80
+set cursorline
 set number
 set nocompatible
 set hlsearch
@@ -75,8 +68,10 @@ map <Leader>n :set invnumber<Enter>
 " map <Leader>n :set invrelativenumber<Enter>
 
 map <Leader>e :e .<Enter>
-map <Leader>E :tabe .<Enter>
-map <Leader>t :NERDTreeToggle .<Enter>
-map <Leader>s :silent ! tmux send -t 'hack1:test.0' up enter<Enter>
+map <Leader>t :tabe .<Enter>
+"map <Leader>s :silent ! tmux send -t 'hack1:test.0' up enter<Enter>
+map <Leader>s :silent ! tmux send -t 'hack1:test.0' !! enter<Enter>
 
-nnoremap <C-p> :CommandT <Enter>
+set fillchars+=vert:\ 
+colorscheme xoria256
+source ~/.vim/xoria-tweaks.vim
