@@ -22,3 +22,9 @@
 [submodule "public/vim/bundle/ack.vim"]
 	path = public/vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
+[submodule "public/vim/bundle/vim-slime"]
+	path = public/vim/bundle/vim-slime
+	url = https://github.com/jpalardy/vim-slime
+[submodule "public/vim/bundle/slimv"]
+	path = public/vim/bundle/slimv
+	url = https://github.com/kovisoft/slimv
