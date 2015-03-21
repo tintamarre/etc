@@ -106,13 +106,16 @@ file_special_case() {
 main() {
     bootstrap_home
     for sd in $source_dirs; do
-        for f in $(list_files $DOTFILES/$sd); do
-            if file_special_case $f; then
-                $(basename $f) $f
-            else
-                standard_handler $f
-            fi
-        done
+        # only loop through members of $sd if it exists
+        if [ -d "$sd" ]; then
+            for f in $(list_files $DOTFILES/$sd); do
+                if file_special_case $f; then
+                    $(basename $f) $f
+                else
+                    standard_handler $f
+                fi
+            done
+        fi
     done
 }
 main "$@"
