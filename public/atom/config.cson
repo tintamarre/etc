@@ -16,10 +16,6 @@
       "*~"
       "#*#"
     ]
-    themes: [
-      "seti-ui"
-      "seti-syntax"
-    ]
   editor:
     invisibles: {}
     showInvisibles: true
