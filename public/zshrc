@@ -40,9 +40,10 @@ fi
 
 export PATH
 
-alias e="emacs -nw"
+#alias e="emacs -nw"
 #alias e="emacsclient -nw -ca ''"
 alias v="vim"
+alias e="gvim"
 #alias ls="ls --color=auto"
 alias l="ls --color=auto"
 alias ls="ls --color=auto"
