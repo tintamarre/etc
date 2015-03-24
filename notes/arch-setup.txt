@@ -231,9 +231,9 @@ modelling:
 Here's the packages I like related to development:
 
 # pacman -S --asexplicit git cvs svn fossil mercurial bzr base-devel \
-                         ncurses llvm clang nasm yasm perl perlbrew \
-                         cpanminus v8 js lua luarocks chicken \
-                         guile ocaml rust python3 python-pip \
+                         bmake ncurses llvm clang nasm yasm perl \
+                         perlbrew cpanminus v8 js lua luarocks \
+                         chicken guile ocaml rust python3 python-pip \
                          python-virtualenv cython pypy python2 \
                          python2-pip python2-virtualenv sbcl \
                          jdk8-openjdk clojure rlwrap supercollider \
