@@ -234,7 +234,7 @@ Here's the packages I like related to development:
                          bmake ncurses llvm clang nasm yasm perl \
                          perlbrew cpanminus v8 js lua luarocks \
                          chicken guile ocaml rust python3 python-pip \
-                         python-virtualenv cython pypy python2 \
+                         python-virtualenv cython pypy pypy3 python2 \
                          python2-pip python2-virtualenv sbcl \
                          jdk8-openjdk clojure rlwrap supercollider \
                          ruby go android-tools android-udev sqlite
