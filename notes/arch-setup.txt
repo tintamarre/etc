@@ -165,7 +165,7 @@ Here's the packages I like for a GUI desktop:
 # pacman -S --asexplicit dhclient networkmanager xorg mate mate-extra \
                          mate-themes-extras gnome-keyring \
                          network-manager-applet lightdm-gtk-greeter \
-                         firefox chromium netsurf dillo lynx links \
+                         firefox chromium netsurf dillo lynx links w3m \
                          surfraw pidgin-otr hexchat emacs gvim \
                          libreoffice-fresh cups cups-filters cups-pdf \
                          foomatic-db foomatic-db-engine \
