@@ -1,3 +1,5 @@
+TODO: openbox variant is WIP, need to test
+
 Set temporary root password and start sshd if desired for remote
 install
 
@@ -132,12 +134,14 @@ non-privileged user:
 # useradd -m -g users -G wheel zebdeos
 # passwd zebdeos
 
-Install some additional essential packages:
+Install packages from package list (script under scripts, package list under
+notes, in my dotfiles repo, be sure to reference the full path to the location
+using from):
 
-# pacman -S --asexplicit openssh tmux rsync sudo ed zsh curl wget \
-                         nethack rogue bsd-games fortune-mod pwgen \
-                         mc ranger vifm zsh-syntax-highlighting tree \
-                         dosfstools ntfsprogs ack
+TODO: wget script and package list from github raw to /tmp for use below
+
+# pacman -S --needed $(/tmp/flatten_pkg_list.sh /tmp/archpackages-openbox.txt)
+# pacman -D --asexplicit $(/tmp/flatten_pkg_list.sh /tmp/archpackages-openbox.txt)
 
 Configure sudo to allow users in the wheel group to issue commands
 with super user privileges
@@ -156,28 +160,12 @@ can change its shell now:
 
 # chsh -s /bin/zsh zebdeos
 
-I'm currently using a full MATE Desktop GUI environment, and this can
-all be installed and ready to go for first boot (along with any other
-packages you care to install).
-
-Here's the packages I like for a GUI desktop:
-
-# pacman -S --asexplicit dhclient networkmanager xorg mate mate-extra \
-                         mate-themes-extras gnome-keyring \
-                         network-manager-applet lightdm-gtk-greeter \
-                         firefox chromium netsurf dillo lynx links w3m \
-                         surfraw pidgin-otr hexchat emacs gvim \
-                         libreoffice-fresh cups cups-filters cups-pdf \
-                         foomatic-db foomatic-db-engine \
-                         system-config-printer caja fuse mtpfs \
-                         gvfs-mtp synergy gnome-commander leafpad
-
-You will need to enable some services at this point for things to boot
-into the graphical environment upon restart:
+I'm currently using Openbox for my window manager, and forgoing a
+display manager in favor of xinit. However, I do use NetworkManager
+and want ssh and cups enabled upon reboot:
 
 # systemctl enable NetworkManager
 # systemctl enable sshd
-# systemctl enable lightdm
 # systemctl enable org.cups.cupsd
 
 As an alternative to enabling NetworkManager we can rely on dhcpcd to
@@ -191,73 +179,14 @@ And we could bring up the interface manually like this:
 
 # dhcpcd ens5
 
-You're also going to want spell checking and good fonts right out of
-the box:
-
-# pacman -S --asexplicit aspell aspell-en hunspell hunspell-en \
-                         ttf-bitstream-vera ttf-dejavu ttf-freefont \
-                         ttf-linux-libertine ttf-oxygen ttf-droid \
-                         ttf-fira-mono ttf-fira-sans ttf-gentium \
-                         ttf-inconsolata ttf-liberation ttf-symbola \
-                         ttf-ubuntu-font-family \
-                         adobe-source-code-pro-fonts \
-                         adobe-source-sans-pro-fonts \
-                         adobe-source-serif-pro-fonts cantarell-fonts \
-                         gnu-free-fonts terminus-font
-
-Also to avoid some funky font issues in some apps let's disable
+To avoid some funky font issues in some apps let's disable
 bitmapped fallback fonts from X11:
 
 # ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf \
         /etc/fonts/conf.d/
 
-Packages enabling multi-media playback, audo processing, screen
-recording, and video processing
-
-# pacman -S --asexplicit gst-libav gst-plugins-bad gst-plugins-base \
-                         gst-plugins-base-libs gst-plugins-good \
-                         gst-plugins-ugly ffmpeg espeak audacity vlc \
-                         mplayer recordmydesktop gtk-recordmydesktop \
-                         simplescreenrecorder frei0r-plugins gource \
-                         libdvdread libdvdcss libdvdnav openshot \
-                         cheese guvcview xawtv
-
-Here's applications I like to keep on hand for doing graphics and 3d
-modelling:
-
-# pacman -S --asexplicit gimp inkscape povray blender graphicsmagick \
-                         simple-scan pinta
-
-Here's the packages I like related to development:
-
-# pacman -S --asexplicit git cvs svn fossil mercurial bzr base-devel \
-                         bmake ncurses llvm clang nasm yasm perl \
-                         perlbrew cpanminus v8 js lua luarocks \
-                         chicken guile ocaml rust python3 python-pip \
-                         python-virtualenv cython pypy pypy3 python2 \
-                         python2-pip python2-virtualenv sbcl \
-                         jdk8-openjdk clojure rlwrap supercollider \
-                         ruby go android-tools android-udev sqlite
-
-# NOTE: replaced nodejs with iojs from AUR for now
-
-Kitchen sink of libraries (most is already installed; also all the
-gnome libs seem to be installed as part of gnome-extra):
-
-# pacman -S --asexplicit allegro sdl mesa mesa-libgl libxcb xcb-util \
-                         libxt libxaw xaw3d libxft fontconfig pango \
-                         cairo
-
-And finally, here's the packages and basic setup for emulation,
-virtualization, and containerization:
-
-# pacman -S --asexplicit simh bochs qemu libvirt virt-manager lxc \
-                         docker openbsd-netcat bridge-utils ebtables \
-                         dnsmasq arch-install-scripts vagrant
-
-Now let's set this stuff up. First, so that our user can access
-libvirt directly without having to enter a password we will set up a
-custom polkit rule:
+So that our user can access libvirt directly without having to enter a
+password we will set up a custom polkit rule:
 
 # vi /etc/polkit-1/rules.d/49-libvirtwheel.rules
 
@@ -275,6 +204,10 @@ wheel users but requiring a password.
 
 Now let's enable nested virtualization for KVM (see
 https://wiki.archlinux.org/index.php/KVM#Nested_virtualization):
+
+Note: don't do this if you're running a CPU without virtualization
+extensions supporting nexted virt (see the arch wiki above for
+documentation on how to check things).
 
 # vi /etc/modprobe.d/modprobe.conf
 
@@ -294,23 +227,19 @@ And then finally enable the libvirt and docker services:
 
 TODO: libvirt vagrant provider installation
 
-I like to install a load of docs in case I'm stuck offline somewhere:
+Finally, we can generate or refresh an OpenBox menu with
+all applications registered with the xdg system (as per
+https://wiki.archlinux.org/index.php/Xdg-menu#With_update-menus_4):
 
-# pacman -S --asexplicit linux-manpages linux-docs sqlite-doc \
-                         ruby-docs arch-wiki-docs bash-docs gcc-docs \
-                         python-docs python2-docs freedesktop-docs \
-                         xorg-docs zsh-doc
+# vi /etc/update-menus.conf
 
-Finally, I install a couple more games:
+<file>
+...
+openbox
+...
+</file>
 
-# pacman -S freeciv freecol minetest
-
-There are many games available from the repos, here's a few on my
-radar (but not necessarily installed):
-
-curseofwar gnugo ccgo simultrans stone-soup agband wesnoth widelands
-hex-a-hop gnuchess xboard speed-dream torcs vdrift flightgear oolite
-freedroidrpg naev warzone2100 0ad
+# update-menus
 
 Now things are installed we can exit the chroot and reboot the system:
 
@@ -319,20 +248,22 @@ Now things are installed we can exit the chroot and reboot the system:
 # sync
 # shutdown -h now  # I prefer to halt to easily remove USB stick
 
+Upon reboot I log in as my normal user and install my dotfiles, which
+will allow startx to work, and my openbox config and other settings
+will be in place. Feel free to look at my dotfiles repo to see how I
+set things up.
+
+Also use lxappearance and qtconfig-qt4 to set a good GTK theme and
+have QT4 apps adopt the GTK theme appearance (not sure about QT5 apps
+yet).
+
 Once the system has rebooted I like to install some packages from the
 AUR:
 
+- iojs (alternative to nodejs)
 - cower (an AUR helper)
-- firefox-developer (Firefox Developer Edition)
-- atom-editor (Atom Text Editor from GitHub)
-- leiningen (Clojure build tool)
 - Perl 6 (rakudo / moarvm)
-
-There are more AUR packages I will install when and as needed:
-
 - Haxe
 - OpenFL
-- brogue
-- dwarffortress
 
-TODO: enabling suspend and resume for laptop?
+TODO: provide instructions for building and installing those from AUR
