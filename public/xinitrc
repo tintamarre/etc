@@ -26,11 +26,12 @@ elif [ -x /usr/lib/x86_64-linux-gnu/lxpolkit ]; then
     /usr/lib/x86_64-linux-gnu/lxpolkit &
 fi
 
-xsetroot -solid "#000000"
+xsetroot -solid "#18254A"
+xrandr --dpi 96
 
 [ -x $HOME/.wallpaper ] && $HOME/.wallpaper
-[ -x $HOME/.xsession.local ] && $HOME/.xsession.local
+[ -x $HOME/.xinitrc.local ] && $HOME/.xinitrc.local
 [ -e $HOME/.Xresources ] && xrdb $HOME/.Xresources
 [ -e $HOME/.Xresources.local ] && xrdb -override $HOME/.Xresources.local
 
-exec openbox-session
+exec openbox
