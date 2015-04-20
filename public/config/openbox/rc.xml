@@ -299,7 +299,7 @@
   </keybind>
   <keybind key="W-Return">
     <action name="Execute">
-      <command>xterm</command>
+      <command>urxvtc</command>
     </action>
   </keybind>
   <keybind key="Print">

@@ -26,6 +26,8 @@ elif [ -x /usr/lib/x86_64-linux-gnu/lxpolkit ]; then
     /usr/lib/x86_64-linux-gnu/lxpolkit &
 fi
 
+urxvtd -q -f -o
+
 xsetroot -solid "#18254A"
 xrandr --dpi 96
 
