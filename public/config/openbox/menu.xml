@@ -2,7 +2,7 @@
 
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
-<menu id="favorites-menu" label="Favorite Apps">
+<menu id="favorites-menu" label="favs">
   <item label="Xterm">
     <action name="Execute"><command>xterm</command></action>
   </item>
@@ -18,25 +18,19 @@
   -->
 </menu>
 
-<menu id="system-menu" label="System">
-  <item label="Openbox Configuration Manager">
-    <action name="Execute">
-      <command>obconf</command>
-      <startupnotify><enabled>yes</enabled></startupnotify>
-    </action>
-  </item>
-  <item label="Reconfigure Openbox">
+<menu id="system-menu" label="system">
+  <item label="reconfigure openbox">
     <action name="Reconfigure" />
   </item>
 </menu>
 
 <menu id="root-menu" label="Openbox 3">
-  <separator label="Apps" />
+  <!-- <separator label="Be Happy" /> -->
   <menu id="favorites-menu"/>
-  <separator />
+  <menu id="xdg-menu" label="apps" execute="cat /var/cache/xdg-menu/openbox/menu.xml"/>
+  <!-- <separator /> -->
   <menu id="system-menu"/>
-  <separator />
-  <item label="Log Out">
+  <item label="log out">
     <action name="Exit">
       <prompt>yes</prompt>
     </action>
