@@ -26,8 +26,6 @@ elif [ -x /usr/lib/x86_64-linux-gnu/lxpolkit ]; then
     /usr/lib/x86_64-linux-gnu/lxpolkit &
 fi
 
-urxvtd -q -f -o
-
 # multli rows for desktops from: http://openbox.org/wiki/Help:Contents#Panels.2C_widgets.2C_desktops.2C_pagers.2C_etc..
 xprop -root -format _NET_DESKTOP_LAYOUT 32c \
       -set _NET_DESKTOP_LAYOUT 0,4,2,0
