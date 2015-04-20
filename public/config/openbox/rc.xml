@@ -170,10 +170,10 @@
     <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
   <keybind key="S-W-comma">
-    <action name="SendToDesktop"><to>previous</to><wrap>no</wrap></action>
+    <action name="SendToDesktop"><to>previous</to><wrap>yes</wrap></action>
   </keybind>
   <keybind key="S-W-period">
-    <action name="SendToDesktop"><to>next</to><wrap>no</wrap></action>
+    <action name="SendToDesktop"><to>next</to><wrap>yes</wrap></action>
   </keybind>
 
   <!-- Keybindings for window switching -->
@@ -297,9 +297,17 @@
       <command>dmenu_run</command>
     </action>
   </keybind>
+  <keybind key="W-i">
+    <action name="ToggleDecorations"/>
+  </keybind>
   <keybind key="W-Return">
     <action name="Execute">
       <command>urxvtc</command>
+    </action>
+  </keybind>
+  <keybind key="W-apostrophe">
+    <action name="Execute">
+      <command>slock</command>
     </action>
   </keybind>
   <keybind key="Print">
@@ -531,9 +539,10 @@
 </menu>
 
 <applications>
-  <!--
-       foo
-  -->
+  <application class="XClock">
+    <skip_pager>no</skip_pager>
+    <skip_taskbar>no</skip_taskbar>
+  </application>
 </applications>
 
 </openbox_config>
