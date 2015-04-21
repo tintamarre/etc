@@ -74,6 +74,7 @@ dmenu
 x11-ssh-askpass
 ranger
 openbox
+openbox-themes
 imagemagick
 graphicsmagick
 gv
