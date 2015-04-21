@@ -24,7 +24,7 @@
 </placement>
 
 <theme>
-  <name>Onyx-black</name>
+  <name>Onyx</name>
   <titleLayout>NDSLIMC</titleLayout>
   <keepBorder>yes</keepBorder>
   <animateIconify>yes</animateIconify>
