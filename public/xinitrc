@@ -1,5 +1,5 @@
 $HOME/etc/scripts/initxkb
-xset r rate 185 130
+# xset r rate 185 130
 
 [ ! $SSH_AGENT_PID ] && eval `ssh-agent -s`
 
