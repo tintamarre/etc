@@ -63,6 +63,8 @@ android-udev
 sqlite
 
 xorg
+wayland
+weston
 xterm
 xorg-xinit
 lynx
