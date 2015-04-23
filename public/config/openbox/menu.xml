@@ -3,8 +3,11 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
 <menu id="favorites-menu" label="favs">
-  <item label="Xterm">
+  <item label="xterm">
     <action name="Execute"><command>xterm</command></action>
+  </item>
+  <item label="caja">
+    <action name="Execute"><command>caja --no-desktop --browser</command></action>
   </item>
   <!--
   <item label="Calculator">
