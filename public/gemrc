@@ -1,0 +1,7 @@
+# Initial .gemrc complements of Donnie West (https://github.com/DonnieWest)
+
+# for my future reference: http://guides.rubygems.org/command-reference/#gem-environment
+
+# --user-install is used to install to $HOME/.gem/ by default since we want to
+#                separate pacman installed gems and gem installed gems
+gem: --user-install
