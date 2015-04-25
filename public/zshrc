@@ -31,6 +31,16 @@ PATH="$PATH:$HOME/bin:$HOME/local/bin"
 # per http://guides.rubygems.org/faqs/#user-install
 if which ruby 1>/dev/null 2>&1 && which gem 1>/dev/null 2>&1; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+
+    # We have to set $GEM_HOME to ensure Bundler doesn't disrespect
+    # our system ruby if it can get sudo privileges, since it will use
+    # sudo without asking first to install things system wide by default
+    # (as of version 1.9). See
+    #    - https://github.com/bundler/bundler/issues/3006
+    #    - https://github.com/bundler/bundler/issues/2565#issuecomment-87121045
+    # Note that Bundler's behaviour at this point actually conflicts with
+    # it's own documentation here: http://bundler.io/v1.9/man/bundle-install.1.html#SUDO-USAGE
+    export GEM_HOME="$(ruby -rubygems -e 'puts Gem.user_dir')"
 fi
 
 if [ -d $HOME/.rbenv/bin ]; then
