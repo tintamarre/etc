@@ -35,31 +35,31 @@
     <slant>normal</slant>
   </font>
   <font place="InactiveWindow">
-    <name>sans</name>
+    <name>Terminus</name>
     <size>8</size>
     <weight>bold</weight>
     <slant>normal</slant>
   </font>
   <font place="MenuHeader">
-    <name>sans</name>
+    <name>Terminus</name>
     <size>9</size>
     <weight>normal</weight>
     <slant>normal</slant>
   </font>
   <font place="MenuItem">
-    <name>sans</name>
+    <name>Terminus</name>
     <size>9</size>
     <weight>normal</weight>
     <slant>normal</slant>
   </font>
   <font place="ActiveOnScreenDisplay">
-    <name>sans</name>
+    <name>Terminus</name>
     <size>9</size>
     <weight>bold</weight>
     <slant>normal</slant>
   </font>
   <font place="InactiveOnScreenDisplay">
-    <name>sans</name>
+    <name>Terminus</name>
     <size>9</size>
     <weight>bold</weight>
     <slant>normal</slant>
