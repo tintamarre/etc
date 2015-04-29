@@ -12,8 +12,8 @@
 
 # Predefined sets that can be specified
 vps="bin etc"
-main="arc art bin cv doc etc gis org pub src wri wrk"
-all="arc art bin cv doc etc ext gis org pub src wri wrk"
+main="arc art bin cv doc etc gis org pub src wiki wri wrk"
+all="arc art bin cv doc etc ext gis org pub src wiki wri wrk"
 
 # Will be set for specific sets below
 extraargs=
