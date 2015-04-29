@@ -29,7 +29,7 @@
   <keepBorder>yes</keepBorder>
   <animateIconify>yes</animateIconify>
   <font place="ActiveWindow">
-    <name>sans</name>
+    <name>Terminus</name>
     <size>8</size>
     <weight>bold</weight>
     <slant>normal</slant>
