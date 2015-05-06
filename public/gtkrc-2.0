@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/zebdeos/.gtkrc-2.0.mine"
-gtk-theme-name="Misted"
+gtk-theme-name="clearlooks-phenix"
 gtk-icon-theme-name="gnome"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="Adwaita"
