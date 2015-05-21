@@ -70,7 +70,7 @@ map <Leader>n :set invnumber<Enter>
 map <Leader>e :e .<Enter>
 map <Leader>t :tabe .<Enter>
 "map <Leader>s :silent ! tmux send -t 'hack1:test.0' up enter<Enter>
-map <Leader>s :silent ! tmux send -t 'hack1:test.0' !! enter<Enter>
+map <Leader>s :silent! :!tmux send -t '0:0.2' 'make test' enter<Enter>
 
 set fillchars+=vert:\ 
 colorscheme xoria256
