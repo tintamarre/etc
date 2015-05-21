@@ -20,6 +20,7 @@ ack
 tree
 
 git
+tk
 base-devel
 cvs
 svn
@@ -67,6 +68,8 @@ gnome
 gnome-extra
 gvim
 emacs
+mousepad
+leafpad
 
 # xorg
 # wayland
@@ -120,8 +123,9 @@ imagemagick
 # inkscape
 povray
 blender
-# simple-scan
 # pinta
+simple-scan
+xsane
 
 firefox
 chromium
@@ -135,6 +139,7 @@ pidgin-otr
 hexchat
 
 libreoffice-fresh
+pdfmod
 
 cups
 cups-filters
