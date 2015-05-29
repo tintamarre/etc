@@ -2,12 +2,18 @@
 
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
-<menu id="favorites-menu" label="favs">
-  <item label="xterm">
-    <action name="Execute"><command>xterm</command></action>
+<menu id="favorites-menu" label="fav">
+  <item label="terminal">
+    <action name="Execute"><command>mate-terminal</command></action>
   </item>
   <item label="caja">
     <action name="Execute"><command>caja --no-desktop --browser</command></action>
+  </item>
+  <item label="surf">
+    <action name="Execute"><command>surf</command></action>
+  </item>
+  <item label="firefox">
+    <action name="Execute"><command>firefox</command></action>
   </item>
   <!--
   <item label="Calculator">
@@ -21,6 +27,9 @@
   -->
 </menu>
 
+<menu id="apps-menu" label="apps">
+</menu>
+
 <menu id="system-menu" label="system">
   <item label="reconfigure openbox">
     <action name="Reconfigure" />
@@ -30,6 +39,7 @@
 <menu id="root-menu" label="Openbox 3">
   <!-- <separator label="Be Happy" /> -->
   <menu id="favorites-menu"/>
+  <menu id="apps-menu"/>
   <!-- <menu id="xdg-menu" label="apps" execute="cat /var/cache/xdg-menu/openbox/menu.xml"/> -->
   <!-- <separator /> -->
   <menu id="system-menu"/>
