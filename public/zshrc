@@ -13,6 +13,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Source .profile is not in X11 (display manager sources automatically
+# if we are in X11, so we don't want to run it twice); .profile sets
+# up our home directory bin paths
+[ -z "$DISPLAY" ] && source $HOME/.profile
+
 zstyle ':completion:*' menu select
 autoload -U colors && colors
 #autoload -U promptinit && promptinit && prompt redhat
@@ -25,8 +30,6 @@ precmd() {
 
 # for the likes of gnome-terminal and mate-terminal
 [ "x$TERM" = "xxterm" ] && export TERM="xterm-256color"
-
-PATH="$PATH:$HOME/bin:$HOME/local/bin"
 
 # per http://guides.rubygems.org/faqs/#user-install
 if which ruby 1>/dev/null 2>&1 && which gem 1>/dev/null 2>&1; then
