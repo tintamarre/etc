@@ -261,6 +261,7 @@ appearance (not sure about QT5 apps yet).
 Once the system has rebooted I like to install some packages from the
 AUR:
 
+- compton
 - Perl 6 (rakudo / moarvm)
 
-TODO: provide instructions for building and installing that from AUR
+TODO: provide instructions for building and installing these from AUR
