@@ -1,1 +1,1 @@
-arch-setup-mate.txt
+arch-setup-mate-openbox.txt
