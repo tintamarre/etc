@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=compton -czb
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=Compton
+Name=Compton
+Comment[en_US]=Enable compositing using compton
+Comment=Enable compositing using compton
