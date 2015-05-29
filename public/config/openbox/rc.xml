@@ -315,13 +315,11 @@
       <command>mate-terminal</command>
     </action>
   </keybind>
-  <!--
   <keybind key="W-apostrophe">
     <action name="Execute">
-      <command>slock</command>
+      <command>mate-screensaver-command --lock</command>
     </action>
   </keybind>
-  -->
   <keybind key="Print">
     <action name="Execute">
       <command>scrot</command>
