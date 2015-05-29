@@ -11,3 +11,4 @@ dconf write /org/mate/marco/general/action-double-click-titlebar "'toggle_shade'
 dconf write /org/mate/marco/window-keybindings/toggle-fullscreen "'F11'"
 dconf write /org/mate/panel/objects/workspace-switcher/prefs/num-rows 2
 dconf write /org/mate/desktop/background/show-desktop-icons false
+dconf write /org/mate/panel/general/enable-animations false
