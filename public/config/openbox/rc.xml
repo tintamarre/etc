@@ -294,7 +294,7 @@
   </keybind>
   <keybind key="W-semicolon">
     <action name="Execute">
-      <command>mate-panel --run-dialog</command>
+      <command>dmenu_run</command>
     </action>
   </keybind>
   <keybind key="A-F2">

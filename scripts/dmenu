@@ -1,0 +1,7 @@
+#!/bin/sh
+# Based on dmenu_run script imported from the dmenu project, licensed under
+# MIT/X11 License; see http://git.suckless.org/dmenu/tree/LICENSE
+
+# Wrapper script to cause dmenu to run with custom font, even from apps
+# like surf
+/bin/dmenu -fn "-bitstream-bitstream vera sans-medium-r-*-*-*-120-*-*-*-*-*-*" "$@"
