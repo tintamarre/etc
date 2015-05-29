@@ -77,11 +77,11 @@ URxvt*geometry: 80x24
 !URxvt*font: xft:Inconsolata:size=14
 URxvt*internalBorder: 0
 
-!XClock*background: #1C1709
-!XClock*render: false
-!XClock*foreground: #FF7300
-!XClock*hands: #6D3805
-!XClock*highlight: #ff7300
+XClock*background: #242424
+XClock*render: false
+XClock*foreground: #CECECE
+XClock*hands: #454545
+XClock*highlight: #CECECE
 
 ! XClock*hourColor: #FFAC44
 ! XClock*minuteColor: S_green

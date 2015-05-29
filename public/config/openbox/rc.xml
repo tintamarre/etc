@@ -555,8 +555,15 @@
 
 <applications>
   <application class="XClock">
-    <skip_pager>no</skip_pager>
-    <skip_taskbar>no</skip_taskbar>
+    <skip_pager>yes</skip_pager>
+    <skip_taskbar>yes</skip_taskbar>
+    <decor>no</decor>
+    <layer>below</layer>
+    <desktop>all</desktop>
+    <position force="no">
+      <x>-15</x>
+      <y>15</y>
+    </position>
   </application>
 </applications>
 
