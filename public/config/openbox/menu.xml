@@ -30,7 +30,7 @@
 <menu id="root-menu" label="Openbox 3">
   <!-- <separator label="Be Happy" /> -->
   <menu id="favorites-menu"/>
-  <menu id="xdg-menu" label="apps" execute="cat /var/cache/xdg-menu/openbox/menu.xml"/>
+  <!-- <menu id="xdg-menu" label="apps" execute="cat /var/cache/xdg-menu/openbox/menu.xml"/> -->
   <!-- <separator /> -->
   <menu id="system-menu"/>
   <item label="log out">

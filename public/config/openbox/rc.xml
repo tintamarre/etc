@@ -24,43 +24,43 @@
 </placement>
 
 <theme>
-  <name>Onyx</name>
+  <name>waldorf</name>
   <titleLayout>NDSLIMC</titleLayout>
   <keepBorder>yes</keepBorder>
   <animateIconify>yes</animateIconify>
   <font place="ActiveWindow">
-    <name>Terminus</name>
-    <size>8</size>
+    <name>Sans</name>
+    <size>10</size>
     <weight>bold</weight>
     <slant>normal</slant>
   </font>
   <font place="InactiveWindow">
-    <name>Terminus</name>
-    <size>8</size>
-    <weight>bold</weight>
+    <name>Sans</name>
+    <size>10</size>
+    <weight>normal</weight>
     <slant>normal</slant>
   </font>
   <font place="MenuHeader">
-    <name>Terminus</name>
-    <size>9</size>
+    <name>Sans</name>
+    <size>10</size>
     <weight>normal</weight>
     <slant>normal</slant>
   </font>
   <font place="MenuItem">
-    <name>Terminus</name>
-    <size>9</size>
+    <name>Sans</name>
+    <size>10</size>
     <weight>normal</weight>
     <slant>normal</slant>
   </font>
   <font place="ActiveOnScreenDisplay">
-    <name>Terminus</name>
-    <size>9</size>
+    <name>Sans</name>
+    <size>10</size>
     <weight>bold</weight>
     <slant>normal</slant>
   </font>
   <font place="InactiveOnScreenDisplay">
-    <name>Terminus</name>
-    <size>9</size>
+    <name>Sans</name>
+    <size>10</size>
     <weight>bold</weight>
     <slant>normal</slant>
   </font>
@@ -294,7 +294,12 @@
   </keybind>
   <keybind key="W-semicolon">
     <action name="Execute">
-      <command>dmenu_run</command>
+      <command>mate-panel --run-dialog</command>
+    </action>
+  </keybind>
+  <keybind key="A-F2">
+    <action name="Execute">
+      <command>mate-panel --run-dialog</command>
     </action>
   </keybind>
   <keybind key="W-i">
@@ -302,14 +307,21 @@
   </keybind>
   <keybind key="W-Return">
     <action name="Execute">
-      <command>xterm</command>
+      <command>mate-terminal</command>
     </action>
   </keybind>
+  <keybind key="A-Return">
+    <action name="Execute">
+      <command>mate-terminal</command>
+    </action>
+  </keybind>
+  <!--
   <keybind key="W-apostrophe">
     <action name="Execute">
       <command>slock</command>
     </action>
   </keybind>
+  -->
   <keybind key="Print">
     <action name="Execute">
       <command>scrot</command>
@@ -519,6 +531,9 @@
   <context name="Root">
     <!-- Menus -->
     <mousebind button="Left" action="Press">
+      <action name="ShowMenu"><menu>root-menu</menu></action>
+    </mousebind>
+    <mousebind button="Middle" action="Press">
       <action name="ShowMenu"><menu>client-list-combined-menu</menu></action>
     </mousebind> 
     <mousebind button="Right" action="Press">
