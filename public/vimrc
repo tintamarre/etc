@@ -25,13 +25,13 @@ set background=dark
 syntax on
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#aesthetics
-set list
+set nolist
 set listchars=tab:▸\ ,eol:¬
 set nowrap
 set textwidth=0
 set colorcolumn=80
 set cursorline
-set number
+set nonumber
 set nocompatible
 set hlsearch
 set vb t_vb= "no bell or visual bell
