@@ -30,7 +30,7 @@ Xft.dpi: 96
 
 
 ! http://hintsforums.macworld.com/showthread.php?t=9282
-XTerm*.LoginShell: True
+XTerm*.LoginShell: False
 
 ! https://wiki.archlinux.org/index.php/X_resources#Xterm_resources
 XTerm*VT100.geometry:     80x24
