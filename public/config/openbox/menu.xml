@@ -3,8 +3,8 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
 <menu id="favorites-menu" label="fav">
-  <item label="terminal">
-    <action name="Execute"><command>mate-terminal</command></action>
+  <item label="xterm">
+    <action name="Execute"><command>xterm</command></action>
   </item>
   <item label="caja">
     <action name="Execute"><command>caja --no-desktop --browser</command></action>
@@ -15,16 +15,6 @@
   <item label="firefox">
     <action name="Execute"><command>firefox</command></action>
   </item>
-  <!--
-  <item label="Calculator">
-    <action name="Execute">
-      <command>gnome-calculator</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  -->
 </menu>
 
 <menu id="apps-menu" label="apps">

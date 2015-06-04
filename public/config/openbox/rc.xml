@@ -24,7 +24,7 @@
 </placement>
 
 <theme>
-  <name>greybird</name>
+  <name>Onyx</name>
   <titleLayout>NDSLIMC</titleLayout>
   <keepBorder>yes</keepBorder>
   <animateIconify>yes</animateIconify>
@@ -307,12 +307,12 @@
   </keybind>
   <keybind key="W-Return">
     <action name="Execute">
-      <command>mate-terminal</command>
+      <command>xterm</command>
     </action>
   </keybind>
   <keybind key="A-Return">
     <action name="Execute">
-      <command>mate-terminal</command>
+      <command>xterm</command>
     </action>
   </keybind>
   <keybind key="W-apostrophe">
