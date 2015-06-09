@@ -5,7 +5,7 @@ openssh
 iw
 wpa_supplicant
 dosfstools
-ntfsprogs
+ntfs-3g
 
 ed
 curl
@@ -17,6 +17,7 @@ zsh-doc
 zsh-syntax-highlighting
 ack
 tree
+pwgen
 
 git
 base-devel
@@ -57,6 +58,10 @@ sbcl
 rlwrap
 ruby
 go
+jdk8-openjdk
+openjdk8-doc
+openjdk8-src
+clojure
 android-tools
 android-udev
 sqlite
