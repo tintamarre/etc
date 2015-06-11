@@ -1,7 +1,12 @@
+# Source .profile if not in X11 (display manager sources automatically
+# if we are in X11, so we don't want to run it twice); .profile sets
+# up our home directory bin paths
+[ -z "$DISPLAY" ] && source $HOME/.profile
+
 gen_prompt() {
     cwd=$(pwd)
-    [ $cwd = $HOME ] && cwd="~"
-    cwd=$(basename $cwd)
+    [ "z$cwd" = "z$HOME" ] && cwd="~"
+    cwd=$(basename "$cwd")
     prompt="#"
     (( USER_ID )) && prompt="$"
     user=$(whoami)
@@ -14,11 +19,19 @@ PS1='$(gen_prompt)'
 # for the likes of gnome-terminal and mate-terminal
 [ "x$TERM" = "xxterm" ] && export TERM="xterm-256color"
 
-PATH="$PATH:$HOME/bin:$HOME/local/bin"
-
 # per http://guides.rubygems.org/faqs/#user-install
 if which ruby 1>/dev/null 2>&1 && which gem 1>/dev/null 2>&1; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+
+    # We have to set $GEM_HOME to ensure Bundler doesn't disrespect
+    # our system ruby if it can get sudo privileges, since it will use
+    # sudo without asking first to install things system wide by default
+    # (as of version 1.9). See
+    #    - https://github.com/bundler/bundler/issues/3006
+    #    - https://github.com/bundler/bundler/issues/2565#issuecomment-87121045
+    # Note that Bundler's behaviour at this point actually conflicts with
+    # it's own documentation here: http://bundler.io/v1.9/man/bundle-install.1.html#SUDO-USAGE
+    export GEM_HOME="$(ruby -rubygems -e 'puts Gem.user_dir')"
 fi
 
 if [ -d $HOME/.rbenv/bin ]; then
@@ -28,15 +41,11 @@ fi
 
 export PATH
 
-alias em="emacs -nw"
 alias e="emacsclient -nw -ca ''"
 alias v="vim"
 
 # stuff for vagrant
 export VAGRANT_DEFAULT_PROVIDER=libvirt
-
-# stuff for python pip
-export PIP_DOWNLOAD_CACHE="$HOME/ext/package/pip-cache"
 
 export VISUAL=vim
 
