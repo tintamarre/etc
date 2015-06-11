@@ -1,6 +1,0 @@
-block-cursor
-minimap
-scrolly
-
-seti-syntax
-seti-ui
