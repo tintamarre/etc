@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=xclock
-Hidden=false
-X-MATE-Autostart-enabled=true
-Name[en_US]=xclock
-Name=xclock
-Comment[en_US]=Run xclock like a desktop widget
-Comment=Run xclock like a desktop widget
