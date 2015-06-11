@@ -37,4 +37,4 @@ xrandr --dpi 96
 [ -e $HOME/.Xresources ] && xrdb $HOME/.Xresources
 [ -e $HOME/.Xresources.local ] && xrdb -override $HOME/.Xresources.local
 
-exec openbox
+exec openbox-session
