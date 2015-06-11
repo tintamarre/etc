@@ -3,7 +3,7 @@
 DOTFILES="$(pwd)"
 DEST="$HOME"
 source_dirs="public private"
-special_cases="config ssh atom fonts"
+special_cases="config ssh atom fonts elinks"
 ignore="attic gitconfig_cit hgrc_cit"
 
 list_files() {
@@ -54,6 +54,12 @@ fonts() {
     fonts_source=$1
     fonts_dest=$DEST/.fonts
     merge_handler "$fonts_source" "$fonts_dest"
+}
+
+elinks() {
+    elinks_source=$1
+    elinks_dest=$DEST/.elinks
+    merge_handler "$elinks_source" "$elinks_dest"
 }
 
 merge_handler() {
