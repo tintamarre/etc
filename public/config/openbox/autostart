@@ -4,18 +4,11 @@
 ## Set default screen DPI
 xrandr --dpi 96 &
 
-## GNOME PolicyKit and Keyring
-eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
-# /usr/bin/lxpolkit &
-
 ## Set root window colour
 xsetroot -solid "#2E3436" &
 
 ## Set the wallpaper
 [ -x $HOME/.wallpaper ] && $HOME/.wallpaper
-
-## Initialize the keyboard settings
-[ -x $HOME/etc/scripts/initxkb ] && $HOME/etc/scripts/initxkb
 
 ## Start tint2 panel
 tint2 &
@@ -28,6 +21,10 @@ xfce4-power-manager &
 
 ## Start Thunar Daemon
 thunar --daemon &
+
+## Set keyboard settings
+[ -x $HOME/etc/scripts/initxkb ] && $HOME/etc/scripts/initxkb
+xset r rate 185 130
 
 ## Turn on/off system beep
 xset b off &
