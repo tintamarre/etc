@@ -302,17 +302,17 @@
   </keybind>
   <keybind key="W-Return">
     <action name="Execute">
-      <command>xterm</command>
+      <command>xfce4-terminal</command>
     </action>
   </keybind>
   <keybind key="A-Return">
     <action name="Execute">
-      <command>xterm</command>
+      <command>xfce4-terminal</command>
     </action>
   </keybind>
   <keybind key="W-apostrophe">
     <action name="Execute">
-      <command>mate-screensaver-command --lock</command>
+      <command>slock</command>
     </action>
   </keybind>
   <keybind key="Print">
