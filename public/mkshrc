@@ -3,16 +3,13 @@
 # up our home directory bin paths
 [ -z "$DISPLAY" ] && source $HOME/.profile
 
+host=$(hostname -s)
+user=$(echo $USER | cut -b1)
 gen_prompt() {
-    cwd=$(pwd)
-    [ "z$cwd" = "z$HOME" ] && cwd="~"
-    cwd=$(basename "$cwd")
-    prompt="#"
-    (( USER_ID )) && prompt="$"
-    user=$(whoami)
-    [ $user = "zebdeos" ] && user=z
-    host=$(hostname -s)
-    echo "$user@$host $cwd $prompt "
+    cwd=$(basename "$PWD")
+    [ "z$PWD" = "z$HOME" ] && cwd="~"
+
+    echo "$user@$host $cwd \$ "
 }
 PS1='$(gen_prompt)'
 
