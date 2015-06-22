@@ -19,9 +19,6 @@ dconf
 xdg-utils
 ttf-liberation
 
-# xscreensaver
-# zenity
-
 # Granola Recommends
 # ==================
 
@@ -33,7 +30,7 @@ network-manager-applet
 # -----------
 faenza-icon-theme
 lxappearance
-# custom:granola-ui-theme
+custom:granola-ui-theme
 
 # Additional Fonts
 # ----------------
@@ -73,6 +70,7 @@ alsa-utils
 # arandr
 # clipit
 # nitrogen
+# xscreensaver
 # aur:hsetroot
 # aur:gigolo
 
