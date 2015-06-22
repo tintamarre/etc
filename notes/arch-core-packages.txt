@@ -1,0 +1,29 @@
+# Basic Arch Install
+# ==================
+group:base
+grub
+
+openssh
+iw
+wpa_supplicant
+networkmanager
+dosfstools
+ntfs-3g
+
+ed
+curl
+wget
+rsync
+mksh
+ack
+tree
+pwgen
+tmux
+
+# Graphical Workstation Enablement
+# ================================
+group:xorg
+lightdm
+lightdm-gtk-greeter
+wayland
+weston

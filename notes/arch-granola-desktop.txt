@@ -1,0 +1,193 @@
+# Granola Requirements
+# ====================
+openbox
+gmrun
+dmenu
+conky
+trayer
+xfce4-power-manager
+gnome-keyring
+volumeicon
+pavucontrol
+thunar
+xautolock
+i3lock
+scrot
+feh
+mate-terminal
+dconf
+xdg-utils
+ttf-liberation
+
+# xscreensaver
+# zenity
+
+# Granola Recommends
+# ==================
+
+# Network Management
+# ------------------
+network-manager-applet
+
+# Look & Feel
+# -----------
+faenza-icon-theme
+lxappearance
+# custom:granola-ui-theme
+
+# Additional Fonts
+# ----------------
+ttf-bitstream-vera
+ttf-dejavu
+# cantarell-fonts
+# ttf-droid
+# ttf-oxygen
+# ttf-inconsolata
+# ttf-freefont
+# ttf-symbola
+# ttf-ubuntu-font-family
+# adobe-source-code-pro-fonts
+# adobe-source-sans-pro-fonts
+# adobe-source-serif-pro-fonts
+# terminus-font
+
+# Enhance Thunar Functionality
+# ----------------------------
+tumbler
+fuse
+mtpfs
+gvfs-mtp
+
+# Enable Spell Checking
+# ---------------------
+aspell
+aspell-en
+hunspell
+hunspell-en
+
+# Misc Utilities
+# --------------
+dconf-editor
+seahorse
+alsa-utils
+# arandr
+# clipit
+# nitrogen
+# aur:hsetroot
+# aur:gigolo
+
+# Online Chat
+# -----------
+pidgin
+pidgin-otr
+irssi
+# wechat
+# hexchat
+
+# Text Editing
+# ------------
+leafpad
+gvim
+# emacs
+# geany
+
+# Web Browsing
+# ------------
+midori
+elinks
+firefox
+chromium
+# netsurf
+# lynx
+# w3m
+# surfraw
+# dillo
+# surf
+# luakit
+
+# Email
+# -----
+thunderbird
+# mutt
+
+# PDF & Image Viewing
+# -------------------
+mupdf
+# atril
+sxiv
+feh
+# viewnior
+
+# Productivity Software
+# ---------------------
+galculator-gtk2
+abiword
+gnumeric
+# libreoffice-fresh
+# pdfmod
+
+# Multimedia Playback
+# -------------------
+vlc
+mplayer
+gnome-mplayer
+
+# Enable DVD Playback
+# -------------------
+libdvdread
+# libdvdcss
+# libdvdnav
+
+# Multimedia Codecs, Etc.
+# -----------------------
+ffmpeg
+gst-libav
+gst-plugins-base
+gst-plugins-base-libs
+gst-plugins-good
+# gst-plugins-ugly
+# gst-plugins-bad
+
+# Audio Processing
+# ----------------
+audacity
+espeak
+
+# Graphics Production
+# -------------------
+gimp
+inkscape
+blender
+povray
+gcolor2
+imagemagick
+# graphicsmagick
+# pinta
+# xsane
+# gpick
+# gv
+# aur:xpaint
+
+# Video Production
+# ----------------
+openshot
+guvcview
+simplescreenrecorder
+# recordmydesktop
+# gtk-recordmydesktop
+# kdenlive
+# frei0r-plugins
+# gource
+
+# Printing Enablement
+# -------------------
+cups
+foomatic-db
+foomatic-db-engine
+system-config-printer
+# cups-filters
+# cups-pdf
+
+# Compositing enablement
+# ----------------------
+# aur:compton
