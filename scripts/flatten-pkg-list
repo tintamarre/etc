@@ -1,4 +1,29 @@
 #!/bin/sh
 
-sh strip_pkg_list.sh "$1" | tr '\n' ' '
-echo
+# Flatten and merge package list text files as formatted by me
+
+g_packages=""
+g_groups=""
+g_aur=""
+g_custom=""
+
+# Loop through files passed as args
+for list in "$@"; do
+  # Filter out package names
+  g_packages="$g_packages $(grep -v '\(^#\|^$\|^group:\|^aur:\|^custom:\)' $list)"
+
+  # Filter out group names
+  g_groups="$g_groups $(grep -v '\(^#\|^$\)' $list | grep '^group:' | sed 's/^group://')"
+
+  # Filter out aur names
+  g_aur="$g_aur $(grep -v '\(^#\|^$\)' $list | grep '^aur:' | sed 's/^aur://')"
+
+  # Filter out custom names
+  g_custom="$g_custom $(grep -v '\(^#\|^$\)' $list | grep '^custom:' | sed 's/^custom://')"
+done
+
+# Echo flatted package list, each package separated by whitespace
+echo "PACKAGES: $(echo $g_packages | sort | tr '\n' ' ' | sed 's/ *$//')"
+echo "GROUPS: $(echo $g_groups | sort | tr '\n' ' ' | sed 's/ *$//')"
+echo "AUR: $(echo $g_aur | sort | tr '\n' ' ' | sed 's/ *$//')"
+echo "CUSTOM: $(echo $g_custom | sort | tr '\n' ' ' | sed 's/ *$//')"
