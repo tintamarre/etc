@@ -23,7 +23,7 @@ for list in "$@"; do
 done
 
 # Echo flatted package list, each package separated by whitespace
-echo "PACKAGES: $(echo $g_packages | sort | tr '\n' ' ' | sed 's/ *$//')"
-echo "GROUPS: $(echo $g_groups | sort | tr '\n' ' ' | sed 's/ *$//')"
-echo "AUR: $(echo $g_aur | sort | tr '\n' ' ' | sed 's/ *$//')"
-echo "CUSTOM: $(echo $g_custom | sort | tr '\n' ' ' | sed 's/ *$//')"
+echo PACKAGES: $(echo $g_packages)
+echo GROUPS: $(echo $g_groups)
+echo AUR: $(echo $g_aur)
+echo CUSTOM: $(echo $g_custom)
