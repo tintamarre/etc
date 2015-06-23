@@ -1,0 +1,69 @@
+#!/bin/sh
+
+# Uninstall all packages except those passed in as formatted by
+# flatten-pkg-list
+# e.g.: $ install-pkg-list $(flatten-pkg-list list1.txt list2.txt)
+
+# Just a dumb wrapper around pacman to install/uninstall a set of
+# packages; I use this to keep package selections consistent on my
+# personal workstations, and to easily get rid of packages not in
+# my lists (as I change them). Easy way to get everything to a
+# specific set of packages.
+
+g_packages=""
+g_groups=""
+g_aur=""
+g_custom=""
+
+package_lists="$@"
+
+# First things first, make sure we're all up to date
+sudo pacman -Syyu
+
+# Mark ALL currently installed packages as installed as dependency
+# This will make it easy to prune whatever we don't explicitly mark
+# as being installed explicitly or actually installing explicitly
+sudo pacman -D --asdeps $(pacman -Qq)
+
+# Normalize newlines in passed package lists based on type tags
+for set in PACKAGES GROUPS AUR CUSTOM; do
+  package_lists="$(echo "$package_lists" | sed "s/ $set:/\\n$set:/")"
+done
+
+# Loop through each package list line, which represents a type of package
+# name, and explicitly install (or mark as installed)
+OLD_IFS="$IFS"
+IFS="
+"
+for list in $package_lists; do
+  # Separate packages into respective variables
+  if echo $list | grep -q '^PACKAGES:'; then
+    g_packages="$(echo $list | sed 's/^PACKAGES: *//')"
+  elif echo $list | grep -q '^GROUPS:'; then
+    g_groups="$(echo $list | sed 's/^GROUPS: *//')"
+  elif echo $list | grep -q '^AUR:'; then
+    g_aur="$(echo $list | sed 's/^AUR: *//')"
+  elif echo $list | grep -q '^CUSTOM:'; then
+    g_custom="$(echo $list | sed 's/^CUSTOM: *//')"
+  fi
+done
+IFS="$OLD_IFS"
+
+# Expand groups and concatenate group package members to main package
+# list
+[ "$g_groups" ] && g_packages="$g_packages $(pacman -Sqg $g_groups | tr '\n' ' ' | sed 's/ *$//')"
+
+# Install all packages, as needed, from our list; mark all packages
+# (including those not "needed") as explicitly installed
+sudo pacman -S --needed $g_packages
+sudo pacman -D --asexplicit $g_packages
+
+# Prune anything that's left that isn't a true dependency and
+# which hasn't been marked as installed explicitly by now
+g_remove_packages=$(pacman -Qqdtt)
+[ "$g_remove_packages" ] && sudo pacman -Rsu $g_remove_packages
+
+# Tell user what packages need to be manually installed as custom packages
+# or from the AUR
+[ "$g_custom" ] && (echo "Still to be installed from custom packages:" ; echo $g_custom)
+[ "$g_aur" ] && (echo "Still to be installed from the AUR:" ; echo $g_aur)
