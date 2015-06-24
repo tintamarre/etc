@@ -127,6 +127,8 @@ gnumeric
 
 # Multimedia Playback
 # -------------------
+pulseaudio
+pulseaudio-alsa
 vlc
 mplayer
 gnome-mplayer
