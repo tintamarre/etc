@@ -30,6 +30,7 @@ network-manager-applet
 # -----------
 faenza-icon-theme
 lxappearance
+gtk-engine-murrine
 custom:granola-ui-theme
 
 # Additional Fonts
