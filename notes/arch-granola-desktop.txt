@@ -6,6 +6,7 @@ dmenu
 conky
 trayer
 xfce4-power-manager
+xfce4-notifyd
 gnome-keyring
 volumeicon
 pavucontrol
