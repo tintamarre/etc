@@ -19,8 +19,8 @@ mate-terminal
 dconf
 xdg-utils
 ttf-liberation
-python2-notify
 fortune-mod
+libnotify
 
 # Granola Recommends
 # ==================
