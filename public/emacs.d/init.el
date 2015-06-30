@@ -1,5 +1,8 @@
-(column-number-mode t)
-(ido-mode t)
+(column-number-mode 1)
+(ido-mode 1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
 
 (setq-default
  truncate-lines t
@@ -13,16 +16,16 @@
  )
 
 (setq default-frame-alist
-      '((font . "Source Code Pro Light 12")
-        (tool-bar-lines . 0)
-        (menu-bar-lines . 0)
-        (vertical-scroll-bars . nil)
+      '((font . "DejaVu Sans Mono 11")
+        ;(tool-bar-lines . 0)
+        ;(menu-bar-lines . 0)
+        ;(vertical-scroll-bars . nil)
         (width . 80)
         (height . 24)
         ))
 
 ; from http://stackoverflow.com/a/10439239
-(setq tab-stop-list (number-sequence 4 200 4))
+; (setq tab-stop-list (number-sequence 4 200 4))
 
 ;; http://orgmode.org/manual/Activation.html#Activation
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -36,7 +39,7 @@
 ;; http://ergoemacs.org/emacs/emacs_playing_with_color_theme.html
 (defun on-after-init ()
   (if (display-graphic-p (selected-frame))
-    (load-theme 'wombat)))
+    (load-theme 'atom-one-dark t)))
 (add-hook 'window-setup-hook 'on-after-init)
 
 (put 'narrow-to-region 'disabled nil)
