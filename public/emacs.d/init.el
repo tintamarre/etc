@@ -3,6 +3,7 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+(electric-indent-mode -1)
 
 (setq-default
  truncate-lines t
@@ -24,8 +25,24 @@
         (height . 24)
         ))
 
+;; Set indendentation preferences
+
 ; from http://stackoverflow.com/a/10439239
-(setq tab-stop-list (number-sequence 4 200 4))
+(setq tab-stop-list '(2 4 6))
+
+; from http://stackoverflow.com/a/9210502
+(defun r-text-indent ()
+    (interactive)
+    (tab-to-tab-stop))
+;(defun r-text-backspace ()
+;    (interactive)
+;    (forward-char -4))
+(add-hook 'emacs-lisp-mode-hook
+    (lambda ()
+        (setq
+            tab-stop-list '(4 8 12)
+            indent-line-function 'r-text-indent
+        )))
 
 ;; http://orgmode.org/manual/Activation.html#Activation
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -39,7 +56,7 @@
 ;; http://ergoemacs.org/emacs/emacs_playing_with_color_theme.html
 (defun on-after-init ()
   (if (display-graphic-p (selected-frame))
-    (load-theme 'atom-one-dark t)))
+    (load-theme 'wombat t)))
 (add-hook 'window-setup-hook 'on-after-init)
 
 (put 'narrow-to-region 'disabled nil)
