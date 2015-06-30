@@ -40,6 +40,10 @@ custom:granola-ui-theme
 # ----------------
 ttf-bitstream-vera
 ttf-dejavu
+# otf-fira-mono
+# otf-fira-sans
+# ttf-fira-mono
+# ttf-fira-sans
 # cantarell-fonts
 # ttf-droid
 # ttf-oxygen
