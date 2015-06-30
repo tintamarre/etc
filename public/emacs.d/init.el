@@ -25,7 +25,7 @@
         ))
 
 ; from http://stackoverflow.com/a/10439239
-; (setq tab-stop-list (number-sequence 4 200 4))
+(setq tab-stop-list (number-sequence 4 200 4))
 
 ;; http://orgmode.org/manual/Activation.html#Activation
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -45,7 +45,6 @@
 (put 'narrow-to-region 'disabled nil)
 
 ;; ELPA Configuration (http://www.emacswiki.org/emacs/ELPA)
-
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("marmalade" . "https://marmalade-repo.org/packages/")
 			 ("melpa" . "http://melpa.milkbox.net/packages/")))
