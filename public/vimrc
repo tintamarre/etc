@@ -1,9 +1,9 @@
-" let g:loaded_netrw = 1
-" let g:loaded_netrwPlugin = 1
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
 let g:loaded_matchparen = 1
-let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
-let g:netrw_banner=0
-let g:netrw_cursor=0
+" let g:netrw_list_hide= '\(^\|\s\s\)\zs\.[^\.]\S\+,\~$,^\.\/$,\.pyc$'
+" let g:netrw_banner=0
+" let g:netrw_cursor=0
 
 " disable alternate screen for vim
 " http://shallowsky.com/linux/noaltscreen.html
@@ -67,8 +67,8 @@ map <Leader>w :w<Enter>
 map <Leader>n :set invnumber<Enter>
 " map <Leader>n :set invrelativenumber<Enter>
 
-map <Leader>e :e .<Enter>
-map <Leader>t :tabe .<Enter>
+" map <Leader>e :e .<Enter>
+" map <Leader>t :tabe .<Enter>
 "map <Leader>s :silent ! tmux send -t 'hack1:test.0' up enter<Enter>
 map <Leader>s :silent! :!tmux send -t '0:0.2' 'make test' enter<Enter>
 
