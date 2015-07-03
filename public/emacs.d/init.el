@@ -65,3 +65,5 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("marmalade" . "https://marmalade-repo.org/packages/")
 			 ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+(autoload 'dirtree "dirtree" "Add directory to tree view" t)(autoload 'dirtree "dirtree" "Add directory to tree view" t)
