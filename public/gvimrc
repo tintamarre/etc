@@ -1,5 +1,4 @@
 set guioptions=agit
-set guiheadroom=0
 syntax on
 set colorcolumn=80
 "set number
