@@ -11,8 +11,8 @@ set t_ti= t_te=
 
 execute pathogen#infect()
 
-" let g:NERDTreeMinimalUI=1
-" let g:NERDTreeWinSize = 25
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeWinSize = 25
 
 set backupdir=~/local/tmp
 set directory=~/local/tmp
@@ -68,7 +68,7 @@ map <Leader>n :set invnumber<Enter>
 " map <Leader>n :set invrelativenumber<Enter>
 
 " map <Leader>e :e .<Enter>
-" map <Leader>t :tabe .<Enter>
+map <Leader>t :NERDTreeToggle<Enter>
 "map <Leader>s :silent ! tmux send -t 'hack1:test.0' up enter<Enter>
 map <Leader>s :silent! :!tmux send -t '0:0.2' 'make test' enter<Enter>
 
