@@ -1,12 +1,13 @@
 set guioptions=agit
+set guiheadroom=0
 syntax on
 set colorcolumn=80
 "set number
 set cursorline
 set lines=24
 set columns=80
-"set gfn=DejaVu\ Sans\ Mono\ Book\ 12
-set gfn=Source\ Code\ Pro\ Extralight\ 12
+set gfn=DejaVu\ Sans\ Mono\ Book\ 11
+"set gfn=Source\ Code\ Pro\ Extralight\ 12
 set vb t_vb= "no bell or visual bell
 colorscheme xoria256
 source ~/.vim/xoria-tweaks.vim
