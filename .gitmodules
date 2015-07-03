@@ -4,9 +4,6 @@
 [submodule "public/vim/bundle/vim-colorsamplerpack"]
 	path = public/vim/bundle/vim-colorsamplerpack
 	url = https://github.com/Slashbunny/vim-colorsamplerpack
-[submodule "extras/submodules/powerline"]
-	path = extras/submodules/powerline
-	url = https://github.com/powerline/powerline
 [submodule "public/vim/bundle/ack.vim"]
 	path = public/vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
