@@ -1,5 +1,5 @@
 # http://stackoverflow.com/questions/12763692/paddings-around-the-actual-vim-wi dow-in-gvim
 style "vimfix" {
-  bg[NORMAL] = "#1F1F1F" # this matches my gvim theme 'Normal' bg color.
+  bg[NORMAL] = "#121212" # this matches my gvim theme 'Normal' bg color.
 }
 widget "vim-main-window.*GtkForm" style "vimfix"
