@@ -4,6 +4,7 @@ highlight NonText guibg=#121212 ctermbg=none
 highlight CursorLine guibg=#1C1C1C ctermbg=234
 highlight TabLineSel guibg=#4E4E4E ctermbg=239
 highlight TabLine guibg=#1C1C1C ctermbg=234
-highlight TabLineFill guibg=#121212 ctermbg=none
+highlight TabLineFill guibg=#1C1C1C ctermbg=234
 highlight LineNr guibg=#1C1C1C ctermbg=234
 highlight CursorLineNr guibg=#121212 ctermbg=none
+highlight NonText guifg=#1C1C1C ctermfg=234
