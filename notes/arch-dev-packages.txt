@@ -45,6 +45,8 @@ jdk8-openjdk
 openjdk8-doc
 openjdk8-src
 clojure
+php
+hack
 android-tools
 android-udev
 sqlite
