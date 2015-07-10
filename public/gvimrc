@@ -1,7 +1,7 @@
 set guioptions=agit
 syntax on
 set colorcolumn=80
-"set number
+set number
 set cursorline
 set lines=24
 set columns=80
