@@ -13,6 +13,7 @@ execute pathogen#infect()
 
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeWinSize = 25
+autocmd VimEnter * NERDTreeToggle
 
 set backupdir=~/local/tmp
 set directory=~/local/tmp
@@ -63,12 +64,11 @@ inoremap ,w <ESC>:w<Enter>
 nmap ; :
 let mapleader = ","
 map <Leader>w :w<Enter>
-" http://vim.wikia.com/wiki/Display_line_numbers
-map <Leader>n :set invnumber<Enter>
-" map <Leader>n :set invrelativenumber<Enter>
 
-" map <Leader>e :e .<Enter>
-map <Leader>t :NERDTreeToggle<Enter>
+map <Leader>t :tabnew<Enter>:NERDTreeMirror<Enter>
+map <Leader>e :NERDTreeFocus<Enter>
+map <Leader>n :NERDTreeToggle<Enter>
+map <Leader>m :NERDTreeMirror<Enter>
 "map <Leader>s :silent ! tmux send -t 'hack1:test.0' up enter<Enter>
 map <Leader>s :silent! :!tmux send -t '0:0.2' 'make test' enter<Enter>
 
